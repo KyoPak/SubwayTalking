@@ -12,6 +12,7 @@
 		310C7B8E2B96DE52002A3BB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C7B8D2B96DE52002A3BB6 /* ViewController.swift */; };
 		310C7B932B96DE53002A3BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 310C7B922B96DE53002A3BB6 /* Assets.xcassets */; };
 		310C7B962B96DE53002A3BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310C7B942B96DE53002A3BB6 /* LaunchScreen.storyboard */; };
+		318C840B2B96F15100D88219 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 318C840A2B96F15100D88219 /* .swiftlint.yml */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +23,7 @@
 		310C7B922B96DE53002A3BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		310C7B952B96DE53002A3BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		310C7B972B96DE53002A3BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		318C840A2B96F15100D88219 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -38,6 +40,7 @@
 		310C7B7D2B96DE52002A3BB6 = {
 			isa = PBXGroup;
 			children = (
+				318C840A2B96F15100D88219 /* .swiftlint.yml */,
 				310C7B882B96DE52002A3BB6 /* SubwayTalking */,
 				310C7B872B96DE52002A3BB6 /* Products */,
 			);
@@ -98,6 +101,7 @@
 				310C7B822B96DE52002A3BB6 /* Sources */,
 				310C7B832B96DE52002A3BB6 /* Frameworks */,
 				310C7B842B96DE52002A3BB6 /* Resources */,
+				310C7BA02B96EC4B002A3BB6 /* SwiftLint RunScript */,
 			);
 			buildRules = (
 			);
@@ -146,12 +150,34 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				318C840B2B96F15100D88219 /* .swiftlint.yml in Resources */,
 				310C7B962B96DE53002A3BB6 /* LaunchScreen.storyboard in Resources */,
 				310C7B932B96DE53002A3BB6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
+
+/* Begin PBXShellScriptBuildPhase section */
+		310C7BA02B96EC4B002A3BB6 /* SwiftLint RunScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+			);
+			name = "SwiftLint RunScript";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint .\nelse\n  echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
+		};
+/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		310C7B822B96DE52002A3BB6 /* Sources */ = {
@@ -305,6 +331,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZRLFU9PV5L;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SubwayTalking/Resource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "써브웨이톡";
@@ -340,6 +367,7 @@
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZRLFU9PV5L;
+				ENABLE_USER_SCRIPT_SANDBOXING = NO;
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_FILE = SubwayTalking/Resource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "써브웨이톡";
