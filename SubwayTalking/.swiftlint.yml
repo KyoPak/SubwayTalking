@@ -1,0 +1,9 @@
+included:
+- SubwayTalking
+
+disabled_rules:
+- trailing_whitespace
+- xctfail_message
+- unused_closure_parameter
+
+line_length: 120
