@@ -54,14 +54,38 @@
 		310C7B882B96DE52002A3BB6 /* SubwayTalking */ = {
 			isa = PBXGroup;
 			children = (
+				310C7B9F2B96E3ED002A3BB6 /* Resource */,
+				310C7B9D2B96E3C2002A3BB6 /* Source */,
+			);
+			path = SubwayTalking;
+			sourceTree = "<group>";
+		};
+		310C7B9D2B96E3C2002A3BB6 /* Source */ = {
+			isa = PBXGroup;
+			children = (
+				310C7B9E2B96E3CA002A3BB6 /* Application */,
+				310C7B8D2B96DE52002A3BB6 /* ViewController.swift */,
+			);
+			path = Source;
+			sourceTree = "<group>";
+		};
+		310C7B9E2B96E3CA002A3BB6 /* Application */ = {
+			isa = PBXGroup;
+			children = (
 				310C7B892B96DE52002A3BB6 /* AppDelegate.swift */,
 				310C7B8B2B96DE52002A3BB6 /* SceneDelegate.swift */,
-				310C7B8D2B96DE52002A3BB6 /* ViewController.swift */,
+			);
+			path = Application;
+			sourceTree = "<group>";
+		};
+		310C7B9F2B96E3ED002A3BB6 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
 				310C7B922B96DE53002A3BB6 /* Assets.xcassets */,
 				310C7B942B96DE53002A3BB6 /* LaunchScreen.storyboard */,
 				310C7B972B96DE53002A3BB6 /* Info.plist */,
 			);
-			path = SubwayTalking;
+			path = Resource;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -282,7 +306,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZRLFU9PV5L;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SubwayTalking/Info.plist;
+				INFOPLIST_FILE = SubwayTalking/Resource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "써브웨이톡";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
@@ -317,7 +341,7 @@
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZRLFU9PV5L;
 				GENERATE_INFOPLIST_FILE = YES;
-				INFOPLIST_FILE = SubwayTalking/Info.plist;
+				INFOPLIST_FILE = SubwayTalking/Resource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "써브웨이톡";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
