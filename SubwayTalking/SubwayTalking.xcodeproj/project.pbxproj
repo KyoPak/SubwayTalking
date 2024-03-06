@@ -14,6 +14,7 @@
 		310C7B932B96DE53002A3BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 310C7B922B96DE53002A3BB6 /* Assets.xcassets */; };
 		310C7B962B96DE53002A3BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310C7B942B96DE53002A3BB6 /* LaunchScreen.storyboard */; };
 		313CFB3E2B9827490032ECE3 /* NaverMaps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 313CFB3D2B9827490032ECE3 /* NaverMaps.plist */; };
+		3155BC2F2B9848AB003D4140 /* SubwayInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3155BC2E2B9848AB003D4140 /* SubwayInformationDTO.swift */; };
 		318C840B2B96F15100D88219 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 318C840A2B96F15100D88219 /* .swiftlint.yml */; };
 		B7140B37A39C500D6030A37A /* libPods-SubwayTalking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */; };
 /* End PBXBuildFile section */
@@ -30,6 +31,7 @@
 		310C7B952B96DE53002A3BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		310C7B972B96DE53002A3BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		313CFB3D2B9827490032ECE3 /* NaverMaps.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NaverMaps.plist; sourceTree = "<group>"; };
+		3155BC2E2B9848AB003D4140 /* SubwayInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayInformationDTO.swift; sourceTree = "<group>"; };
 		318C840A2B96F15100D88219 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SubwayTalking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -128,6 +130,7 @@
 				310C7B9E2B96E3CA002A3BB6 /* Application */,
 				3108E4BD2B98291E003115B0 /* Util */,
 				3108E4BA2B982818003115B0 /* Presentation */,
+				3155BC2C2B98480E003D4140 /* Data */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -150,6 +153,30 @@
 				313CFB3D2B9827490032ECE3 /* NaverMaps.plist */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		3155BC2C2B98480E003D4140 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				3155BC2D2B984892003D4140 /* Model */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3155BC2D2B984892003D4140 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				3155BC302B9848D0003D4140 /* SubwayInformation */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		3155BC302B9848D0003D4140 /* SubwayInformation */ = {
+			isa = PBXGroup;
+			children = (
+				3155BC2E2B9848AB003D4140 /* SubwayInformationDTO.swift */,
+			);
+			path = SubwayInformation;
 			sourceTree = "<group>";
 		};
 		FD29053EA72FC72E53DBAD4F /* Pods */ = {
@@ -297,6 +324,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				310C7B8E2B96DE52002A3BB6 /* MainViewController.swift in Sources */,
+				3155BC2F2B9848AB003D4140 /* SubwayInformationDTO.swift in Sources */,
 				310C7B8A2B96DE52002A3BB6 /* AppDelegate.swift in Sources */,
 				3108E4C02B982990003115B0 /* Bundle+APIKey.swift in Sources */,
 				310C7B8C2B96DE52002A3BB6 /* SceneDelegate.swift in Sources */,
