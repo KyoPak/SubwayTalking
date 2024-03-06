@@ -13,9 +13,12 @@
 		310C7B932B96DE53002A3BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 310C7B922B96DE53002A3BB6 /* Assets.xcassets */; };
 		310C7B962B96DE53002A3BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310C7B942B96DE53002A3BB6 /* LaunchScreen.storyboard */; };
 		318C840B2B96F15100D88219 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 318C840A2B96F15100D88219 /* .swiftlint.yml */; };
+		B7140B37A39C500D6030A37A /* libPods-SubwayTalking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12A2041202D54450D6AA1C53 /* Pods-SubwayTalking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubwayTalking.debug.xcconfig"; path = "Target Support Files/Pods-SubwayTalking/Pods-SubwayTalking.debug.xcconfig"; sourceTree = "<group>"; };
+		1BE4C4BEC3BEC81A254214ED /* Pods-SubwayTalking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubwayTalking.release.xcconfig"; path = "Target Support Files/Pods-SubwayTalking/Pods-SubwayTalking.release.xcconfig"; sourceTree = "<group>"; };
 		310C7B862B96DE52002A3BB6 /* SubwayTalking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubwayTalking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		310C7B892B96DE52002A3BB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		310C7B8B2B96DE52002A3BB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -24,6 +27,7 @@
 		310C7B952B96DE53002A3BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		310C7B972B96DE53002A3BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		318C840A2B96F15100D88219 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SubwayTalking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,18 +35,29 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				B7140B37A39C500D6030A37A /* libPods-SubwayTalking.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19CE3747B88BC5EB4AE03F83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		310C7B7D2B96DE52002A3BB6 = {
 			isa = PBXGroup;
 			children = (
 				318C840A2B96F15100D88219 /* .swiftlint.yml */,
 				310C7B882B96DE52002A3BB6 /* SubwayTalking */,
 				310C7B872B96DE52002A3BB6 /* Products */,
+				FD29053EA72FC72E53DBAD4F /* Pods */,
+				19CE3747B88BC5EB4AE03F83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -91,6 +106,16 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
+		FD29053EA72FC72E53DBAD4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12A2041202D54450D6AA1C53 /* Pods-SubwayTalking.debug.xcconfig */,
+				1BE4C4BEC3BEC81A254214ED /* Pods-SubwayTalking.release.xcconfig */,
+			);
+			name = Pods;
+			path = Pods;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -98,10 +123,12 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 310C7B9A2B96DE53002A3BB6 /* Build configuration list for PBXNativeTarget "SubwayTalking" */;
 			buildPhases = (
+				BA05F096AD49B920BFC75C13 /* [CP] Check Pods Manifest.lock */,
 				310C7B822B96DE52002A3BB6 /* Sources */,
 				310C7B832B96DE52002A3BB6 /* Frameworks */,
 				310C7B842B96DE52002A3BB6 /* Resources */,
 				310C7BA02B96EC4B002A3BB6 /* SwiftLint RunScript */,
+				52DCEA523B5B8722D68235EC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
@@ -176,6 +203,45 @@
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
 			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint .\nelse\n  echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
+		};
+		52DCEA523B5B8722D68235EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SubwayTalking/Pods-SubwayTalking-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SubwayTalking/Pods-SubwayTalking-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SubwayTalking/Pods-SubwayTalking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA05F096AD49B920BFC75C13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SubwayTalking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
 		};
 /* End PBXShellScriptBuildPhase section */
 
@@ -325,6 +391,7 @@
 		};
 		310C7B9B2B96DE53002A3BB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12A2041202D54450D6AA1C53 /* Pods-SubwayTalking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -361,6 +428,7 @@
 		};
 		310C7B9C2B96DE53002A3BB6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BE4C4BEC3BEC81A254214ED /* Pods-SubwayTalking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
