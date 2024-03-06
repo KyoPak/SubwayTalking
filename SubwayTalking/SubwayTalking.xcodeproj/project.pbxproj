@@ -9,9 +9,10 @@
 /* Begin PBXBuildFile section */
 		310C7B8A2B96DE52002A3BB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C7B892B96DE52002A3BB6 /* AppDelegate.swift */; };
 		310C7B8C2B96DE52002A3BB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C7B8B2B96DE52002A3BB6 /* SceneDelegate.swift */; };
-		310C7B8E2B96DE52002A3BB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C7B8D2B96DE52002A3BB6 /* ViewController.swift */; };
+		310C7B8E2B96DE52002A3BB6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C7B8D2B96DE52002A3BB6 /* MainViewController.swift */; };
 		310C7B932B96DE53002A3BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 310C7B922B96DE53002A3BB6 /* Assets.xcassets */; };
 		310C7B962B96DE53002A3BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310C7B942B96DE53002A3BB6 /* LaunchScreen.storyboard */; };
+		313CFB3E2B9827490032ECE3 /* NaverMaps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 313CFB3D2B9827490032ECE3 /* NaverMaps.plist */; };
 		318C840B2B96F15100D88219 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 318C840A2B96F15100D88219 /* .swiftlint.yml */; };
 		B7140B37A39C500D6030A37A /* libPods-SubwayTalking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */; };
 /* End PBXBuildFile section */
@@ -22,10 +23,11 @@
 		310C7B862B96DE52002A3BB6 /* SubwayTalking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubwayTalking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		310C7B892B96DE52002A3BB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		310C7B8B2B96DE52002A3BB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		310C7B8D2B96DE52002A3BB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		310C7B8D2B96DE52002A3BB6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		310C7B922B96DE53002A3BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		310C7B952B96DE53002A3BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		310C7B972B96DE53002A3BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		313CFB3D2B9827490032ECE3 /* NaverMaps.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NaverMaps.plist; sourceTree = "<group>"; };
 		318C840A2B96F15100D88219 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SubwayTalking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -48,6 +50,30 @@
 				B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3108E4BA2B982818003115B0 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				3108E4BB2B982872003115B0 /* MainScene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3108E4BB2B982872003115B0 /* MainScene */ = {
+			isa = PBXGroup;
+			children = (
+				3108E4BC2B982887003115B0 /* View */,
+			);
+			path = MainScene;
+			sourceTree = "<group>";
+		};
+		3108E4BC2B982887003115B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				310C7B8D2B96DE52002A3BB6 /* MainViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		310C7B7D2B96DE52002A3BB6 = {
@@ -82,7 +108,7 @@
 			isa = PBXGroup;
 			children = (
 				310C7B9E2B96E3CA002A3BB6 /* Application */,
-				310C7B8D2B96DE52002A3BB6 /* ViewController.swift */,
+				3108E4BA2B982818003115B0 /* Presentation */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -102,6 +128,7 @@
 				310C7B922B96DE53002A3BB6 /* Assets.xcassets */,
 				310C7B942B96DE53002A3BB6 /* LaunchScreen.storyboard */,
 				310C7B972B96DE53002A3BB6 /* Info.plist */,
+				313CFB3D2B9827490032ECE3 /* NaverMaps.plist */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -112,7 +139,6 @@
 				12A2041202D54450D6AA1C53 /* Pods-SubwayTalking.debug.xcconfig */,
 				1BE4C4BEC3BEC81A254214ED /* Pods-SubwayTalking.release.xcconfig */,
 			);
-			name = Pods;
 			path = Pods;
 			sourceTree = "<group>";
 		};
@@ -179,6 +205,7 @@
 			files = (
 				318C840B2B96F15100D88219 /* .swiftlint.yml in Resources */,
 				310C7B962B96DE53002A3BB6 /* LaunchScreen.storyboard in Resources */,
+				313CFB3E2B9827490032ECE3 /* NaverMaps.plist in Resources */,
 				310C7B932B96DE53002A3BB6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -250,7 +277,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				310C7B8E2B96DE52002A3BB6 /* ViewController.swift in Sources */,
+				310C7B8E2B96DE52002A3BB6 /* MainViewController.swift in Sources */,
 				310C7B8A2B96DE52002A3BB6 /* AppDelegate.swift in Sources */,
 				310C7B8C2B96DE52002A3BB6 /* SceneDelegate.swift in Sources */,
 			);
