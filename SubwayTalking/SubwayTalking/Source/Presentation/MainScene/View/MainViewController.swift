@@ -7,10 +7,36 @@
 
 import UIKit
 
-class MainViewController: UIViewController {
+import NMapsMap
 
+final class MainViewController: UIViewController {
+
+    // MARK: UI
+    
+    private let naverMapView: NMFMapView = {
+        let mapView = NMFMapView()
+        mapView.mapType = .basic
+        mapView.minZoomLevel = 5
+        return mapView
+    }()
+    
+    // MARK: LifeCycle
+    
     override func viewDidLoad() {
         super.viewDidLoad()
-        view.backgroundColor = .red
+        
+        configureHierachy()
+        configureLayout()
+    }
+}
+
+// MARK: UI Configure
+extension MainViewController {
+    private func configureHierachy() {
+        view.addSubview(naverMapView)
+    }
+    
+    private func configureLayout() {
+        naverMapView.frame = view.frame
     }
 }
