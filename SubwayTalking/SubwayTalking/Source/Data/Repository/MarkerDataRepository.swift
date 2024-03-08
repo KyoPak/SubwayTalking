@@ -1,5 +1,5 @@
 //
-//  MapMarkRepository.swift
+//  MarkerDataRepository.swift
 //  SubwayTalking
 //
 //  Created by 박효성 on 3/8/24.
@@ -9,11 +9,11 @@ import UIKit
 
 import RxSwift
 
-protocol MapMarkRepository {
+protocol MarkerDataRepository {
     func fetchData() -> Observable<[SubwayInformation]>
 }
 
-final class DefaultMapMarkRepository: MapMarkRepository {
+final class DefaultMarkerDataRepository: MarkerDataRepository {
     
     func fetchData() -> Observable<[SubwayInformation]> {
         return Observable.create { observer in

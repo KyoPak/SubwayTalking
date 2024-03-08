@@ -19,7 +19,7 @@
 		315A68582B9AF71E00268DF4 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 315A68572B9AF71E00268DF4 /* RxRelay */; };
 		315A685C2B9AF71E00268DF4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 315A685B2B9AF71E00268DF4 /* RxSwift */; };
 		318C840B2B96F15100D88219 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 318C840A2B96F15100D88219 /* .swiftlint.yml */; };
-		31A075A02B9B03DF0060211B /* MapMarkRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A0759F2B9B03DF0060211B /* MapMarkRepository.swift */; };
+		31A075A02B9B03DF0060211B /* MarkerDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A0759F2B9B03DF0060211B /* MarkerDataRepository.swift */; };
 		31A075A32B9B0E710060211B /* JSONDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A075A22B9B0E710060211B /* JSONDataError.swift */; };
 		31A075A52B9B10CC0060211B /* SubwayInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A075A42B9B10CC0060211B /* SubwayInformation.swift */; };
 		8539C3733FD3F320422145DF /* libPods-SubwayTalking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */; };
@@ -39,7 +39,7 @@
 		313CFB3D2B9827490032ECE3 /* NaverMaps.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NaverMaps.plist; sourceTree = "<group>"; };
 		3155BC2E2B9848AB003D4140 /* SubwayInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayInformationDTO.swift; sourceTree = "<group>"; };
 		318C840A2B96F15100D88219 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		31A0759F2B9B03DF0060211B /* MapMarkRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapMarkRepository.swift; sourceTree = "<group>"; };
+		31A0759F2B9B03DF0060211B /* MarkerDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerDataRepository.swift; sourceTree = "<group>"; };
 		31A075A22B9B0E710060211B /* JSONDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataError.swift; sourceTree = "<group>"; };
 		31A075A42B9B10CC0060211B /* SubwayInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayInformation.swift; sourceTree = "<group>"; };
 		B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SubwayTalking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -197,7 +197,7 @@
 		31A0759E2B9B036F0060211B /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				31A0759F2B9B03DF0060211B /* MapMarkRepository.swift */,
+				31A0759F2B9B03DF0060211B /* MarkerDataRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -382,7 +382,7 @@
 				310C7B8E2B96DE52002A3BB6 /* MainViewController.swift in Sources */,
 				3155BC2F2B9848AB003D4140 /* SubwayInformationDTO.swift in Sources */,
 				310C7B8A2B96DE52002A3BB6 /* AppDelegate.swift in Sources */,
-				31A075A02B9B03DF0060211B /* MapMarkRepository.swift in Sources */,
+				31A075A02B9B03DF0060211B /* MarkerDataRepository.swift in Sources */,
 				31A075A52B9B10CC0060211B /* SubwayInformation.swift in Sources */,
 				3108E4C02B982990003115B0 /* Bundle+APIKey.swift in Sources */,
 				310C7B8C2B96DE52002A3BB6 /* SceneDelegate.swift in Sources */,
