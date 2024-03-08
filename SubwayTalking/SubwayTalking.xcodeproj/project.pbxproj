@@ -15,11 +15,12 @@
 		310C7B962B96DE53002A3BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310C7B942B96DE53002A3BB6 /* LaunchScreen.storyboard */; };
 		313CFB3E2B9827490032ECE3 /* NaverMaps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 313CFB3D2B9827490032ECE3 /* NaverMaps.plist */; };
 		3155BC2F2B9848AB003D4140 /* SubwayInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3155BC2E2B9848AB003D4140 /* SubwayInformationDTO.swift */; };
+		31569A302B9B1B3C000DF03B /* MarkerDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31569A2F2B9B1B3C000DF03B /* MarkerDataRepository.swift */; };
 		315A68542B9AF71E00268DF4 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 315A68532B9AF71E00268DF4 /* RxCocoa */; };
 		315A68582B9AF71E00268DF4 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 315A68572B9AF71E00268DF4 /* RxRelay */; };
 		315A685C2B9AF71E00268DF4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 315A685B2B9AF71E00268DF4 /* RxSwift */; };
 		318C840B2B96F15100D88219 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 318C840A2B96F15100D88219 /* .swiftlint.yml */; };
-		31A075A02B9B03DF0060211B /* MarkerDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A0759F2B9B03DF0060211B /* MarkerDataRepository.swift */; };
+		31A075A02B9B03DF0060211B /* DefaultMarkerDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A0759F2B9B03DF0060211B /* DefaultMarkerDataRepository.swift */; };
 		31A075A32B9B0E710060211B /* JSONDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A075A22B9B0E710060211B /* JSONDataError.swift */; };
 		31A075A52B9B10CC0060211B /* SubwayInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A075A42B9B10CC0060211B /* SubwayInformation.swift */; };
 		31A075AA2B9B131A0060211B /* AddMarkerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A075A92B9B131A0060211B /* AddMarkerUseCase.swift */; };
@@ -39,8 +40,9 @@
 		310C7B972B96DE53002A3BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		313CFB3D2B9827490032ECE3 /* NaverMaps.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NaverMaps.plist; sourceTree = "<group>"; };
 		3155BC2E2B9848AB003D4140 /* SubwayInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayInformationDTO.swift; sourceTree = "<group>"; };
+		31569A2F2B9B1B3C000DF03B /* MarkerDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerDataRepository.swift; sourceTree = "<group>"; };
 		318C840A2B96F15100D88219 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		31A0759F2B9B03DF0060211B /* MarkerDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerDataRepository.swift; sourceTree = "<group>"; };
+		31A0759F2B9B03DF0060211B /* DefaultMarkerDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMarkerDataRepository.swift; sourceTree = "<group>"; };
 		31A075A22B9B0E710060211B /* JSONDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataError.swift; sourceTree = "<group>"; };
 		31A075A42B9B10CC0060211B /* SubwayInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayInformation.swift; sourceTree = "<group>"; };
 		31A075A92B9B131A0060211B /* AddMarkerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMarkerUseCase.swift; sourceTree = "<group>"; };
@@ -175,17 +177,17 @@
 			children = (
 				31A075A12B9B0E630060211B /* Error */,
 				31A0759E2B9B036F0060211B /* Repository */,
-				3155BC2D2B984892003D4140 /* Model */,
+				3155BC2D2B984892003D4140 /* DataMapping */,
 			);
 			path = Data;
 			sourceTree = "<group>";
 		};
-		3155BC2D2B984892003D4140 /* Model */ = {
+		3155BC2D2B984892003D4140 /* DataMapping */ = {
 			isa = PBXGroup;
 			children = (
 				3155BC302B9848D0003D4140 /* SubwayInformation */,
 			);
-			path = Model;
+			path = DataMapping;
 			sourceTree = "<group>";
 		};
 		3155BC302B9848D0003D4140 /* SubwayInformation */ = {
@@ -196,10 +198,18 @@
 			path = SubwayInformation;
 			sourceTree = "<group>";
 		};
+		31569A2E2B9B1B15000DF03B /* RepositoryInterface */ = {
+			isa = PBXGroup;
+			children = (
+				31569A2F2B9B1B3C000DF03B /* MarkerDataRepository.swift */,
+			);
+			path = RepositoryInterface;
+			sourceTree = "<group>";
+		};
 		31A0759E2B9B036F0060211B /* Repository */ = {
 			isa = PBXGroup;
 			children = (
-				31A0759F2B9B03DF0060211B /* MarkerDataRepository.swift */,
+				31A0759F2B9B03DF0060211B /* DefaultMarkerDataRepository.swift */,
 			);
 			path = Repository;
 			sourceTree = "<group>";
@@ -217,6 +227,7 @@
 			children = (
 				31A075A72B9B12010060211B /* Entity */,
 				31A075A82B9B124D0060211B /* UseCase */,
+				31569A2E2B9B1B15000DF03B /* RepositoryInterface */,
 			);
 			path = Domain;
 			sourceTree = "<group>";
@@ -393,8 +404,9 @@
 				310C7B8E2B96DE52002A3BB6 /* MainViewController.swift in Sources */,
 				3155BC2F2B9848AB003D4140 /* SubwayInformationDTO.swift in Sources */,
 				31A075AA2B9B131A0060211B /* AddMarkerUseCase.swift in Sources */,
+				31569A302B9B1B3C000DF03B /* MarkerDataRepository.swift in Sources */,
 				310C7B8A2B96DE52002A3BB6 /* AppDelegate.swift in Sources */,
-				31A075A02B9B03DF0060211B /* MarkerDataRepository.swift in Sources */,
+				31A075A02B9B03DF0060211B /* DefaultMarkerDataRepository.swift in Sources */,
 				31A075A52B9B10CC0060211B /* SubwayInformation.swift in Sources */,
 				3108E4C02B982990003115B0 /* Bundle+APIKey.swift in Sources */,
 				310C7B8C2B96DE52002A3BB6 /* SceneDelegate.swift in Sources */,
