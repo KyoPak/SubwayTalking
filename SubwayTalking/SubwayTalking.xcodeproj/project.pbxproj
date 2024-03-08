@@ -142,6 +142,7 @@
 				310C7B9E2B96E3CA002A3BB6 /* Application */,
 				3108E4BD2B98291E003115B0 /* Util */,
 				3108E4BA2B982818003115B0 /* Presentation */,
+				31A075A62B9B11C90060211B /* Domain */,
 				3155BC2C2B98480E003D4140 /* Data */,
 			);
 			path = Source;
@@ -189,7 +190,6 @@
 			isa = PBXGroup;
 			children = (
 				3155BC2E2B9848AB003D4140 /* SubwayInformationDTO.swift */,
-				31A075A42B9B10CC0060211B /* SubwayInformation.swift */,
 			);
 			path = SubwayInformation;
 			sourceTree = "<group>";
@@ -208,6 +208,22 @@
 				31A075A22B9B0E710060211B /* JSONDataError.swift */,
 			);
 			path = Error;
+			sourceTree = "<group>";
+		};
+		31A075A62B9B11C90060211B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				31A075A72B9B12010060211B /* Entity */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		31A075A72B9B12010060211B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				31A075A42B9B10CC0060211B /* SubwayInformation.swift */,
+			);
+			path = Entity;
 			sourceTree = "<group>";
 		};
 		FD29053EA72FC72E53DBAD4F /* Pods */ = {
