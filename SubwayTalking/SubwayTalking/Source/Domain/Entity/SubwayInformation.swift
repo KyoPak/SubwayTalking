@@ -10,6 +10,6 @@ import Foundation
 struct SubwayInformation {
     let number: String
     let name: String
-    let latitude: Double
-    let longitude: Double
+    let latitude: Double?
+    let longitude: Double?
 }

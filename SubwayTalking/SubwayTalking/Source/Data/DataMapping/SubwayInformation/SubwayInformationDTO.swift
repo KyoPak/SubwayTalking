@@ -8,20 +8,18 @@
 import Foundation
 
 struct SubwayInformationDTO: Decodable {
-    let subwayNumber: String
+    let number: String
     let name: String
-    let englishName: String
-    let latitude, longitude: Double
-    let phoneNumber: String
+    let englishName: String?
+    let latitude, longitude: Double?
     
     private enum CodingKeys: String, CodingKey {
-        case subwayNumber, name, latitude, longitude, phoneNumber
-        case englishName = "engName"
+        case number, name, englishName, latitude, longitude
     }
 }
 
 extension SubwayInformationDTO {
     func toEntity() -> SubwayInformation {
-        return .init(number: subwayNumber, name: name, latitude: latitude, longitude: longitude)
+        return .init(number: number, name: name, latitude: latitude, longitude: longitude)
     }
 }
