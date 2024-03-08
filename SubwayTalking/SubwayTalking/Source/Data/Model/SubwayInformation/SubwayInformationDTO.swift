@@ -19,3 +19,9 @@ struct SubwayInformationDTO: Decodable {
         case englishName = "engName"
     }
 }
+
+extension SubwayInformationDTO {
+    func toEntity() -> SubwayInformation {
+        return .init(number: subwayNumber, name: name, latitude: latitude, longitude: longitude)
+    }
+}
