@@ -15,16 +15,11 @@
 		310C7B962B96DE53002A3BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310C7B942B96DE53002A3BB6 /* LaunchScreen.storyboard */; };
 		313CFB3E2B9827490032ECE3 /* NaverMaps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 313CFB3D2B9827490032ECE3 /* NaverMaps.plist */; };
 		3155BC2F2B9848AB003D4140 /* SubwayInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3155BC2E2B9848AB003D4140 /* SubwayInformationDTO.swift */; };
+		315A68542B9AF71E00268DF4 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 315A68532B9AF71E00268DF4 /* RxCocoa */; };
+		315A68582B9AF71E00268DF4 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 315A68572B9AF71E00268DF4 /* RxRelay */; };
+		315A685C2B9AF71E00268DF4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 315A685B2B9AF71E00268DF4 /* RxSwift */; };
 		318C840B2B96F15100D88219 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 318C840A2B96F15100D88219 /* .swiftlint.yml */; };
-		31B1F2F42B99F39100B0B719 /* RxBlocking-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 31B1F2F32B99F39100B0B719 /* RxBlocking-Dynamic */; };
-		31B1F2F62B99F39100B0B719 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 31B1F2F52B99F39100B0B719 /* RxCocoa */; };
-		31B1F2F82B99F39100B0B719 /* RxCocoa-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 31B1F2F72B99F39100B0B719 /* RxCocoa-Dynamic */; };
-		31B1F2FA2B99F39100B0B719 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 31B1F2F92B99F39100B0B719 /* RxRelay */; };
-		31B1F2FC2B99F39100B0B719 /* RxRelay-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 31B1F2FB2B99F39100B0B719 /* RxRelay-Dynamic */; };
-		31B1F2FE2B99F39100B0B719 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 31B1F2FD2B99F39100B0B719 /* RxSwift */; };
-		31B1F3002B99F39100B0B719 /* RxSwift-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 31B1F2FF2B99F39100B0B719 /* RxSwift-Dynamic */; };
-		31B1F3022B99F39100B0B719 /* RxTest-Dynamic in Frameworks */ = {isa = PBXBuildFile; productRef = 31B1F3012B99F39100B0B719 /* RxTest-Dynamic */; };
-		B7140B37A39C500D6030A37A /* libPods-SubwayTalking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */; };
+		8539C3733FD3F320422145DF /* libPods-SubwayTalking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -49,15 +44,10 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				31B1F3002B99F39100B0B719 /* RxSwift-Dynamic in Frameworks */,
-				31B1F2FA2B99F39100B0B719 /* RxRelay in Frameworks */,
-				31B1F2F82B99F39100B0B719 /* RxCocoa-Dynamic in Frameworks */,
-				31B1F3022B99F39100B0B719 /* RxTest-Dynamic in Frameworks */,
-				31B1F2FC2B99F39100B0B719 /* RxRelay-Dynamic in Frameworks */,
-				31B1F2F62B99F39100B0B719 /* RxCocoa in Frameworks */,
-				B7140B37A39C500D6030A37A /* libPods-SubwayTalking.a in Frameworks */,
-				31B1F2F42B99F39100B0B719 /* RxBlocking-Dynamic in Frameworks */,
-				31B1F2FE2B99F39100B0B719 /* RxSwift in Frameworks */,
+				315A68582B9AF71E00268DF4 /* RxRelay in Frameworks */,
+				315A68542B9AF71E00268DF4 /* RxCocoa in Frameworks */,
+				315A685C2B9AF71E00268DF4 /* RxSwift in Frameworks */,
+				8539C3733FD3F320422145DF /* libPods-SubwayTalking.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -224,14 +214,9 @@
 			);
 			name = SubwayTalking;
 			packageProductDependencies = (
-				31B1F2F32B99F39100B0B719 /* RxBlocking-Dynamic */,
-				31B1F2F52B99F39100B0B719 /* RxCocoa */,
-				31B1F2F72B99F39100B0B719 /* RxCocoa-Dynamic */,
-				31B1F2F92B99F39100B0B719 /* RxRelay */,
-				31B1F2FB2B99F39100B0B719 /* RxRelay-Dynamic */,
-				31B1F2FD2B99F39100B0B719 /* RxSwift */,
-				31B1F2FF2B99F39100B0B719 /* RxSwift-Dynamic */,
-				31B1F3012B99F39100B0B719 /* RxTest-Dynamic */,
+				315A68532B9AF71E00268DF4 /* RxCocoa */,
+				315A68572B9AF71E00268DF4 /* RxRelay */,
+				315A685B2B9AF71E00268DF4 /* RxSwift */,
 			);
 			productName = SubwayTalking;
 			productReference = 310C7B862B96DE52002A3BB6 /* SubwayTalking.app */;
@@ -262,7 +247,7 @@
 			);
 			mainGroup = 310C7B7D2B96DE52002A3BB6;
 			packageReferences = (
-				31B1F2F22B99F39100B0B719 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				315A684E2B9AF71E00268DF4 /* XCRemoteSwiftPackageReference "RxSwift" */,
 			);
 			productRefGroup = 310C7B872B96DE52002A3BB6 /* Products */;
 			projectDirPath = "";
@@ -411,6 +396,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -434,6 +420,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
 		};
@@ -474,6 +461,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -591,7 +580,7 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
-		31B1F2F22B99F39100B0B719 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+		315A684E2B9AF71E00268DF4 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
 			requirement = {
@@ -602,45 +591,20 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
-		31B1F2F32B99F39100B0B719 /* RxBlocking-Dynamic */ = {
+		315A68532B9AF71E00268DF4 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 31B1F2F22B99F39100B0B719 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = "RxBlocking-Dynamic";
-		};
-		31B1F2F52B99F39100B0B719 /* RxCocoa */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 31B1F2F22B99F39100B0B719 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 315A684E2B9AF71E00268DF4 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxCocoa;
 		};
-		31B1F2F72B99F39100B0B719 /* RxCocoa-Dynamic */ = {
+		315A68572B9AF71E00268DF4 /* RxRelay */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 31B1F2F22B99F39100B0B719 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = "RxCocoa-Dynamic";
-		};
-		31B1F2F92B99F39100B0B719 /* RxRelay */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 31B1F2F22B99F39100B0B719 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 315A684E2B9AF71E00268DF4 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxRelay;
 		};
-		31B1F2FB2B99F39100B0B719 /* RxRelay-Dynamic */ = {
+		315A685B2B9AF71E00268DF4 /* RxSwift */ = {
 			isa = XCSwiftPackageProductDependency;
-			package = 31B1F2F22B99F39100B0B719 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = "RxRelay-Dynamic";
-		};
-		31B1F2FD2B99F39100B0B719 /* RxSwift */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 31B1F2F22B99F39100B0B719 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			package = 315A684E2B9AF71E00268DF4 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
-		};
-		31B1F2FF2B99F39100B0B719 /* RxSwift-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 31B1F2F22B99F39100B0B719 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = "RxSwift-Dynamic";
-		};
-		31B1F3012B99F39100B0B719 /* RxTest-Dynamic */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = 31B1F2F22B99F39100B0B719 /* XCRemoteSwiftPackageReference "RxSwift" */;
-			productName = "RxTest-Dynamic";
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
