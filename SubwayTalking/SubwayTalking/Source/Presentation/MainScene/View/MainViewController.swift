@@ -52,7 +52,9 @@ final class MainViewController: UIViewController, MainViewUpdatable {
     // MARK: MainViewUpdatable
     
     func update(with state: MainState) {
-        print(state.subwayInfos.count)
+        state.subwayInfos.forEach { info in
+            configureMarker(info.latitude, info.longitude)
+        }
     }
     
     // MARK: Bind
@@ -72,6 +74,18 @@ final class MainViewController: UIViewController, MainViewUpdatable {
                 self?.intent?.viewDidLoad()
             }
             .disposed(by: disposeBag)
+    }
+}
+
+extension MainViewController {
+    private func configureMarker(_ latitude: Double, _ longitude: Double) {
+        let marker = NMFMarker()
+        let subwayMarkerImage = UIImage(named: "SubwayMarker") ?? UIImage()
+        
+        marker.iconTintColor = UIColor.blue
+        marker.iconImage = NMFOverlayImage(image: subwayMarkerImage)
+        marker.position = NMGLatLng(lat: latitude, lng: longitude)
+        marker.mapView = naverMapView
     }
 }
 
