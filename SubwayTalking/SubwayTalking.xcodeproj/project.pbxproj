@@ -75,6 +75,8 @@
 		3108E4BA2B982818003115B0 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
+				31569A362B9B1D00000DF03B /* View.swift */,
+				3172261E2B9C116F0035704A /* State.swift */,
 				3108E4BB2B982872003115B0 /* MainScene */,
 			);
 			path = Presentation;
@@ -403,6 +405,7 @@
 				31A075A32B9B0E710060211B /* JSONDataError.swift in Sources */,
 				310C7B8E2B96DE52002A3BB6 /* MainViewController.swift in Sources */,
 				3155BC2F2B9848AB003D4140 /* SubwayInformationDTO.swift in Sources */,
+				3172261F2B9C11700035704A /* State.swift in Sources */,
 				31A075AA2B9B131A0060211B /* AddMarkerUseCase.swift in Sources */,
 				31569A302B9B1B3C000DF03B /* MarkerDataRepository.swift in Sources */,
 				310C7B8A2B96DE52002A3BB6 /* AppDelegate.swift in Sources */,
