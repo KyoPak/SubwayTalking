@@ -8,5 +8,5 @@
 import RxSwift
 
 protocol MarkerDataRepository {
-    func fetchData() -> Observable<[SubwayInformation]>
+    func fetchData() -> Single<[SubwayInformation]>
 }

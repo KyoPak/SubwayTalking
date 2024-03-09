@@ -11,14 +11,15 @@ import RxSwift
 
 final class DefaultMarkerDataRepository: MarkerDataRepository {
     
-    func fetchData() -> Observable<[SubwayInformation]> {
-        return Observable.create { observer in
-            do {
-                let subwayInformations = try self.decodeSubwayData()
-                observer.onNext(subwayInformations)
-                observer.onCompleted()
-            } catch {
-                observer.onError(JSONDataError.decodingError)
+    func fetchData() -> Single<[SubwayInformation]> {
+        return Single<[SubwayInformation]>.create { single in
+            DispatchQueue.global().async {
+                do {
+                    let subwayInformations = try self.decodeSubwayData()
+                    single(.success(subwayInformations))
+                } catch {
+                    single(.failure(error))
+                }
             }
             
             return Disposables.create()
@@ -27,8 +28,10 @@ final class DefaultMarkerDataRepository: MarkerDataRepository {
     
     private func decodeSubwayData() throws -> [SubwayInformation] {
         guard let subwayData = NSDataAsset.init(name: "SubwayInformation") else { throw JSONDataError.dataSetError }
+        guard let datas = try? JSONDecoder().decode([SubwayInformationDTO].self, from: subwayData.data) else {
+            throw JSONDataError.decodingError
+        }
         
-        let datas = try JSONDecoder().decode([SubwayInformationDTO].self, from: subwayData.data)
         let subwayInformations = datas.map { $0.toEntity() }
         
         return subwayInformations

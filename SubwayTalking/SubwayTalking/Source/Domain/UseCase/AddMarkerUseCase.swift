@@ -20,6 +20,6 @@ final class DefaultAddMarkerUseCase: AddMarkerUseCase {
     }
     
     func fetchMarkerData() -> Observable<[SubwayInformation]> {
-        return markerDataRepository.fetchData()
+        return markerDataRepository.fetchData().asObservable()
     }
 }
