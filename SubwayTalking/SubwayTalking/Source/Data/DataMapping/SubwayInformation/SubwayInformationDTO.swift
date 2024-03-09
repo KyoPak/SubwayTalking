@@ -11,7 +11,8 @@ struct SubwayInformationDTO: Decodable {
     let number: String
     let name: String
     let englishName: String?
-    let latitude, longitude: Double?
+    let latitude: Double?
+    let longitude: Double?
     
     private enum CodingKeys: String, CodingKey {
         case number, name, englishName, latitude, longitude
@@ -20,6 +21,6 @@ struct SubwayInformationDTO: Decodable {
 
 extension SubwayInformationDTO {
     func toEntity() -> SubwayInformation {
-        return .init(number: number, name: name, latitude: latitude, longitude: longitude)
+        return .init(number: number, name: name, latitude: latitude ?? .zero, longitude: longitude ?? .zero)
     }
 }
