@@ -16,9 +16,13 @@
 		313CFB3E2B9827490032ECE3 /* NaverMaps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 313CFB3D2B9827490032ECE3 /* NaverMaps.plist */; };
 		3155BC2F2B9848AB003D4140 /* SubwayInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3155BC2E2B9848AB003D4140 /* SubwayInformationDTO.swift */; };
 		31569A302B9B1B3C000DF03B /* MarkerDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31569A2F2B9B1B3C000DF03B /* MarkerDataRepository.swift */; };
+		31569A322B9B1C3D000DF03B /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31569A312B9B1C3D000DF03B /* MainState.swift */; };
+		31569A352B9B1CEF000DF03B /* MainIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31569A342B9B1CEF000DF03B /* MainIntent.swift */; };
+		31569A372B9B1D00000DF03B /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31569A362B9B1D00000DF03B /* View.swift */; };
 		315A68542B9AF71E00268DF4 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 315A68532B9AF71E00268DF4 /* RxCocoa */; };
 		315A68582B9AF71E00268DF4 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 315A68572B9AF71E00268DF4 /* RxRelay */; };
 		315A685C2B9AF71E00268DF4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 315A685B2B9AF71E00268DF4 /* RxSwift */; };
+		3172261F2B9C11700035704A /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172261E2B9C116F0035704A /* State.swift */; };
 		318C840B2B96F15100D88219 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 318C840A2B96F15100D88219 /* .swiftlint.yml */; };
 		31A075A02B9B03DF0060211B /* DefaultMarkerDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A0759F2B9B03DF0060211B /* DefaultMarkerDataRepository.swift */; };
 		31A075A32B9B0E710060211B /* JSONDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A075A22B9B0E710060211B /* JSONDataError.swift */; };
@@ -41,6 +45,10 @@
 		313CFB3D2B9827490032ECE3 /* NaverMaps.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NaverMaps.plist; sourceTree = "<group>"; };
 		3155BC2E2B9848AB003D4140 /* SubwayInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayInformationDTO.swift; sourceTree = "<group>"; };
 		31569A2F2B9B1B3C000DF03B /* MarkerDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerDataRepository.swift; sourceTree = "<group>"; };
+		31569A312B9B1C3D000DF03B /* MainState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
+		31569A342B9B1CEF000DF03B /* MainIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainIntent.swift; sourceTree = "<group>"; };
+		31569A362B9B1D00000DF03B /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		3172261E2B9C116F0035704A /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		318C840A2B96F15100D88219 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		31A0759F2B9B03DF0060211B /* DefaultMarkerDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMarkerDataRepository.swift; sourceTree = "<group>"; };
 		31A075A22B9B0E710060211B /* JSONDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataError.swift; sourceTree = "<group>"; };
@@ -86,6 +94,7 @@
 			isa = PBXGroup;
 			children = (
 				3108E4BC2B982887003115B0 /* View */,
+				31569A332B9B1CE3000DF03B /* Intent */,
 			);
 			path = MainScene;
 			sourceTree = "<group>";
@@ -206,6 +215,15 @@
 				31569A2F2B9B1B3C000DF03B /* MarkerDataRepository.swift */,
 			);
 			path = RepositoryInterface;
+			sourceTree = "<group>";
+		};
+		31569A332B9B1CE3000DF03B /* Intent */ = {
+			isa = PBXGroup;
+			children = (
+				31569A312B9B1C3D000DF03B /* MainState.swift */,
+				31569A342B9B1CEF000DF03B /* MainIntent.swift */,
+			);
+			path = Intent;
 			sourceTree = "<group>";
 		};
 		31A0759E2B9B036F0060211B /* Repository */ = {
@@ -402,6 +420,8 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				31569A372B9B1D00000DF03B /* View.swift in Sources */,
+				31569A322B9B1C3D000DF03B /* MainState.swift in Sources */,
 				31A075A32B9B0E710060211B /* JSONDataError.swift in Sources */,
 				310C7B8E2B96DE52002A3BB6 /* MainViewController.swift in Sources */,
 				3155BC2F2B9848AB003D4140 /* SubwayInformationDTO.swift in Sources */,
@@ -412,6 +432,7 @@
 				31A075A02B9B03DF0060211B /* DefaultMarkerDataRepository.swift in Sources */,
 				31A075A52B9B10CC0060211B /* SubwayInformation.swift in Sources */,
 				3108E4C02B982990003115B0 /* Bundle+APIKey.swift in Sources */,
+				31569A352B9B1CEF000DF03B /* MainIntent.swift in Sources */,
 				310C7B8C2B96DE52002A3BB6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
