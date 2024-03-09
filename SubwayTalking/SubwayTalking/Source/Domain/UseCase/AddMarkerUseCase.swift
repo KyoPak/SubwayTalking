@@ -6,6 +6,7 @@
 //
 
 import RxSwift
+import Foundation
 
 protocol AddMarkerUseCase {
     func fetchMarkerData() -> Observable<[SubwayInformation]>
@@ -20,6 +21,10 @@ final class DefaultAddMarkerUseCase: AddMarkerUseCase {
     }
     
     func fetchMarkerData() -> Observable<[SubwayInformation]> {
-        return markerDataRepository.fetchData().asObservable()
+        return markerDataRepository.fetchData()
+            .map({ infos in
+                return infos.filter { $0.latitude != .zero && $0.longitude != .zero }
+            })
+            .asObservable()
     }
 }
