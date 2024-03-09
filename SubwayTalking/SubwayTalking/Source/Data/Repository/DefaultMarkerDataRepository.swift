@@ -10,16 +10,13 @@ import UIKit
 import RxSwift
 
 final class DefaultMarkerDataRepository: MarkerDataRepository {
-    
     func fetchData() -> Single<[SubwayInformation]> {
         return Single<[SubwayInformation]>.create { single in
-            DispatchQueue.global().async {
-                do {
-                    let subwayInformations = try self.decodeSubwayData()
-                    single(.success(subwayInformations))
-                } catch {
-                    single(.failure(error))
-                }
+            do {
+                let subwayInformations = try self.decodeSubwayData()
+                single(.success(subwayInformations))
+            } catch {
+                single(.failure(error))
             }
             
             return Disposables.create()

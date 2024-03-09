@@ -40,10 +40,15 @@ final class DefaultMainIntent: MainIntent {
     // MARK: Inputs
     
     func viewDidLoad() {
+        let backGroundQueue = ConcurrentDispatchQueueScheduler(queue: .global())
+        
         addMarkerUseCase.fetchMarkerData()
-            .subscribe { [weak self] datas in
-                self?.state.accept(MainState(subwayInfos: datas))
-            }
+            .subscribe(on: backGroundQueue)
+            .observe(on: MainScheduler.instance)
+            .subscribe(with: self, onNext: { owner, datas in
+                let newState = MainState(subwayInfos: datas)
+                owner.state.accept(newState)
+            })
             .disposed(by: disposeBag)
     }
 }
