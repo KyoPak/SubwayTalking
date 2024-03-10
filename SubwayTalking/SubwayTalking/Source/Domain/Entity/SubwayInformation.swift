@@ -13,3 +13,9 @@ struct SubwayInformation {
     let latitude: Double
     let longitude: Double
 }
+
+extension SubwayInformation: Equatable {
+    static func == (lhs: Self, rhs: Self) -> Bool {
+        return lhs.number == rhs.number && lhs.name == rhs.name && lhs.latitude == rhs.latitude && lhs.longitude == rhs.longitude
+    }
+}
