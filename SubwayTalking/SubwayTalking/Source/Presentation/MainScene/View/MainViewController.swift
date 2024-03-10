@@ -110,7 +110,7 @@ final class MainViewController: UIViewController, MainViewUpdatable {
 extension MainViewController {
     private func configureMarker(_ latitude: Double, _ longitude: Double) {
         let marker = NMFMarker()
-        let subwayMarkerImage = UIImage(named: "SubwayMarker") ?? UIImage()
+        let subwayMarkerImage = Constant.Image.subwayMarker
         
         marker.iconTintColor = UIColor.blue
         marker.iconImage = NMFOverlayImage(image: subwayMarkerImage)

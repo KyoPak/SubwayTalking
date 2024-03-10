@@ -11,13 +11,11 @@ extension Bundle {
     
     var naverMapsClientID: String {
         guard let file = self.path(forResource: "NaverMaps", ofType: "plist") else {
-            fatalError("NaverMaps.plist 파일이 존재하지 않습니다.")
+            fatalError(Constant.Error.naverMapsPlistOmit)
         }
         
-        guard let resource = NSDictionary(contentsOfFile: file) else { fatalError("파일 에러가 발생하였습니다.") }
-        guard let clientID = resource["NMFClientId"] as? String else {
-            fatalError("NaverMaps에서 발급받은 NMFClientId을 설정하세요.")
-        }
+        guard let resource = NSDictionary(contentsOfFile: file) else { fatalError(Constant.Error.fileError) }
+        guard let clientID = resource["NMFClientId"] as? String else { fatalError(Constant.Error.naverMapsIdOmit) }
         
         return clientID
     }
