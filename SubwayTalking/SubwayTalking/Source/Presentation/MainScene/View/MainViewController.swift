@@ -11,6 +11,34 @@ import NMapsMap
 import RxCocoa
 import RxSwift
 
+class StartViewController: UIViewController {
+    
+    let button: UIButton = {
+       let button = UIButton()
+        button.backgroundColor = .red
+        button.translatesAutoresizingMaskIntoConstraints = false
+        button.addTarget(self, action: #selector(moveView), for: .touchUpInside)
+        return button
+    }()
+    
+    @objc func moveView() {
+        let mainIntent = DefaultMainIntent(addMarkerUseCase: DefaultAddMarkerUseCase(markerDataRepository: DefaultMarkerDataRepository()))
+        
+        let mainVC = MainViewController(intent: mainIntent)
+        present(mainVC, animated: true)
+    }
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+        view.addSubview(button)
+        NSLayoutConstraint.activate([
+            button.centerXAnchor.constraint(equalTo: view.centerXAnchor),
+            button.centerYAnchor.constraint(equalTo: view.centerYAnchor)
+        ])
+    }
+}
+
 protocol MainViewUpdatable: View where AssociatedState == MainState { }
 
 final class MainViewController: UIViewController, MainViewUpdatable {
@@ -51,9 +79,11 @@ final class MainViewController: UIViewController, MainViewUpdatable {
     
     // MARK: MainViewUpdatable
     
-    func update(with state: MainState) {
-        state.subwayInfos.forEach { info in
-            configureMarker(info.latitude, info.longitude)
+    func update(with state: MainState?, prev: MainState?) {
+        if state?.subwayInfos != prev?.subwayInfos {
+            state?.subwayInfos.forEach { info in
+                configureMarker(info.latitude, info.longitude)
+            }
         }
     }
     

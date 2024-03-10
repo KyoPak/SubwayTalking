@@ -28,6 +28,8 @@
 		31A075A32B9B0E710060211B /* JSONDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A075A22B9B0E710060211B /* JSONDataError.swift */; };
 		31A075A52B9B10CC0060211B /* SubwayInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A075A42B9B10CC0060211B /* SubwayInformation.swift */; };
 		31A075AA2B9B131A0060211B /* AddMarkerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A075A92B9B131A0060211B /* AddMarkerUseCase.swift */; };
+		31A4B0742B9D7CE900CDEA26 /* Observable+Previous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4B0732B9D7CE900CDEA26 /* Observable+Previous.swift */; };
+		31A4B0782B9D7D8200CDEA26 /* StateRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4B0772B9D7D8200CDEA26 /* StateRelay.swift */; };
 		8539C3733FD3F320422145DF /* libPods-SubwayTalking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */; };
 /* End PBXBuildFile section */
 
@@ -54,6 +56,8 @@
 		31A075A22B9B0E710060211B /* JSONDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataError.swift; sourceTree = "<group>"; };
 		31A075A42B9B10CC0060211B /* SubwayInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayInformation.swift; sourceTree = "<group>"; };
 		31A075A92B9B131A0060211B /* AddMarkerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMarkerUseCase.swift; sourceTree = "<group>"; };
+		31A4B0732B9D7CE900CDEA26 /* Observable+Previous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Previous.swift"; sourceTree = "<group>"; };
+		31A4B0772B9D7D8200CDEA26 /* StateRelay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRelay.swift; sourceTree = "<group>"; };
 		B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SubwayTalking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -83,8 +87,8 @@
 		3108E4BA2B982818003115B0 /* Presentation */ = {
 			isa = PBXGroup;
 			children = (
-				31569A362B9B1D00000DF03B /* View.swift */,
-				3172261E2B9C116F0035704A /* State.swift */,
+				31A4B0762B9D7D6A00CDEA26 /* CustomState */,
+				31A4B0752B9D7D5A00CDEA26 /* Protocol */,
 				3108E4BB2B982872003115B0 /* MainScene */,
 			);
 			path = Presentation;
@@ -119,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				3108E4BF2B982990003115B0 /* Bundle+APIKey.swift */,
+				31A4B0732B9D7CE900CDEA26 /* Observable+Previous.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -266,6 +271,23 @@
 				31A075A92B9B131A0060211B /* AddMarkerUseCase.swift */,
 			);
 			path = UseCase;
+			sourceTree = "<group>";
+		};
+		31A4B0752B9D7D5A00CDEA26 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				31569A362B9B1D00000DF03B /* View.swift */,
+				3172261E2B9C116F0035704A /* State.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		31A4B0762B9D7D6A00CDEA26 /* CustomState */ = {
+			isa = PBXGroup;
+			children = (
+				31A4B0772B9D7D8200CDEA26 /* StateRelay.swift */,
+			);
+			path = CustomState;
 			sourceTree = "<group>";
 		};
 		FD29053EA72FC72E53DBAD4F /* Pods */ = {
@@ -422,12 +444,14 @@
 			files = (
 				31569A372B9B1D00000DF03B /* View.swift in Sources */,
 				31569A322B9B1C3D000DF03B /* MainState.swift in Sources */,
+				31A4B0742B9D7CE900CDEA26 /* Observable+Previous.swift in Sources */,
 				31A075A32B9B0E710060211B /* JSONDataError.swift in Sources */,
 				310C7B8E2B96DE52002A3BB6 /* MainViewController.swift in Sources */,
 				3155BC2F2B9848AB003D4140 /* SubwayInformationDTO.swift in Sources */,
 				3172261F2B9C11700035704A /* State.swift in Sources */,
 				31A075AA2B9B131A0060211B /* AddMarkerUseCase.swift in Sources */,
 				31569A302B9B1B3C000DF03B /* MarkerDataRepository.swift in Sources */,
+				31A4B0782B9D7D8200CDEA26 /* StateRelay.swift in Sources */,
 				310C7B8A2B96DE52002A3BB6 /* AppDelegate.swift in Sources */,
 				31A075A02B9B03DF0060211B /* DefaultMarkerDataRepository.swift in Sources */,
 				31A075A52B9B10CC0060211B /* SubwayInformation.swift in Sources */,

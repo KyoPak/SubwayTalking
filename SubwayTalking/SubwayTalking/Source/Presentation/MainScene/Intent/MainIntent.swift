@@ -17,24 +17,21 @@ final class DefaultMainIntent: MainIntent {
     
     // MARK: Property
     
-    private let state: BehaviorRelay<MainState>
+    private let state: StateRelay<MainState>
     private let addMarkerUseCase: AddMarkerUseCase
     private let disposeBag = DisposeBag()
     
     init(addMarkerUseCase: AddMarkerUseCase) {
         self.addMarkerUseCase = addMarkerUseCase
         
-        state = BehaviorRelay(value: MainState.initialState)
+        state = StateRelay<MainState>()
     }
     
     // MARK: MainIntent
-
+    
     func bind<V: MainViewUpdatable>(to view: V) {
-        state.subscribe { [weak view] event in
-            guard let state = event.element else { return }
-            view?.update(with: state)
-        }
-        .disposed(by: disposeBag)
+        state.bind(to: view)
+            .disposed(by: disposeBag)
     }
     
     // MARK: Inputs
