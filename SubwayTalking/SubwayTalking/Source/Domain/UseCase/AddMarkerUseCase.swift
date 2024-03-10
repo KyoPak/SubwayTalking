@@ -13,7 +13,6 @@ protocol AddMarkerUseCase {
 }
 
 final class DefaultAddMarkerUseCase: AddMarkerUseCase {
-    
     private let markerDataRepository: MarkerDataRepository
     
     init(markerDataRepository: MarkerDataRepository) {

@@ -20,6 +20,7 @@ struct SubwayInformationDTO: Decodable {
 }
 
 extension SubwayInformationDTO {
+    
     func toEntity() -> SubwayInformation {
         return .init(number: number, name: name, latitude: latitude ?? .zero, longitude: longitude ?? .zero)
     }

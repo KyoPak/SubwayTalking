@@ -5,7 +5,7 @@
 //  Created by 박효성 on 3/10/24.
 //
 
-import RxCocoa
+import RxRelay
 import RxSwift
 
 final class StateRelay<S: State> {
