@@ -19,7 +19,12 @@ final class SceneDelegate: UIResponder, UIWindowSceneDelegate {
         
         guard let windowScene = (scene as? UIWindowScene) else { return }
         window = UIWindow(windowScene: windowScene)
-        window?.rootViewController = ViewController()
+        
+        // MARK: Fix
+//        let mainIntent = DefaultMainIntent(addMarkerUseCase: DefaultAddMarkerUseCase(markerDataRepository: DefaultMarkerDataRepository()))
+//        window?.rootViewController = MainViewController(intent: mainIntent)
+        let startTempViewController = StartViewController()
+        window?.rootViewController = startTempViewController
         
         window?.makeKeyAndVisible()
     }

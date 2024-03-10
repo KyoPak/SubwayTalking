@@ -7,6 +7,8 @@
 
 import UIKit
 
+import NMapsMap
+
 @main
 final class AppDelegate: UIResponder, UIApplicationDelegate {
 
@@ -14,6 +16,8 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         _ application: UIApplication,
         didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?
     ) -> Bool {
+        
+        NMFAuthManager.shared().clientId = Bundle.main.naverMapsClientID
         
         return true
     }

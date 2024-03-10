@@ -7,23 +7,58 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		3108E4C02B982990003115B0 /* Bundle+APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3108E4BF2B982990003115B0 /* Bundle+APIKey.swift */; };
 		310C7B8A2B96DE52002A3BB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C7B892B96DE52002A3BB6 /* AppDelegate.swift */; };
 		310C7B8C2B96DE52002A3BB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C7B8B2B96DE52002A3BB6 /* SceneDelegate.swift */; };
-		310C7B8E2B96DE52002A3BB6 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C7B8D2B96DE52002A3BB6 /* ViewController.swift */; };
+		310C7B8E2B96DE52002A3BB6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C7B8D2B96DE52002A3BB6 /* MainViewController.swift */; };
 		310C7B932B96DE53002A3BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 310C7B922B96DE53002A3BB6 /* Assets.xcassets */; };
 		310C7B962B96DE53002A3BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310C7B942B96DE53002A3BB6 /* LaunchScreen.storyboard */; };
+		313CFB3E2B9827490032ECE3 /* NaverMaps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 313CFB3D2B9827490032ECE3 /* NaverMaps.plist */; };
+		3155BC2F2B9848AB003D4140 /* SubwayInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3155BC2E2B9848AB003D4140 /* SubwayInformationDTO.swift */; };
+		31569A302B9B1B3C000DF03B /* MarkerDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31569A2F2B9B1B3C000DF03B /* MarkerDataRepository.swift */; };
+		31569A322B9B1C3D000DF03B /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31569A312B9B1C3D000DF03B /* MainState.swift */; };
+		31569A352B9B1CEF000DF03B /* MainIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31569A342B9B1CEF000DF03B /* MainIntent.swift */; };
+		31569A372B9B1D00000DF03B /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31569A362B9B1D00000DF03B /* View.swift */; };
+		315A68542B9AF71E00268DF4 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 315A68532B9AF71E00268DF4 /* RxCocoa */; };
+		315A68582B9AF71E00268DF4 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 315A68572B9AF71E00268DF4 /* RxRelay */; };
+		315A685C2B9AF71E00268DF4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 315A685B2B9AF71E00268DF4 /* RxSwift */; };
+		3172261F2B9C11700035704A /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172261E2B9C116F0035704A /* State.swift */; };
 		318C840B2B96F15100D88219 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 318C840A2B96F15100D88219 /* .swiftlint.yml */; };
+		31A075A02B9B03DF0060211B /* DefaultMarkerDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A0759F2B9B03DF0060211B /* DefaultMarkerDataRepository.swift */; };
+		31A075A32B9B0E710060211B /* JSONDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A075A22B9B0E710060211B /* JSONDataError.swift */; };
+		31A075A52B9B10CC0060211B /* SubwayInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A075A42B9B10CC0060211B /* SubwayInformation.swift */; };
+		31A075AA2B9B131A0060211B /* AddMarkerUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A075A92B9B131A0060211B /* AddMarkerUseCase.swift */; };
+		31A4B0742B9D7CE900CDEA26 /* Observable+Previous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4B0732B9D7CE900CDEA26 /* Observable+Previous.swift */; };
+		31A4B0782B9D7D8200CDEA26 /* StateRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4B0772B9D7D8200CDEA26 /* StateRelay.swift */; };
+		8539C3733FD3F320422145DF /* libPods-SubwayTalking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		12A2041202D54450D6AA1C53 /* Pods-SubwayTalking.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubwayTalking.debug.xcconfig"; path = "Target Support Files/Pods-SubwayTalking/Pods-SubwayTalking.debug.xcconfig"; sourceTree = "<group>"; };
+		1BE4C4BEC3BEC81A254214ED /* Pods-SubwayTalking.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SubwayTalking.release.xcconfig"; path = "Target Support Files/Pods-SubwayTalking/Pods-SubwayTalking.release.xcconfig"; sourceTree = "<group>"; };
+		3108E4BF2B982990003115B0 /* Bundle+APIKey.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Bundle+APIKey.swift"; sourceTree = "<group>"; };
 		310C7B862B96DE52002A3BB6 /* SubwayTalking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubwayTalking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		310C7B892B96DE52002A3BB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		310C7B8B2B96DE52002A3BB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		310C7B8D2B96DE52002A3BB6 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		310C7B8D2B96DE52002A3BB6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		310C7B922B96DE53002A3BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		310C7B952B96DE53002A3BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		310C7B972B96DE53002A3BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		313CFB3D2B9827490032ECE3 /* NaverMaps.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NaverMaps.plist; sourceTree = "<group>"; };
+		3155BC2E2B9848AB003D4140 /* SubwayInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayInformationDTO.swift; sourceTree = "<group>"; };
+		31569A2F2B9B1B3C000DF03B /* MarkerDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerDataRepository.swift; sourceTree = "<group>"; };
+		31569A312B9B1C3D000DF03B /* MainState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
+		31569A342B9B1CEF000DF03B /* MainIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainIntent.swift; sourceTree = "<group>"; };
+		31569A362B9B1D00000DF03B /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		3172261E2B9C116F0035704A /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		318C840A2B96F15100D88219 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		31A0759F2B9B03DF0060211B /* DefaultMarkerDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMarkerDataRepository.swift; sourceTree = "<group>"; };
+		31A075A22B9B0E710060211B /* JSONDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataError.swift; sourceTree = "<group>"; };
+		31A075A42B9B10CC0060211B /* SubwayInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayInformation.swift; sourceTree = "<group>"; };
+		31A075A92B9B131A0060211B /* AddMarkerUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMarkerUseCase.swift; sourceTree = "<group>"; };
+		31A4B0732B9D7CE900CDEA26 /* Observable+Previous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Previous.swift"; sourceTree = "<group>"; };
+		31A4B0772B9D7D8200CDEA26 /* StateRelay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRelay.swift; sourceTree = "<group>"; };
+		B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SubwayTalking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -31,18 +66,76 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				315A68582B9AF71E00268DF4 /* RxRelay in Frameworks */,
+				315A68542B9AF71E00268DF4 /* RxCocoa in Frameworks */,
+				315A685C2B9AF71E00268DF4 /* RxSwift in Frameworks */,
+				8539C3733FD3F320422145DF /* libPods-SubwayTalking.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		19CE3747B88BC5EB4AE03F83 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		3108E4BA2B982818003115B0 /* Presentation */ = {
+			isa = PBXGroup;
+			children = (
+				31A4B0762B9D7D6A00CDEA26 /* CustomState */,
+				31A4B0752B9D7D5A00CDEA26 /* Protocol */,
+				3108E4BB2B982872003115B0 /* MainScene */,
+			);
+			path = Presentation;
+			sourceTree = "<group>";
+		};
+		3108E4BB2B982872003115B0 /* MainScene */ = {
+			isa = PBXGroup;
+			children = (
+				3108E4BC2B982887003115B0 /* View */,
+				31569A332B9B1CE3000DF03B /* Intent */,
+			);
+			path = MainScene;
+			sourceTree = "<group>";
+		};
+		3108E4BC2B982887003115B0 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				310C7B8D2B96DE52002A3BB6 /* MainViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		3108E4BD2B98291E003115B0 /* Util */ = {
+			isa = PBXGroup;
+			children = (
+				3108E4BE2B982938003115B0 /* Extensions */,
+			);
+			path = Util;
+			sourceTree = "<group>";
+		};
+		3108E4BE2B982938003115B0 /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				3108E4BF2B982990003115B0 /* Bundle+APIKey.swift */,
+				31A4B0732B9D7CE900CDEA26 /* Observable+Previous.swift */,
+			);
+			path = Extensions;
+			sourceTree = "<group>";
+		};
 		310C7B7D2B96DE52002A3BB6 = {
 			isa = PBXGroup;
 			children = (
 				318C840A2B96F15100D88219 /* .swiftlint.yml */,
 				310C7B882B96DE52002A3BB6 /* SubwayTalking */,
 				310C7B872B96DE52002A3BB6 /* Products */,
+				FD29053EA72FC72E53DBAD4F /* Pods */,
+				19CE3747B88BC5EB4AE03F83 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -67,7 +160,10 @@
 			isa = PBXGroup;
 			children = (
 				310C7B9E2B96E3CA002A3BB6 /* Application */,
-				310C7B8D2B96DE52002A3BB6 /* ViewController.swift */,
+				3108E4BD2B98291E003115B0 /* Util */,
+				3108E4BA2B982818003115B0 /* Presentation */,
+				31A075A62B9B11C90060211B /* Domain */,
+				3155BC2C2B98480E003D4140 /* Data */,
 			);
 			path = Source;
 			sourceTree = "<group>";
@@ -87,8 +183,120 @@
 				310C7B922B96DE53002A3BB6 /* Assets.xcassets */,
 				310C7B942B96DE53002A3BB6 /* LaunchScreen.storyboard */,
 				310C7B972B96DE53002A3BB6 /* Info.plist */,
+				313CFB3D2B9827490032ECE3 /* NaverMaps.plist */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		3155BC2C2B98480E003D4140 /* Data */ = {
+			isa = PBXGroup;
+			children = (
+				31A075A12B9B0E630060211B /* Error */,
+				31A0759E2B9B036F0060211B /* Repository */,
+				3155BC2D2B984892003D4140 /* DataMapping */,
+			);
+			path = Data;
+			sourceTree = "<group>";
+		};
+		3155BC2D2B984892003D4140 /* DataMapping */ = {
+			isa = PBXGroup;
+			children = (
+				3155BC302B9848D0003D4140 /* SubwayInformation */,
+			);
+			path = DataMapping;
+			sourceTree = "<group>";
+		};
+		3155BC302B9848D0003D4140 /* SubwayInformation */ = {
+			isa = PBXGroup;
+			children = (
+				3155BC2E2B9848AB003D4140 /* SubwayInformationDTO.swift */,
+			);
+			path = SubwayInformation;
+			sourceTree = "<group>";
+		};
+		31569A2E2B9B1B15000DF03B /* RepositoryInterface */ = {
+			isa = PBXGroup;
+			children = (
+				31569A2F2B9B1B3C000DF03B /* MarkerDataRepository.swift */,
+			);
+			path = RepositoryInterface;
+			sourceTree = "<group>";
+		};
+		31569A332B9B1CE3000DF03B /* Intent */ = {
+			isa = PBXGroup;
+			children = (
+				31569A312B9B1C3D000DF03B /* MainState.swift */,
+				31569A342B9B1CEF000DF03B /* MainIntent.swift */,
+			);
+			path = Intent;
+			sourceTree = "<group>";
+		};
+		31A0759E2B9B036F0060211B /* Repository */ = {
+			isa = PBXGroup;
+			children = (
+				31A0759F2B9B03DF0060211B /* DefaultMarkerDataRepository.swift */,
+			);
+			path = Repository;
+			sourceTree = "<group>";
+		};
+		31A075A12B9B0E630060211B /* Error */ = {
+			isa = PBXGroup;
+			children = (
+				31A075A22B9B0E710060211B /* JSONDataError.swift */,
+			);
+			path = Error;
+			sourceTree = "<group>";
+		};
+		31A075A62B9B11C90060211B /* Domain */ = {
+			isa = PBXGroup;
+			children = (
+				31A075A72B9B12010060211B /* Entity */,
+				31A075A82B9B124D0060211B /* UseCase */,
+				31569A2E2B9B1B15000DF03B /* RepositoryInterface */,
+			);
+			path = Domain;
+			sourceTree = "<group>";
+		};
+		31A075A72B9B12010060211B /* Entity */ = {
+			isa = PBXGroup;
+			children = (
+				31A075A42B9B10CC0060211B /* SubwayInformation.swift */,
+			);
+			path = Entity;
+			sourceTree = "<group>";
+		};
+		31A075A82B9B124D0060211B /* UseCase */ = {
+			isa = PBXGroup;
+			children = (
+				31A075A92B9B131A0060211B /* AddMarkerUseCase.swift */,
+			);
+			path = UseCase;
+			sourceTree = "<group>";
+		};
+		31A4B0752B9D7D5A00CDEA26 /* Protocol */ = {
+			isa = PBXGroup;
+			children = (
+				31569A362B9B1D00000DF03B /* View.swift */,
+				3172261E2B9C116F0035704A /* State.swift */,
+			);
+			path = Protocol;
+			sourceTree = "<group>";
+		};
+		31A4B0762B9D7D6A00CDEA26 /* CustomState */ = {
+			isa = PBXGroup;
+			children = (
+				31A4B0772B9D7D8200CDEA26 /* StateRelay.swift */,
+			);
+			path = CustomState;
+			sourceTree = "<group>";
+		};
+		FD29053EA72FC72E53DBAD4F /* Pods */ = {
+			isa = PBXGroup;
+			children = (
+				12A2041202D54450D6AA1C53 /* Pods-SubwayTalking.debug.xcconfig */,
+				1BE4C4BEC3BEC81A254214ED /* Pods-SubwayTalking.release.xcconfig */,
+			);
+			path = Pods;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -98,16 +306,23 @@
 			isa = PBXNativeTarget;
 			buildConfigurationList = 310C7B9A2B96DE53002A3BB6 /* Build configuration list for PBXNativeTarget "SubwayTalking" */;
 			buildPhases = (
+				BA05F096AD49B920BFC75C13 /* [CP] Check Pods Manifest.lock */,
 				310C7B822B96DE52002A3BB6 /* Sources */,
 				310C7B832B96DE52002A3BB6 /* Frameworks */,
 				310C7B842B96DE52002A3BB6 /* Resources */,
 				310C7BA02B96EC4B002A3BB6 /* SwiftLint RunScript */,
+				52DCEA523B5B8722D68235EC /* [CP] Embed Pods Frameworks */,
 			);
 			buildRules = (
 			);
 			dependencies = (
 			);
 			name = SubwayTalking;
+			packageProductDependencies = (
+				315A68532B9AF71E00268DF4 /* RxCocoa */,
+				315A68572B9AF71E00268DF4 /* RxRelay */,
+				315A685B2B9AF71E00268DF4 /* RxSwift */,
+			);
 			productName = SubwayTalking;
 			productReference = 310C7B862B96DE52002A3BB6 /* SubwayTalking.app */;
 			productType = "com.apple.product-type.application";
@@ -136,6 +351,9 @@
 				Base,
 			);
 			mainGroup = 310C7B7D2B96DE52002A3BB6;
+			packageReferences = (
+				315A684E2B9AF71E00268DF4 /* XCRemoteSwiftPackageReference "RxSwift" */,
+			);
 			productRefGroup = 310C7B872B96DE52002A3BB6 /* Products */;
 			projectDirPath = "";
 			projectRoot = "";
@@ -152,6 +370,7 @@
 			files = (
 				318C840B2B96F15100D88219 /* .swiftlint.yml in Resources */,
 				310C7B962B96DE53002A3BB6 /* LaunchScreen.storyboard in Resources */,
+				313CFB3E2B9827490032ECE3 /* NaverMaps.plist in Resources */,
 				310C7B932B96DE53002A3BB6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -177,6 +396,45 @@
 			shellPath = /bin/sh;
 			shellScript = "if [[ \"$(uname -m)\" == arm64 ]]; then\n    export PATH=\"/opt/homebrew/bin:$PATH\"\nfi\n\nif which swiftlint > /dev/null; then\n  swiftlint .\nelse\n  echo \"warning: SwiftFormat not installed, download from https://github.com/nicklockwood/SwiftFormat\"\nfi\n";
 		};
+		52DCEA523B5B8722D68235EC /* [CP] Embed Pods Frameworks */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SubwayTalking/Pods-SubwayTalking-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+			);
+			name = "[CP] Embed Pods Frameworks";
+			outputFileListPaths = (
+				"${PODS_ROOT}/Target Support Files/Pods-SubwayTalking/Pods-SubwayTalking-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-SubwayTalking/Pods-SubwayTalking-frameworks.sh\"\n";
+			showEnvVarsInLog = 0;
+		};
+		BA05F096AD49B920BFC75C13 /* [CP] Check Pods Manifest.lock */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputFileListPaths = (
+			);
+			inputPaths = (
+				"${PODS_PODFILE_DIR_PATH}/Podfile.lock",
+				"${PODS_ROOT}/Manifest.lock",
+			);
+			name = "[CP] Check Pods Manifest.lock";
+			outputFileListPaths = (
+			);
+			outputPaths = (
+				"$(DERIVED_FILE_DIR)/Pods-SubwayTalking-checkManifestLockResult.txt",
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "diff \"${PODS_PODFILE_DIR_PATH}/Podfile.lock\" \"${PODS_ROOT}/Manifest.lock\" > /dev/null\nif [ $? != 0 ] ; then\n    # print error to STDERR\n    echo \"error: The sandbox is not in sync with the Podfile.lock. Run 'pod install' or update your CocoaPods installation.\" >&2\n    exit 1\nfi\n# This output is used by Xcode 'outputs' to avoid re-running this script phase.\necho \"SUCCESS\" > \"${SCRIPT_OUTPUT_FILE_0}\"\n";
+			showEnvVarsInLog = 0;
+		};
 /* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
@@ -184,8 +442,21 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				310C7B8E2B96DE52002A3BB6 /* ViewController.swift in Sources */,
+				31569A372B9B1D00000DF03B /* View.swift in Sources */,
+				31569A322B9B1C3D000DF03B /* MainState.swift in Sources */,
+				31A4B0742B9D7CE900CDEA26 /* Observable+Previous.swift in Sources */,
+				31A075A32B9B0E710060211B /* JSONDataError.swift in Sources */,
+				310C7B8E2B96DE52002A3BB6 /* MainViewController.swift in Sources */,
+				3155BC2F2B9848AB003D4140 /* SubwayInformationDTO.swift in Sources */,
+				3172261F2B9C11700035704A /* State.swift in Sources */,
+				31A075AA2B9B131A0060211B /* AddMarkerUseCase.swift in Sources */,
+				31569A302B9B1B3C000DF03B /* MarkerDataRepository.swift in Sources */,
+				31A4B0782B9D7D8200CDEA26 /* StateRelay.swift in Sources */,
 				310C7B8A2B96DE52002A3BB6 /* AppDelegate.swift in Sources */,
+				31A075A02B9B03DF0060211B /* DefaultMarkerDataRepository.swift in Sources */,
+				31A075A52B9B10CC0060211B /* SubwayInformation.swift in Sources */,
+				3108E4C02B982990003115B0 /* Bundle+APIKey.swift in Sources */,
+				31569A352B9B1CEF000DF03B /* MainIntent.swift in Sources */,
 				310C7B8C2B96DE52002A3BB6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -241,6 +512,7 @@
 				DEBUG_INFORMATION_FORMAT = dwarf;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
 				ENABLE_TESTABILITY = YES;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_DYNAMIC_NO_PIC = NO;
@@ -264,6 +536,7 @@
 				SDKROOT = iphoneos;
 				SWIFT_ACTIVE_COMPILATION_CONDITIONS = "DEBUG $(inherited)";
 				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+				VALIDATE_PRODUCT = YES;
 			};
 			name = Debug;
 		};
@@ -304,6 +577,8 @@
 				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
 				ENABLE_NS_ASSERTIONS = NO;
 				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = NO;
+				ENABLE_TESTING_SEARCH_PATHS = YES;
 				ENABLE_USER_SCRIPT_SANDBOXING = YES;
 				GCC_C_LANGUAGE_STANDARD = gnu17;
 				GCC_NO_COMMON_BLOCKS = YES;
@@ -325,6 +600,7 @@
 		};
 		310C7B9B2B96DE53002A3BB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 12A2041202D54450D6AA1C53 /* Pods-SubwayTalking.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -361,6 +637,7 @@
 		};
 		310C7B9C2B96DE53002A3BB6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 1BE4C4BEC3BEC81A254214ED /* Pods-SubwayTalking.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
@@ -417,6 +694,35 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCRemoteSwiftPackageReference section */
+		315A684E2B9AF71E00268DF4 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/ReactiveX/RxSwift";
+			requirement = {
+				kind = exactVersion;
+				version = 6.5.0;
+			};
+		};
+/* End XCRemoteSwiftPackageReference section */
+
+/* Begin XCSwiftPackageProductDependency section */
+		315A68532B9AF71E00268DF4 /* RxCocoa */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 315A684E2B9AF71E00268DF4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxCocoa;
+		};
+		315A68572B9AF71E00268DF4 /* RxRelay */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 315A684E2B9AF71E00268DF4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxRelay;
+		};
+		315A685B2B9AF71E00268DF4 /* RxSwift */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 315A684E2B9AF71E00268DF4 /* XCRemoteSwiftPackageReference "RxSwift" */;
+			productName = RxSwift;
+		};
+/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = 310C7B7E2B96DE52002A3BB6 /* Project object */;
 }
