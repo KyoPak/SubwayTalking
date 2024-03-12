@@ -13,6 +13,7 @@
 		310C7B8E2B96DE52002A3BB6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C7B8D2B96DE52002A3BB6 /* MainViewController.swift */; };
 		310C7B932B96DE53002A3BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 310C7B922B96DE53002A3BB6 /* Assets.xcassets */; };
 		310C7B962B96DE53002A3BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310C7B942B96DE53002A3BB6 /* LaunchScreen.storyboard */; };
+		3125B39E2BA03C410064E8DD /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3125B39D2BA03C410064E8DD /* Alertable.swift */; };
 		313CFB3E2B9827490032ECE3 /* NaverMaps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 313CFB3D2B9827490032ECE3 /* NaverMaps.plist */; };
 		3155BC2F2B9848AB003D4140 /* SubwayInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3155BC2E2B9848AB003D4140 /* SubwayInformationDTO.swift */; };
 		31569A302B9B1B3C000DF03B /* MarkerDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31569A2F2B9B1B3C000DF03B /* MarkerDataRepository.swift */; };
@@ -46,6 +47,7 @@
 		310C7B922B96DE53002A3BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		310C7B952B96DE53002A3BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		310C7B972B96DE53002A3BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		3125B39D2BA03C410064E8DD /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		313CFB3D2B9827490032ECE3 /* NaverMaps.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NaverMaps.plist; sourceTree = "<group>"; };
 		3155BC2E2B9848AB003D4140 /* SubwayInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayInformationDTO.swift; sourceTree = "<group>"; };
 		31569A2F2B9B1B3C000DF03B /* MarkerDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerDataRepository.swift; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 			children = (
 				31569A362B9B1D00000DF03B /* View.swift */,
 				3172261E2B9C116F0035704A /* State.swift */,
+				3125B39D2BA03C410064E8DD /* Alertable.swift */,
 			);
 			path = Protocol;
 			sourceTree = "<group>";
@@ -467,6 +470,7 @@
 				3173BFE52B9E048A005CFC5F /* LocationManager.swift in Sources */,
 				31569A302B9B1B3C000DF03B /* MarkerDataRepository.swift in Sources */,
 				31A4B0782B9D7D8200CDEA26 /* StateRelay.swift in Sources */,
+				3125B39E2BA03C410064E8DD /* Alertable.swift in Sources */,
 				310C7B8A2B96DE52002A3BB6 /* AppDelegate.swift in Sources */,
 				31A102562B9DDF580051121A /* Constant.swift in Sources */,
 				31A075A02B9B03DF0060211B /* DefaultMarkerDataRepository.swift in Sources */,

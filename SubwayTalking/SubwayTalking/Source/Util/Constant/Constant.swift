@@ -10,6 +10,12 @@ import UIKit
 enum Constant { 
     enum Text {
         
+        // MARK: Alert
+        
+        static let locationAlertTitle = "현재 위치를 불러올 수 없습니다."
+        static let locationAlertMessage = "위치 서비스를 사용하실 수 없습니다.\n디바이스의 '설정 > 개인정보 보호'에서 위치 서비스를 켜주세요."
+        static let locationAlertConfirmActionTitle = "설정으로 이동"
+        static let alertCancelActionTitle = "취소"
     }
     
     enum Image {
