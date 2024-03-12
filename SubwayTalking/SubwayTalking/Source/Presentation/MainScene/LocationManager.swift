@@ -45,7 +45,6 @@ extension LocationManager: CLLocationManagerDelegate {
         switch manager.authorizationStatus {
         case .denied, .restricted, .notDetermined: 
             delegate?.requestLocationAuthorization()
-            
         case .authorizedAlways, .authorizedWhenInUse:
             locationManager?.startUpdatingLocation()
         default: break
@@ -56,5 +55,9 @@ extension LocationManager: CLLocationManagerDelegate {
         guard let currentLocation = locations.last?.coordinate else { return }
         
         delegate?.updateLocation(latitude: currentLocation.latitude, longitude: currentLocation.longitude)
+    }
+    
+    func locationManager(_ manager: CLLocationManager, didFailWithError error: Error) {
+        delegate?.updateLocation(latitude: .zero, longitude: .zero)
     }
 }
