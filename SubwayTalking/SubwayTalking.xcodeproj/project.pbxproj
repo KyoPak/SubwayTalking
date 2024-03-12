@@ -23,6 +23,7 @@
 		315A68582B9AF71E00268DF4 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 315A68572B9AF71E00268DF4 /* RxRelay */; };
 		315A685C2B9AF71E00268DF4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 315A685B2B9AF71E00268DF4 /* RxSwift */; };
 		3172261F2B9C11700035704A /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172261E2B9C116F0035704A /* State.swift */; };
+		3173BFE52B9E048A005CFC5F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3173BFE42B9E048A005CFC5F /* LocationManager.swift */; };
 		318C840B2B96F15100D88219 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 318C840A2B96F15100D88219 /* .swiftlint.yml */; };
 		31A075A02B9B03DF0060211B /* DefaultMarkerDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A0759F2B9B03DF0060211B /* DefaultMarkerDataRepository.swift */; };
 		31A075A32B9B0E710060211B /* JSONDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A075A22B9B0E710060211B /* JSONDataError.swift */; };
@@ -52,6 +53,7 @@
 		31569A342B9B1CEF000DF03B /* MainIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainIntent.swift; sourceTree = "<group>"; };
 		31569A362B9B1D00000DF03B /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		3172261E2B9C116F0035704A /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
+		3173BFE42B9E048A005CFC5F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		318C840A2B96F15100D88219 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		31A0759F2B9B03DF0060211B /* DefaultMarkerDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMarkerDataRepository.swift; sourceTree = "<group>"; };
 		31A075A22B9B0E710060211B /* JSONDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataError.swift; sourceTree = "<group>"; };
@@ -99,6 +101,7 @@
 		3108E4BB2B982872003115B0 /* MainScene */ = {
 			isa = PBXGroup;
 			children = (
+				3173BFE42B9E048A005CFC5F /* LocationManager.swift */,
 				3108E4BC2B982887003115B0 /* View */,
 				31569A332B9B1CE3000DF03B /* Intent */,
 			);
@@ -461,6 +464,7 @@
 				3155BC2F2B9848AB003D4140 /* SubwayInformationDTO.swift in Sources */,
 				3172261F2B9C11700035704A /* State.swift in Sources */,
 				31A075AA2B9B131A0060211B /* AddMarkerUseCase.swift in Sources */,
+				3173BFE52B9E048A005CFC5F /* LocationManager.swift in Sources */,
 				31569A302B9B1B3C000DF03B /* MarkerDataRepository.swift in Sources */,
 				31A4B0782B9D7D8200CDEA26 /* StateRelay.swift in Sources */,
 				310C7B8A2B96DE52002A3BB6 /* AppDelegate.swift in Sources */,
@@ -624,6 +628,8 @@
 				INFOPLIST_FILE = SubwayTalking/Resource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "써브웨이톡";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "현재 위치를 기반으로 가까운 Subway 채팅방에 입장하실 수 있습니다.1";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 기반으로 가까운 Subway 채팅방에 입장하실 수 있습니다.2";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
@@ -661,6 +667,8 @@
 				INFOPLIST_FILE = SubwayTalking/Resource/Info.plist;
 				INFOPLIST_KEY_CFBundleDisplayName = "써브웨이톡";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.social-networking";
+				INFOPLIST_KEY_NSLocationAlwaysAndWhenInUseUsageDescription = "현재 위치를 기반으로 가까운 Subway 채팅방에 입장하실 수 있습니다.1";
+				INFOPLIST_KEY_NSLocationWhenInUseUsageDescription = "현재 위치를 기반으로 가까운 Subway 채팅방에 입장하실 수 있습니다.2";
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
 				INFOPLIST_KEY_UIMainStoryboardFile = "";
