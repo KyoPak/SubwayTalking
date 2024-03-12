@@ -22,7 +22,10 @@ class StartViewController: UIViewController {
     }()
     
     @objc func moveView() {
-        let mainIntent = DefaultMainIntent(addMarkerUseCase: DefaultAddMarkerUseCase(markerDataRepository: DefaultMarkerDataRepository()))
+        let mainIntent = DefaultMainIntent(
+            addMarkerUseCase: DefaultAddMarkerUseCase(markerDataRepository: DefaultMarkerDataRepository()),
+            locationManager: LocationManager()
+        )
         
         let mainVC = MainViewController(intent: mainIntent)
         present(mainVC, animated: true)
@@ -57,6 +60,13 @@ final class MainViewController: UIViewController, MainViewUpdatable {
         return mapView
     }()
     
+    private lazy var locationOverlay: NMFLocationOverlay = {
+        let locationOverlay = self.naverMapView.locationOverlay
+        locationOverlay.hidden = false
+
+        return locationOverlay
+    }()
+    
     // MARK: Initialize & LifeCycle
     
     init(intent: MainIntent) {
@@ -80,15 +90,22 @@ final class MainViewController: UIViewController, MainViewUpdatable {
     // MARK: MainViewUpdatable
     
     func update(with state: MainState?, prev: MainState?) {
-        if state?.subwayInfos != prev?.subwayInfos {
-            state?.subwayInfos.forEach { info in
+        guard let state = state, let prev = prev else { return }
+        
+        if state.subwayInfos != prev.subwayInfos {
+            state.subwayInfos.forEach { info in
                 configureMarker(info.latitude, info.longitude)
             }
         }
+        
+        if state.location != prev.location {
+            configureUserOverlay(location: state.location)
+        }
     }
-    
-    // MARK: Bind
-    
+}
+
+// MARK: Bind Intent
+extension MainViewController {
     private func bind() {
         bindView()
         bindIntent()
@@ -107,6 +124,7 @@ final class MainViewController: UIViewController, MainViewUpdatable {
     }
 }
 
+// MARK: Configure Map Components
 extension MainViewController {
     private func configureMarker(_ latitude: Double, _ longitude: Double) {
         let marker = NMFMarker()
@@ -116,6 +134,11 @@ extension MainViewController {
         marker.iconImage = NMFOverlayImage(image: subwayMarkerImage)
         marker.position = NMGLatLng(lat: latitude, lng: longitude)
         marker.mapView = naverMapView
+    }
+    
+    private func configureUserOverlay(location: CLLocation) {
+        locationOverlay.location = NMGLatLng(lat: location.coordinate.latitude, lng: location.coordinate.longitude)
+        locationOverlay.circleRadius = 50
     }
 }
 

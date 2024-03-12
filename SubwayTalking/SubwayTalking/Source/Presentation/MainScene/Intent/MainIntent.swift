@@ -5,6 +5,8 @@
 //  Created by 박효성 on 3/8/24.
 //
 
+import CoreLocation
+
 import RxSwift
 import RxRelay
 
@@ -18,13 +20,16 @@ final class DefaultMainIntent: MainIntent {
     // MARK: Property
     
     private let state: StateRelay<MainState>
-    private let addMarkerUseCase: AddMarkerUseCase
     private let disposeBag = DisposeBag()
+    private let addMarkerUseCase: AddMarkerUseCase
+    private let locationManager: LocationManager
     
-    init(addMarkerUseCase: AddMarkerUseCase) {
+    init(addMarkerUseCase: AddMarkerUseCase, locationManager: LocationManager) {
         self.addMarkerUseCase = addMarkerUseCase
+        self.locationManager = locationManager
         
         state = StateRelay<MainState>()
+        locationManager.delegate = self
     }
     
     // MARK: MainIntent
@@ -37,15 +42,28 @@ final class DefaultMainIntent: MainIntent {
     // MARK: Inputs
     
     func viewDidLoad() {
+        locationManager.startUpdatingLocation()
+        
         let backGroundQueue = ConcurrentDispatchQueueScheduler(queue: .global())
         
         addMarkerUseCase.fetchMarkerData()
             .subscribe(on: backGroundQueue)
             .observe(on: MainScheduler.instance)
             .subscribe(with: self, onNext: { owner, datas in
-                let newState = MainState(subwayInfos: datas)
+                let newState = MainState(prevState: owner.state.value, subwayInfos: datas)
                 owner.state.accept(newState)
             })
             .disposed(by: disposeBag)
+    }
+}
+
+extension DefaultMainIntent: LocationAccessable {
+    func requestLocationAuthorization() {
+        let result = locationManager.checkAuthority()
+    }
+    
+    func updateLocation(latitude: Double, longitude: Double) {
+        let newState = MainState(prevState: state.value, location: CLLocation(latitude: latitude, longitude: longitude))
+        state.accept(newState)
     }
 }
