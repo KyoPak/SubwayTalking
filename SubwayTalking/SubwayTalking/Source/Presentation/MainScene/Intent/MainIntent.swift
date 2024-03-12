@@ -59,7 +59,15 @@ final class DefaultMainIntent: MainIntent {
 
 extension DefaultMainIntent: LocationAccessable {
     func requestLocationAuthorization() {
-        let result = locationManager.checkAuthority()
+        let newState = MainState(prevState: state.value, authRequestFlag: true)
+        state.accept(newState)
+        
+        completeLocationAuthorization()
+    }
+
+    private func completeLocationAuthorization() {
+        let newState = MainState(prevState: state.value, authRequestFlag: false)
+        state.accept(newState)
     }
     
     func updateLocation(latitude: Double, longitude: Double) {

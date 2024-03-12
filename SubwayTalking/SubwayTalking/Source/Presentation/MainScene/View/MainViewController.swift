@@ -101,6 +101,10 @@ final class MainViewController: UIViewController, MainViewUpdatable {
         if state.location != prev.location {
             configureUserOverlay(location: state.location)
         }
+        
+        if state.authRequestFlag {
+            requestLocationAuthorization()
+        }
     }
 }
 
@@ -139,6 +143,12 @@ extension MainViewController {
     private func configureUserOverlay(location: CLLocation) {
         locationOverlay.location = NMGLatLng(lat: location.coordinate.latitude, lng: location.coordinate.longitude)
         locationOverlay.circleRadius = 50
+    }
+}
+
+extension MainViewController: Alertable {
+    func requestLocationAuthorization() {
+        showLocationAuthorizationAlert()
     }
 }
 

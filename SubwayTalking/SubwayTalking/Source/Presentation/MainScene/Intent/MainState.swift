@@ -12,13 +12,16 @@ struct MainState: State {
     
     let subwayInfos: [SubwayInformation]
     let location: CLLocation
+    let authRequestFlag: Bool
     
     init(
         prevState: MainState? = nil,
         subwayInfos: [SubwayInformation] = [],
-        location: CLLocation? = nil
+        location: CLLocation? = nil,
+        authRequestFlag: Bool? = false
     ) {
         self.subwayInfos = subwayInfos.isEmpty ? (prevState?.subwayInfos ?? []) : subwayInfos
         self.location = location ?? prevState?.location ?? CLLocation()
+        self.authRequestFlag = authRequestFlag ?? prevState?.authRequestFlag ?? false
     }
 }
