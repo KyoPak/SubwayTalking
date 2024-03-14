@@ -26,6 +26,11 @@ enum Constant {
         static let userLocationButton = UIImage(named: "UserLocationButton") ?? UIImage()
     }
     
+    enum Font {
+        static let npsFontRegular = "NPS-font-regular"
+        static let npsFontBold = "NPS-font-bold"
+    }
+    
     enum Error {
         
         // MARK: Bundel Error

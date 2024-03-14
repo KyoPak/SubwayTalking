@@ -26,6 +26,8 @@
 		3172261F2B9C11700035704A /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172261E2B9C116F0035704A /* State.swift */; };
 		3173BFE52B9E048A005CFC5F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3173BFE42B9E048A005CFC5F /* LocationManager.swift */; };
 		318C840B2B96F15100D88219 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 318C840A2B96F15100D88219 /* .swiftlint.yml */; };
+		318F86792BA2DE9800A6BD3A /* NPSfont_bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 318F86782BA2DE9800A6BD3A /* NPSfont_bold.otf */; };
+		318F867B2BA2DE9D00A6BD3A /* NPSfont_regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 318F867A2BA2DE9D00A6BD3A /* NPSfont_regular.otf */; };
 		31A075A02B9B03DF0060211B /* DefaultMarkerDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A0759F2B9B03DF0060211B /* DefaultMarkerDataRepository.swift */; };
 		31A075A32B9B0E710060211B /* JSONDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A075A22B9B0E710060211B /* JSONDataError.swift */; };
 		31A075A52B9B10CC0060211B /* SubwayInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A075A42B9B10CC0060211B /* SubwayInformation.swift */; };
@@ -57,6 +59,8 @@
 		3172261E2B9C116F0035704A /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		3173BFE42B9E048A005CFC5F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		318C840A2B96F15100D88219 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
+		318F86782BA2DE9800A6BD3A /* NPSfont_bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NPSfont_bold.otf; sourceTree = "<group>"; };
+		318F867A2BA2DE9D00A6BD3A /* NPSfont_regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NPSfont_regular.otf; sourceTree = "<group>"; };
 		31A0759F2B9B03DF0060211B /* DefaultMarkerDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMarkerDataRepository.swift; sourceTree = "<group>"; };
 		31A075A22B9B0E710060211B /* JSONDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataError.swift; sourceTree = "<group>"; };
 		31A075A42B9B10CC0060211B /* SubwayInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayInformation.swift; sourceTree = "<group>"; };
@@ -188,6 +192,7 @@
 		310C7B9F2B96E3ED002A3BB6 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
+				318F86772BA2DE8D00A6BD3A /* Font */,
 				310C7B922B96DE53002A3BB6 /* Assets.xcassets */,
 				310C7B942B96DE53002A3BB6 /* LaunchScreen.storyboard */,
 				310C7B972B96DE53002A3BB6 /* Info.plist */,
@@ -237,6 +242,15 @@
 				31569A342B9B1CEF000DF03B /* MainIntent.swift */,
 			);
 			path = Intent;
+			sourceTree = "<group>";
+		};
+		318F86772BA2DE8D00A6BD3A /* Font */ = {
+			isa = PBXGroup;
+			children = (
+				318F867A2BA2DE9D00A6BD3A /* NPSfont_regular.otf */,
+				318F86782BA2DE9800A6BD3A /* NPSfont_bold.otf */,
+			);
+			path = Font;
 			sourceTree = "<group>";
 		};
 		31A0759E2B9B036F0060211B /* Repository */ = {
@@ -386,8 +400,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				318C840B2B96F15100D88219 /* .swiftlint.yml in Resources */,
+				318F867B2BA2DE9D00A6BD3A /* NPSfont_regular.otf in Resources */,
 				310C7B962B96DE53002A3BB6 /* LaunchScreen.storyboard in Resources */,
 				313CFB3E2B9827490032ECE3 /* NaverMaps.plist in Resources */,
+				318F86792BA2DE9800A6BD3A /* NPSfont_bold.otf in Resources */,
 				310C7B932B96DE53002A3BB6 /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
