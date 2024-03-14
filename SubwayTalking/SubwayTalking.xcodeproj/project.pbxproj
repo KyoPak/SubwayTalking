@@ -26,8 +26,6 @@
 		3172261F2B9C11700035704A /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172261E2B9C116F0035704A /* State.swift */; };
 		3173BFE52B9E048A005CFC5F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3173BFE42B9E048A005CFC5F /* LocationManager.swift */; };
 		318C840B2B96F15100D88219 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 318C840A2B96F15100D88219 /* .swiftlint.yml */; };
-		318F86792BA2DE9800A6BD3A /* NPSfont_bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 318F86782BA2DE9800A6BD3A /* NPSfont_bold.otf */; };
-		318F867B2BA2DE9D00A6BD3A /* NPSfont_regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 318F867A2BA2DE9D00A6BD3A /* NPSfont_regular.otf */; };
 		31A075A02B9B03DF0060211B /* DefaultMarkerDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A0759F2B9B03DF0060211B /* DefaultMarkerDataRepository.swift */; };
 		31A075A32B9B0E710060211B /* JSONDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A075A22B9B0E710060211B /* JSONDataError.swift */; };
 		31A075A52B9B10CC0060211B /* SubwayInformation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A075A42B9B10CC0060211B /* SubwayInformation.swift */; };
@@ -35,6 +33,9 @@
 		31A102562B9DDF580051121A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A102552B9DDF580051121A /* Constant.swift */; };
 		31A4B0742B9D7CE900CDEA26 /* Observable+Previous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4B0732B9D7CE900CDEA26 /* Observable+Previous.swift */; };
 		31A4B0782B9D7D8200CDEA26 /* StateRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4B0772B9D7D8200CDEA26 /* StateRelay.swift */; };
+		31F583652BA32B41003A1F59 /* LINESeedKR-Rg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31F583622BA32B41003A1F59 /* LINESeedKR-Rg.otf */; };
+		31F583662BA32B41003A1F59 /* LINESeedKR-Bd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31F583632BA32B41003A1F59 /* LINESeedKR-Bd.otf */; };
+		31F583672BA32B41003A1F59 /* LINESeedKR-Th.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31F583642BA32B41003A1F59 /* LINESeedKR-Th.otf */; };
 		8539C3733FD3F320422145DF /* libPods-SubwayTalking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */; };
 /* End PBXBuildFile section */
 
@@ -59,8 +60,6 @@
 		3172261E2B9C116F0035704A /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		3173BFE42B9E048A005CFC5F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		318C840A2B96F15100D88219 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
-		318F86782BA2DE9800A6BD3A /* NPSfont_bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NPSfont_bold.otf; sourceTree = "<group>"; };
-		318F867A2BA2DE9D00A6BD3A /* NPSfont_regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = NPSfont_regular.otf; sourceTree = "<group>"; };
 		31A0759F2B9B03DF0060211B /* DefaultMarkerDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMarkerDataRepository.swift; sourceTree = "<group>"; };
 		31A075A22B9B0E710060211B /* JSONDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataError.swift; sourceTree = "<group>"; };
 		31A075A42B9B10CC0060211B /* SubwayInformation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayInformation.swift; sourceTree = "<group>"; };
@@ -68,6 +67,9 @@
 		31A102552B9DDF580051121A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		31A4B0732B9D7CE900CDEA26 /* Observable+Previous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Previous.swift"; sourceTree = "<group>"; };
 		31A4B0772B9D7D8200CDEA26 /* StateRelay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRelay.swift; sourceTree = "<group>"; };
+		31F583622BA32B41003A1F59 /* LINESeedKR-Rg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LINESeedKR-Rg.otf"; sourceTree = "<group>"; };
+		31F583632BA32B41003A1F59 /* LINESeedKR-Bd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LINESeedKR-Bd.otf"; sourceTree = "<group>"; };
+		31F583642BA32B41003A1F59 /* LINESeedKR-Th.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LINESeedKR-Th.otf"; sourceTree = "<group>"; };
 		B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SubwayTalking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -247,8 +249,9 @@
 		318F86772BA2DE8D00A6BD3A /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				318F867A2BA2DE9D00A6BD3A /* NPSfont_regular.otf */,
-				318F86782BA2DE9800A6BD3A /* NPSfont_bold.otf */,
+				31F583632BA32B41003A1F59 /* LINESeedKR-Bd.otf */,
+				31F583622BA32B41003A1F59 /* LINESeedKR-Rg.otf */,
+				31F583642BA32B41003A1F59 /* LINESeedKR-Th.otf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -400,11 +403,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				318C840B2B96F15100D88219 /* .swiftlint.yml in Resources */,
-				318F867B2BA2DE9D00A6BD3A /* NPSfont_regular.otf in Resources */,
+				31F583672BA32B41003A1F59 /* LINESeedKR-Th.otf in Resources */,
 				310C7B962B96DE53002A3BB6 /* LaunchScreen.storyboard in Resources */,
 				313CFB3E2B9827490032ECE3 /* NaverMaps.plist in Resources */,
-				318F86792BA2DE9800A6BD3A /* NPSfont_bold.otf in Resources */,
+				31F583662BA32B41003A1F59 /* LINESeedKR-Bd.otf in Resources */,
 				310C7B932B96DE53002A3BB6 /* Assets.xcassets in Resources */,
+				31F583652BA32B41003A1F59 /* LINESeedKR-Rg.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

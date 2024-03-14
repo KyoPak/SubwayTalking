@@ -85,7 +85,7 @@ final class MainViewController: UIViewController, MainViewUpdatable {
     private let addressLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .clear
-        label.font = UIFont(name: Constant.Font.npsFontBold, size: 20)
+        label.font = UIFont(name: Constant.Font.lineFontBold, size: 20)
         label.textColor = .black
         return label
     }()

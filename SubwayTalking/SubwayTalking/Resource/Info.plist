@@ -4,8 +4,9 @@
 <dict>
 	<key>UIAppFonts</key>
 	<array>
-		<string>NPSfont_regular.otf</string>
-		<string>NPSfont_bold.otf</string>
+		<string>LINESeedKR-Bd.otf</string>
+		<string>LINESeedKR-Rg.otf</string>
+		<string>LINESeedKR-Th.otf</string>
 	</array>
 	<key>UIApplicationSceneManifest</key>
 	<dict>

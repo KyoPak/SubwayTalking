@@ -29,8 +29,9 @@ enum Constant {
     }
     
     enum Font {
-        static let npsFontRegular = "NPS-font-regular"
-        static let npsFontBold = "NPS-font-bold"
+        static let lineFontBold = "LINESeedSansKR-Bold"
+        static let lineFontRegular = "LINESeedSansKR-Regular"
+        static let lineFontThin = "LINESeedSansKR-Thin"
     }
     
     enum Color {
