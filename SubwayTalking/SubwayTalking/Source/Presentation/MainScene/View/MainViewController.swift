@@ -117,6 +117,10 @@ final class MainViewController: UIViewController, MainViewUpdatable {
         if state.authRequestFlag {
             requestLocationAuthorization()
         }
+        
+        if state.userLocationMoveFlag {
+            moveCameraToCurrentLocation(location: state.location)
+        }
     }
 }
 
@@ -137,6 +141,12 @@ extension MainViewController {
                 self?.intent?.viewDidLoad()
             }
             .disposed(by: disposeBag)
+        
+        userLocationButton.rx.tap
+            .bind { [weak self] _ in
+                self?.intent?.userLocationButtonTapped()
+            }
+            .disposed(by: disposeBag)
     }
 }
 
@@ -153,6 +163,12 @@ extension MainViewController {
     private func configureUserOverlay(location: CLLocation) {
         locationOverlay.location = NMGLatLng(lat: location.coordinate.latitude, lng: location.coordinate.longitude)
         locationOverlay.circleRadius = 50
+    }
+    
+    func moveCameraToCurrentLocation(location: CLLocation) {
+        let currentNMGLatLng = NMGLatLng(lat: location.coordinate.latitude, lng: location.coordinate.longitude)
+        naverMapView.moveCamera(NMFCameraUpdate(scrollTo: currentNMGLatLng))
+        naverMapView.moveCamera(NMFCameraUpdate(zoomTo: 14))
     }
 }
 

@@ -10,9 +10,10 @@ import CoreLocation
 import RxSwift
 import RxRelay
 
-protocol MainIntent { 
+protocol MainIntent {
     func bind<V: MainViewUpdatable>(to view: V)
     func viewDidLoad()
+    func userLocationButtonTapped()
 }
 
 final class DefaultMainIntent: MainIntent {
@@ -50,10 +51,17 @@ final class DefaultMainIntent: MainIntent {
             .subscribe(on: backGroundQueue)
             .observe(on: MainScheduler.instance)
             .subscribe(with: self, onNext: { owner, datas in
-                let newState = MainState(prevState: owner.state.value, subwayInfos: datas)
+                let newState = MainState(prevState: owner.state.value, subwayInfos: datas, userLocationMoveFlag: true)
                 owner.state.accept(newState)
             })
             .disposed(by: disposeBag)
+    }
+    
+    func userLocationButtonTapped() {
+        [true, false].forEach { flag in
+            let newState = MainState(prevState: state.value, userLocationMoveFlag: true)
+            state.accept(newState)
+        }
     }
 }
 
