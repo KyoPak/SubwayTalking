@@ -53,9 +53,9 @@ final class DefaultMainIntent: MainIntent {
             .withUnretained(self)
             .flatMap { (owner, datas) in
                 return owner.locationManager.getAddress(location: owner.state.value.location)
-                    .map { address in
+                    .map { [weak owner] address in
                         let newState = MainState(
-                            prevState: owner.state.value,
+                            prevState: owner?.state.value,
                             subwayInfos: datas,
                             userLocationMoveFlag: true,
                             cameraLocationAddress: address
@@ -72,7 +72,7 @@ final class DefaultMainIntent: MainIntent {
     
     func userLocationButtonTapped() {
         [true, false].forEach { flag in
-            let newState = MainState(prevState: state.value, userLocationMoveFlag: true)
+            let newState = MainState(prevState: state.value, userLocationMoveFlag: flag)
             state.accept(newState)
         }
     }
@@ -89,15 +89,10 @@ final class DefaultMainIntent: MainIntent {
 
 extension DefaultMainIntent: LocationAccessable {
     func requestLocationAuthorization() {
-        let newState = MainState(prevState: state.value, authRequestFlag: true)
-        state.accept(newState)
-        
-        completeLocationAuthorization()
-    }
-
-    private func completeLocationAuthorization() {
-        let newState = MainState(prevState: state.value, authRequestFlag: false)
-        state.accept(newState)
+        [true, false].forEach { flag in
+            let newState = MainState(prevState: state.value, authRequestFlag: flag)
+            state.accept(newState)
+        }
     }
     
     func updateLocation(latitude: Double, longitude: Double) {
