@@ -50,12 +50,14 @@ final class MainViewController: UIViewController, MainViewUpdatable {
     
     private var intent: MainIntent?
     private let disposeBag = DisposeBag()
+    private let cameraMovingEvent = PublishRelay<(latitude: Double, longitude: Double)>()
     
     // MARK: UI Property
     
-    private let naverMapView: NMFMapView = {
+    private lazy var naverMapView: NMFMapView = {
         let mapView = NMFMapView()
         mapView.mapType = .basic
+        mapView.addCameraDelegate(delegate: self)
         mapView.minZoomLevel = 5
         return mapView
     }()
@@ -76,6 +78,29 @@ final class MainViewController: UIViewController, MainViewUpdatable {
         button.layer.shadowOffset = CGSize(width: 0, height: 5)
         button.layer.shadowColor = UIColor.black.cgColor
         return button
+    }()
+    
+    private let addressLabel: UILabel = {
+        let label = UILabel()
+        label.backgroundColor = .clear
+        label.font = UIFont(name: Constant.Font.npsFontBold, size: 20)
+        label.textColor = .black
+        return label
+    }()
+    
+    private let addressImageView: UIImageView = {
+        let imageView = UIImageView()
+        imageView.image = Constant.Image.subwayMarker
+        imageView.contentMode = .scaleAspectFit
+        return imageView
+    }()
+    
+    private let addressStackView: UIStackView = {
+        let stackView = UIStackView()
+        stackView.axis = .horizontal
+        stackView.alignment = .center
+        stackView.spacing = 10
+        return stackView
     }()
     
     // MARK: Initialize & LifeCycle
@@ -121,6 +146,10 @@ final class MainViewController: UIViewController, MainViewUpdatable {
         if state.userLocationMoveFlag {
             moveCameraToCurrentLocation(location: state.location)
         }
+        
+        if state.cameraLocationAddress != prev.cameraLocationAddress {
+            addressLabel.text = state.cameraLocationAddress
+        }
     }
 }
 
@@ -145,6 +174,12 @@ extension MainViewController {
         userLocationButton.rx.tap
             .bind { [weak self] _ in
                 self?.intent?.userLocationButtonTapped()
+            }
+            .disposed(by: disposeBag)
+        
+        cameraMovingEvent
+            .bind { [weak self] (latitude, longitude) in
+                self?.intent?.cameraMove(latitide: latitude, longitude: longitude)
             }
             .disposed(by: disposeBag)
     }
@@ -172,6 +207,13 @@ extension MainViewController {
     }
 }
 
+// MARK: - NaverMap Camera Delegate
+extension MainViewController: NMFMapViewCameraDelegate {
+    func mapViewCameraIdle(_ mapView: NMFMapView) {
+        cameraMovingEvent.accept((mapView.latitude, mapView.longitude))
+    }
+}
+
 extension MainViewController: Alertable {
     func requestLocationAuthorization() {
         showLocationAuthorizationAlert()
@@ -181,17 +223,21 @@ extension MainViewController: Alertable {
 // MARK: UI Configure
 extension MainViewController {
     private func configureUIComponents() {
-        userLocationButton.translatesAutoresizingMaskIntoConstraints = false
+        [addressImageView, addressLabel].forEach(addressStackView.addArrangedSubview(_:))
+        [addressStackView, userLocationButton].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
     }
     
     private func configureHierachy() {
-        [naverMapView, userLocationButton].forEach(view.addSubview(_:))
+        [naverMapView, addressStackView, userLocationButton].forEach(view.addSubview(_:))
     }
     
     private func configureLayout() {
         naverMapView.frame = view.frame
         
         NSLayoutConstraint.activate([
+            addressStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
+            addressStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
+            
             userLocationButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -100),
             userLocationButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20)
         ])

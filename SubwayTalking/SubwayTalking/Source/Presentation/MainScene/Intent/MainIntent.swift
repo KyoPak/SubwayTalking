@@ -14,6 +14,7 @@ protocol MainIntent {
     func bind<V: MainViewUpdatable>(to view: V)
     func viewDidLoad()
     func userLocationButtonTapped()
+    func cameraMove(latitide: Double, longitude: Double)
 }
 
 final class DefaultMainIntent: MainIntent {
@@ -62,6 +63,15 @@ final class DefaultMainIntent: MainIntent {
             let newState = MainState(prevState: state.value, userLocationMoveFlag: true)
             state.accept(newState)
         }
+    }
+    
+    func cameraMove(latitide: Double, longitude: Double) {
+        locationManager.getAddress(location: CLLocation(latitude: latitide, longitude: longitude))
+            .subscribe(with: self, onNext: { owner, address in
+                let newState = MainState(prevState: owner.state.value, cameraLocationAddress: address)
+                owner.state.accept(newState)
+            })
+            .disposed(by: disposeBag)
     }
 }
 
