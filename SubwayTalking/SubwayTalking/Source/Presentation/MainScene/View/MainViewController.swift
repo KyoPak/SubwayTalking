@@ -65,6 +65,8 @@ final class MainViewController: UIViewController, MainViewUpdatable {
     private lazy var locationOverlay: NMFLocationOverlay = {
         let locationOverlay = self.naverMapView.locationOverlay
         locationOverlay.hidden = false
+        locationOverlay.circleColor = Constant.Color.overlay
+        locationOverlay.circleRadius = Constant.Value.distance / naverMapView.projection.metersPerPixel()
         return locationOverlay
     }()
     
@@ -197,7 +199,6 @@ extension MainViewController {
     
     private func configureUserOverlay(location: CLLocation) {
         locationOverlay.location = NMGLatLng(lat: location.coordinate.latitude, lng: location.coordinate.longitude)
-        locationOverlay.circleRadius = 50
     }
     
     func moveCameraToCurrentLocation(location: CLLocation) {
@@ -211,6 +212,10 @@ extension MainViewController {
 extension MainViewController: NMFMapViewCameraDelegate {
     func mapViewCameraIdle(_ mapView: NMFMapView) {
         cameraMovingEvent.accept((mapView.latitude, mapView.longitude))
+    }
+    
+    func mapView(_ mapView: NMFMapView, cameraIsChangingByReason reason: Int) {
+        locationOverlay.circleRadius = Constant.Value.distance / naverMapView.projection.metersPerPixel()
     }
 }
 

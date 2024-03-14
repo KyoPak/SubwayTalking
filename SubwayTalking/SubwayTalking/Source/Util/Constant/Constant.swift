@@ -33,6 +33,10 @@ enum Constant {
         static let npsFontBold = "NPS-font-bold"
     }
     
+    enum Color {
+        static let overlay = UIColor(red: 0.4, green: 0.5, blue: 0.98, alpha: 0.3)
+    }
+    
     enum Error {
         
         // MARK: Bundel Error
@@ -45,5 +49,9 @@ enum Constant {
         
         static let dataSetError = "데이터 파일이 올바르지 않습니다."
         static let decodingError = "데이터를 불러오는 과정에서 오류가 발생하였습니다."
+    }
+    
+    enum Value {
+        static let distance: Double = 500
     }
 }
