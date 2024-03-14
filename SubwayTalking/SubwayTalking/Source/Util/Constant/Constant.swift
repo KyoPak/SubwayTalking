@@ -23,6 +23,7 @@ enum Constant {
         // MARK: Asset Image
         
         static let subwayMarker = UIImage(named: "SubwayMarker") ?? UIImage()
+        static let userLocationButton = UIImage(named: "UserLocationButton") ?? UIImage()
     }
     
     enum Error {

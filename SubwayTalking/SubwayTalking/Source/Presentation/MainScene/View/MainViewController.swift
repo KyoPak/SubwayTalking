@@ -63,8 +63,19 @@ final class MainViewController: UIViewController, MainViewUpdatable {
     private lazy var locationOverlay: NMFLocationOverlay = {
         let locationOverlay = self.naverMapView.locationOverlay
         locationOverlay.hidden = false
-
         return locationOverlay
+    }()
+    
+    private let userLocationButton: UIButton = {
+        let button = UIButton()
+        button.layer.shadowColor = UIColor.black.cgColor
+        button.setImage(Constant.Image.userLocationButton, for: .normal)
+        button.layer.shadowRadius = 5
+        button.layer.shadowOpacity = 0.3
+        button.layer.masksToBounds = false
+        button.layer.shadowOffset = CGSize(width: 0, height: 5)
+        button.layer.shadowColor = UIColor.black.cgColor
+        return button
     }()
     
     // MARK: Initialize & LifeCycle
@@ -83,6 +94,7 @@ final class MainViewController: UIViewController, MainViewUpdatable {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        configureUIComponents()
         configureHierachy()
         configureLayout()
     }
@@ -133,8 +145,6 @@ extension MainViewController {
     private func configureMarker(_ latitude: Double, _ longitude: Double) {
         let marker = NMFMarker()
         let subwayMarkerImage = Constant.Image.subwayMarker
-        
-        marker.iconTintColor = UIColor.blue
         marker.iconImage = NMFOverlayImage(image: subwayMarkerImage)
         marker.position = NMGLatLng(lat: latitude, lng: longitude)
         marker.mapView = naverMapView
@@ -154,11 +164,20 @@ extension MainViewController: Alertable {
 
 // MARK: UI Configure
 extension MainViewController {
+    private func configureUIComponents() {
+        userLocationButton.translatesAutoresizingMaskIntoConstraints = false
+    }
+    
     private func configureHierachy() {
-        view.addSubview(naverMapView)
+        [naverMapView, userLocationButton].forEach(view.addSubview(_:))
     }
     
     private func configureLayout() {
         naverMapView.frame = view.frame
+        
+        NSLayoutConstraint.activate([
+            userLocationButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -100),
+            userLocationButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20)
+        ])
     }
 }
