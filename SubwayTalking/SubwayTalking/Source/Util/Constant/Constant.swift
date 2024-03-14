@@ -16,6 +16,7 @@ enum Constant {
         static let locationAlertMessage = "위치 서비스를 사용하실 수 없습니다.\n디바이스의 '설정 > 개인정보 보호'에서 위치 서비스를 켜주세요."
         static let locationAlertConfirmActionTitle = "설정으로 이동"
         static let alertCancelActionTitle = "취소"
+        static let converteAddressFail = "위치정보가 없습니다."
     }
     
     enum Image {

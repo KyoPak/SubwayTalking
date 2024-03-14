@@ -7,6 +7,8 @@
 
 import CoreLocation
 
+import RxSwift
+
 protocol LocationAccessable: AnyObject {
     func requestLocationAuthorization()
     func updateLocation(latitude: Double, longitude: Double)
@@ -38,12 +40,45 @@ final class LocationManager: NSObject {
     func startUpdatingLocation() {
         locationManager?.startUpdatingLocation()
     }
+    
+    func getAddress(location: CLLocation) -> Observable<String> {
+        locationManager?.distanceFilter = kCLDistanceFilterNone
+        
+        let geocoder = CLGeocoder.init()
+        
+        return Observable<String>.create { observer in
+            geocoder.reverseGeocodeLocation(location) { (placemarks, error) in
+                if error != nil { observer.onNext(Constant.Text.converteAddressFail) }
+                
+                if let placemark = placemarks?.first {
+                    var address = ""
+                    
+                    if let administrativeArea = placemark.administrativeArea {
+                        address = "\(address) \(administrativeArea) "
+                    }
+                    
+                    if let locality = placemark.locality {
+                        address = "\(address) \(locality) "
+                    }
+                    
+                    if let subLocality = placemark.subLocality {
+                        address = "\(address) \(subLocality) "
+                    }
+                    
+                    observer.onNext(address)
+                }
+            }
+            
+            return Disposables.create()
+        }
+    }
+
 }
 
 extension LocationManager: CLLocationManagerDelegate {
     func locationManagerDidChangeAuthorization(_ manager: CLLocationManager) {
         switch manager.authorizationStatus {
-        case .denied, .restricted, .notDetermined: 
+        case .denied, .restricted, .notDetermined:
             delegate?.requestLocationAuthorization()
         case .authorizedAlways, .authorizedWhenInUse:
             locationManager?.startUpdatingLocation()
