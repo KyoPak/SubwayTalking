@@ -50,9 +50,21 @@ final class DefaultMainIntent: MainIntent {
         
         addMarkerUseCase.fetchMarkerData()
             .subscribe(on: backGroundQueue)
+            .withUnretained(self)
+            .flatMap { (owner, datas) in
+                return owner.locationManager.getAddress(location: owner.state.value.location)
+                    .map { address in
+                        let newState = MainState(
+                            prevState: owner.state.value,
+                            subwayInfos: datas,
+                            userLocationMoveFlag: true,
+                            cameraLocationAddress: address
+                        )
+                        return newState
+                    }
+            }
             .observe(on: MainScheduler.instance)
-            .subscribe(with: self, onNext: { owner, datas in
-                let newState = MainState(prevState: owner.state.value, subwayInfos: datas, userLocationMoveFlag: true)
+            .subscribe(with: self, onNext: { owner, newState in
                 owner.state.accept(newState)
             })
             .disposed(by: disposeBag)
