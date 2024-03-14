@@ -90,7 +90,7 @@ final class MainViewController: UIViewController, MainViewUpdatable {
     
     private let addressImageView: UIImageView = {
         let imageView = UIImageView()
-        imageView.image = Constant.Image.subwayMarker
+        imageView.image = Constant.Image.addressMarker
         imageView.contentMode = .scaleAspectFit
         return imageView
     }()
@@ -99,7 +99,7 @@ final class MainViewController: UIViewController, MainViewUpdatable {
         let stackView = UIStackView()
         stackView.axis = .horizontal
         stackView.alignment = .center
-        stackView.spacing = 10
+        stackView.spacing = 5
         return stackView
     }()
     
@@ -235,8 +235,8 @@ extension MainViewController {
         naverMapView.frame = view.frame
         
         NSLayoutConstraint.activate([
-            addressStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 10),
-            addressStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 10),
+            addressStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
+            addressStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
             
             userLocationButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -100),
             userLocationButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20)
