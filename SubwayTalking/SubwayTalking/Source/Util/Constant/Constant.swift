@@ -25,6 +25,7 @@ enum Constant {
         
         static let subwayMarker = UIImage(named: "SubwayMarker") ?? UIImage()
         static let userLocationButton = UIImage(named: "UserLocationButton") ?? UIImage()
+        static let addressMarker = UIImage(named: "AddressMarker") ?? UIImage()
     }
     
     enum Font {
