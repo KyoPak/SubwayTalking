@@ -168,20 +168,21 @@ extension MainViewController {
     
     private func bindIntent() {
         rx.methodInvoked(#selector(viewDidLoad))
-            .bind { [weak self] _ in
-                self?.intent?.viewDidLoad()
-            }
+            .bind(with: self, onNext: { owner, _ in
+                owner.intent?.viewDidLoad()
+            })
             .disposed(by: disposeBag)
         
         userLocationButton.rx.tap
-            .bind { [weak self] _ in
-                self?.intent?.userLocationButtonTapped()
-            }
+            .throttle(.milliseconds(1500), scheduler: MainScheduler.instance)
+            .bind(with: self, onNext: { owner, _ in
+                owner.intent?.userLocationButtonTapped()
+            })
             .disposed(by: disposeBag)
         
         cameraMovingEvent
-            .bind { [weak self] (latitude, longitude) in
-                self?.intent?.cameraMove(latitide: latitude, longitude: longitude)
+            .bind(with: self) { owner, location in
+                owner.intent?.cameraMove(latitide: location.latitude, longitude: location.longitude)
             }
             .disposed(by: disposeBag)
     }
@@ -203,6 +204,7 @@ extension MainViewController {
     
     func moveCameraToCurrentLocation(location: CLLocation) {
         let currentNMGLatLng = NMGLatLng(lat: location.coordinate.latitude, lng: location.coordinate.longitude)
+        locationOverlay.circleRadius = Constant.Value.distance / naverMapView.projection.metersPerPixel()
         naverMapView.moveCamera(NMFCameraUpdate(scrollTo: currentNMGLatLng))
         naverMapView.moveCamera(NMFCameraUpdate(zoomTo: 14))
     }
