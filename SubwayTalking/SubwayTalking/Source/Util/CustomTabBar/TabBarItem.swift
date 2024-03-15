@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum TabBarItem: String, CaseIterable {
+enum TabBarItem: Int, CaseIterable {
     case chat
     case map
     case setting
