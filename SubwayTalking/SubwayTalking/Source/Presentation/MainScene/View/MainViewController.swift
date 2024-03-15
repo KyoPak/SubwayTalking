@@ -204,9 +204,9 @@ extension MainViewController {
     
     func moveCameraToCurrentLocation(location: CLLocation) {
         let currentNMGLatLng = NMGLatLng(lat: location.coordinate.latitude, lng: location.coordinate.longitude)
-        locationOverlay.circleRadius = Constant.Value.distance / naverMapView.projection.metersPerPixel()
-        naverMapView.moveCamera(NMFCameraUpdate(scrollTo: currentNMGLatLng))
         naverMapView.moveCamera(NMFCameraUpdate(zoomTo: 14))
+        naverMapView.moveCamera(NMFCameraUpdate(scrollTo: currentNMGLatLng))
+        locationOverlay.circleRadius = Constant.Value.distance / naverMapView.projection.metersPerPixel()
     }
 }
 
