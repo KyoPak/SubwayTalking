@@ -27,6 +27,7 @@
 		3173BFE52B9E048A005CFC5F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3173BFE42B9E048A005CFC5F /* LocationManager.swift */; };
 		318657F22BA43873001F5277 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318657F12BA43873001F5277 /* TabBarItem.swift */; };
 		318657F42BA43C67001F5277 /* TabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318657F32BA43C67001F5277 /* TabBarItemView.swift */; };
+		318657F72BA459E5001F5277 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 318657F62BA459E5001F5277 /* SnapKit */; };
 		318C840B2B96F15100D88219 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 318C840A2B96F15100D88219 /* .swiftlint.yml */; };
 		31A075A02B9B03DF0060211B /* DefaultMarkerDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A0759F2B9B03DF0060211B /* DefaultMarkerDataRepository.swift */; };
 		31A075A32B9B0E710060211B /* JSONDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A075A22B9B0E710060211B /* JSONDataError.swift */; };
@@ -86,6 +87,7 @@
 				315A68542B9AF71E00268DF4 /* RxCocoa in Frameworks */,
 				315A685C2B9AF71E00268DF4 /* RxSwift in Frameworks */,
 				8539C3733FD3F320422145DF /* libPods-SubwayTalking.a in Frameworks */,
+				318657F72BA459E5001F5277 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -370,6 +372,7 @@
 				315A68532B9AF71E00268DF4 /* RxCocoa */,
 				315A68572B9AF71E00268DF4 /* RxRelay */,
 				315A685B2B9AF71E00268DF4 /* RxSwift */,
+				318657F62BA459E5001F5277 /* SnapKit */,
 			);
 			productName = SubwayTalking;
 			productReference = 310C7B862B96DE52002A3BB6 /* SubwayTalking.app */;
@@ -401,6 +404,7 @@
 			mainGroup = 310C7B7D2B96DE52002A3BB6;
 			packageReferences = (
 				315A684E2B9AF71E00268DF4 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				318657F52BA459E5001F5277 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 310C7B872B96DE52002A3BB6 /* Products */;
 			projectDirPath = "";
@@ -764,6 +768,14 @@
 				version = 6.5.0;
 			};
 		};
+		318657F52BA459E5001F5277 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -781,6 +793,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 315A684E2B9AF71E00268DF4 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		318657F62BA459E5001F5277 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 318657F52BA459E5001F5277 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
