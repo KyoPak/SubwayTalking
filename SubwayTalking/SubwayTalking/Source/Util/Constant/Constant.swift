@@ -17,6 +17,12 @@ enum Constant {
         static let locationAlertConfirmActionTitle = "설정으로 이동"
         static let alertCancelActionTitle = "취소"
         static let converteAddressFail = "위치정보가 없습니다."
+        
+        // MARK: Title
+        
+        static let chat = "채팅"
+        static let map = "지도"
+        static let setting = "설정"
     }
     
     enum Image {
@@ -26,6 +32,16 @@ enum Constant {
         static let subwayMarker = UIImage(named: "SubwayMarker") ?? UIImage()
         static let userLocationButton = UIImage(named: "UserLocationButton") ?? UIImage()
         static let addressMarker = UIImage(named: "AddressMarker") ?? UIImage()
+        
+        // MARK: TabBar Image
+        
+        static let map = UIImage(systemName: "map") ?? UIImage()
+        static let chat = UIImage(systemName: "message") ?? UIImage()
+        static let setting = UIImage(systemName: "gearshape") ?? UIImage()
+        
+        static let mapSelected = UIImage(systemName: "map.fill") ?? UIImage()
+        static let chatSelected = UIImage(systemName: "message.fill") ?? UIImage()
+        static let settingSelected = UIImage(systemName: "gearshape.fill") ?? UIImage()
     }
     
     enum Font {
