@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Group 6.png",
+      "filename" : "addressMarkerImage 2.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Group 5.png",
+      "filename" : "addressMarkerImage 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Group 4.png",
+      "filename" : "addressMarkerImage.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
