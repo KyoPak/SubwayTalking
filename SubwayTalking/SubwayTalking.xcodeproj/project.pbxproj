@@ -28,6 +28,7 @@
 		318657F22BA43873001F5277 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318657F12BA43873001F5277 /* TabBarItem.swift */; };
 		318657F42BA43C67001F5277 /* TabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318657F32BA43C67001F5277 /* TabBarItemView.swift */; };
 		318657F72BA459E5001F5277 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 318657F62BA459E5001F5277 /* SnapKit */; };
+		318657F92BA46DC9001F5277 /* TabBarStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318657F82BA46DC9001F5277 /* TabBarStackView.swift */; };
 		318C840B2B96F15100D88219 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 318C840A2B96F15100D88219 /* .swiftlint.yml */; };
 		31A075A02B9B03DF0060211B /* DefaultMarkerDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A0759F2B9B03DF0060211B /* DefaultMarkerDataRepository.swift */; };
 		31A075A32B9B0E710060211B /* JSONDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A075A22B9B0E710060211B /* JSONDataError.swift */; };
@@ -64,6 +65,7 @@
 		3173BFE42B9E048A005CFC5F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
 		318657F12BA43873001F5277 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		318657F32BA43C67001F5277 /* TabBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemView.swift; sourceTree = "<group>"; };
+		318657F82BA46DC9001F5277 /* TabBarStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarStackView.swift; sourceTree = "<group>"; };
 		318C840A2B96F15100D88219 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		31A0759F2B9B03DF0060211B /* DefaultMarkerDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMarkerDataRepository.swift; sourceTree = "<group>"; };
 		31A075A22B9B0E710060211B /* JSONDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataError.swift; sourceTree = "<group>"; };
@@ -258,6 +260,7 @@
 			children = (
 				318657F12BA43873001F5277 /* TabBarItem.swift */,
 				318657F32BA43C67001F5277 /* TabBarItemView.swift */,
+				318657F82BA46DC9001F5277 /* TabBarStackView.swift */,
 			);
 			path = CustomTabBar;
 			sourceTree = "<group>";
@@ -510,6 +513,7 @@
 				3173BFE52B9E048A005CFC5F /* LocationManager.swift in Sources */,
 				31569A302B9B1B3C000DF03B /* MarkerDataRepository.swift in Sources */,
 				31A4B0782B9D7D8200CDEA26 /* StateRelay.swift in Sources */,
+				318657F92BA46DC9001F5277 /* TabBarStackView.swift in Sources */,
 				3125B39E2BA03C410064E8DD /* Alertable.swift in Sources */,
 				310C7B8A2B96DE52002A3BB6 /* AppDelegate.swift in Sources */,
 				31A102562B9DDF580051121A /* Constant.swift in Sources */,
