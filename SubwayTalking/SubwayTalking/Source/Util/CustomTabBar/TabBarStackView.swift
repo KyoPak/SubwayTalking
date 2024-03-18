@@ -66,6 +66,12 @@ extension TabBarStackView {
         alignment = .fill
         layer.cornerRadius = 20
         spacing = 5
+        
+        layer.shadowRadius = 5
+        layer.shadowOpacity = 0.3
+        layer.masksToBounds = false
+        layer.shadowOffset = CGSize(width: 0, height: 5)
+        layer.shadowColor =  UIColor.black.cgColor
     }
 
     private func configureHierachy() {
