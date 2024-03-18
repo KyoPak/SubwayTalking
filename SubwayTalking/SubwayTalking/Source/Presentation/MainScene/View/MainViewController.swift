@@ -23,13 +23,13 @@ class StartViewController: UIViewController {
     }()
     
     @objc func moveView() {
-        let mainIntent = DefaultMainIntent(
-            addMarkerUseCase: DefaultAddMarkerUseCase(markerDataRepository: DefaultMarkerDataRepository()),
-            locationManager: LocationManager()
-        )
+        let controllers = TabBarItem.allCases.map { $0.viewController }
         
-        let mainVC = MainViewController(intent: mainIntent)
-        present(mainVC, animated: true)
+        let tabbarController = TabBarController()
+        tabbarController.setViewControllers(controllers, animated: true)
+        
+        tabbarController.modalPresentationStyle = .fullScreen
+        present(tabbarController, animated: true)
     }
     
     override func viewDidLoad() {
@@ -242,11 +242,11 @@ extension MainViewController {
         naverMapView.frame = view.frame
         
         addressStackView.snp.makeConstraints { component in
-            component.top.leading.equalToSuperview().inset(20)
+            component.top.leading.equalTo(view.safeAreaLayoutGuide).inset(20)
         }
         
         userLocationButton.snp.makeConstraints { component in
-            component.bottom.equalToSuperview().offset(-100)
+            component.bottom.equalToSuperview().offset(-150)
             component.trailing.equalToSuperview().offset(-20)
         }
     }
