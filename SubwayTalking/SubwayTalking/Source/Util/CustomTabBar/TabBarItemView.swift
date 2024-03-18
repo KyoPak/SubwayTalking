@@ -26,7 +26,7 @@ final class TabBarItemView: UIView {
     
     private let titleLabel = UILabel()
     private let iconImageView = UIImageView()
-    private let containerView = UIView()
+    private let containerView = UIStackView()
     
     // MARK: Initializer
     
@@ -35,6 +35,9 @@ final class TabBarItemView: UIView {
         index = item.rawValue
         
         super.init(frame: .zero)
+        configureUIComponents()
+        configureHierachy()
+        configureBasicLayout()
     }
     
     required init?(coder: NSCoder) {
@@ -44,61 +47,55 @@ final class TabBarItemView: UIView {
 
 // MARK: - Animation
 extension TabBarItemView {
-    func animateClick(completion: @escaping () -> Void) {
-        UIView.animate(withDuration: 0.1) {
-            self.transform = CGAffineTransform(scaleX: 0.9, y: 0.9)
-        } completion: { _ in
-            UIView.animate(withDuration: 0.1) {
-                self.transform = CGAffineTransform.identity
-            } completion: { _ in completion() }
-        }
-    }
-    
     private func animateItems() {
-        UIView.animate(withDuration: 0.3) { [weak self] in
-            guard let self = self else { return }
-            self.titleLabel.isHidden = isSelected
-        }
+        titleLabel.isHidden = !isSelected
+        iconImageView.image = isSelected ? item.selectedIcon : item.defaultIcon
+        containerView.backgroundColor = isSelected ? Constant.Color.overlay : .white
         
-        UIView.transition(
-            with: iconImageView,
-            duration: 0.3,
-            options: .transitionCrossDissolve
-        ) { [weak self] in
-            guard let self = self else { return }
-            self.iconImageView.image = self.isSelected ? self.item.selectedIcon : self.item.defaultIcon
-        }
+        if isSelected { configureSelectLayout() }
+        if !isSelected { configureBasicLayout() }
     }
 }
 
 // MARK: UI Configure
 extension TabBarItemView {
-    private func configureUIComponents() { 
+    private func configureUIComponents() {
         titleLabel.text = item.name
-        titleLabel.textColor = .label.withAlphaComponent(0.4)
-        titleLabel.textAlignment = .center
-        titleLabel.font = UIFont(name: Constant.Font.lineFontBold, size: 11)
+        titleLabel.textColor = .black
+        titleLabel.textAlignment = .left
+        titleLabel.font = UIFont(name: Constant.Font.lineFontBold, size: 17)
         
+        iconImageView.tintColor = .black
+        iconImageView.contentMode = .right
         iconImageView.image = isSelected ? item.selectedIcon : item.defaultIcon
+        
+        containerView.layer.cornerRadius = 10
+        containerView.axis = .horizontal
+        containerView.alignment = .center
+        containerView.distribution = .fillProportionally
     }
     
     private func configureHierachy() {
-        [iconImageView, titleLabel].forEach(containerView.addSubview(_:))
         addSubview(containerView)
+        [iconImageView, titleLabel].forEach(containerView.addArrangedSubview(_:))
     }
     
-    private func configureLayout() { 
-        iconImageView.snp.makeConstraints { component in
-            component.top.leading.bottom.equalToSuperview().inset(10)
-        }
+    private func configureBasicLayout() {
+        iconImageView.contentMode = .scaleAspectFit
+        containerView.alignment = .fill
         
-        titleLabel.snp.makeConstraints { component in
-            component.leading.equalTo(iconImageView).offset(10)
-            component.centerY.equalToSuperview()
+        containerView.snp.updateConstraints { component in
+            component.top.leading.trailing.bottom.equalToSuperview().inset(25)
         }
+    }
+    
+    private func configureSelectLayout() {
+        iconImageView.contentMode = .right
+        containerView.alignment = .center
         
-        containerView.snp.makeConstraints { component in
-            component.top.leading.trailing.bottom.equalToSuperview()
+        containerView.snp.updateConstraints { component in
+            component.leading.trailing.equalToSuperview().inset(5)
+            component.top.bottom.equalToSuperview().inset(10)
         }
     }
 }
