@@ -14,7 +14,7 @@ final class TabBarStackView: UIStackView {
     // MARK: Property
     
     private let disposeBag = DisposeBag()
-    let itemTapped = PublishSubject<Int>()
+    let tabBarEvent = PublishSubject<Int>()
     
     // MARK: UI Property
     
@@ -49,25 +49,23 @@ extension TabBarStackView {
     
     @objc func handleTap(sender: UITapGestureRecognizer) {
         guard let tappedView = sender.view as? TabBarItemView else { return }
-        
-        tappedView.animateClick { [weak self] in
-            self?.selectItem(index: tappedView.index)
-        }
+        selectItem(index: tappedView.index)
     }
     
     private func selectItem(index: Int) {
         customItemViews.forEach { $0.isSelected = $0.index == index }
-        itemTapped.onNext(index)
+        tabBarEvent.onNext(index)
     }
 }
 
 // MARK: UI Configure
 extension TabBarStackView {
     private func configureUIComponents() {
-        backgroundColor = .label
+        backgroundColor = .white
         distribution = .fillEqually
-        alignment = .center
+        alignment = .fill
         layer.cornerRadius = 20
+        spacing = 5
     }
 
     private func configureHierachy() {

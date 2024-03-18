@@ -43,7 +43,7 @@ final class TabBarController: UITabBarController {
     }
     
     private func bind() {
-        tabBarView.itemTapped
+        tabBarView.tabBarEvent
             .bind(with: self, onNext: { owner, index in
                 owner.selectedIndex = index
             })
@@ -63,9 +63,9 @@ extension TabBarController {
     
     private func configureLayout() {
         tabBarView.snp.makeConstraints { component in
-            component.leading.trailing.equalToSuperview().inset(90)
-            component.bottom.equalToSuperview().offset(-70)
-            component.height.equalTo(60)
+            component.leading.trailing.equalToSuperview().inset(50)
+            component.bottom.equalToSuperview().offset(-50)
+            component.height.equalTo(80)
         }
     }
 }
