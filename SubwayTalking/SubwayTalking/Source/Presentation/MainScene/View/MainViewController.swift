@@ -10,6 +10,7 @@ import UIKit
 import NMapsMap
 import RxCocoa
 import RxSwift
+import SnapKit
 
 class StartViewController: UIViewController {
     
@@ -22,13 +23,13 @@ class StartViewController: UIViewController {
     }()
     
     @objc func moveView() {
-        let mainIntent = DefaultMainIntent(
-            addMarkerUseCase: DefaultAddMarkerUseCase(markerDataRepository: DefaultMarkerDataRepository()),
-            locationManager: LocationManager()
-        )
+        let controllers = TabBarItem.allCases.map { $0.viewController }
         
-        let mainVC = MainViewController(intent: mainIntent)
-        present(mainVC, animated: true)
+        let tabbarController = TabBarController()
+        tabbarController.setViewControllers(controllers, animated: true)
+        
+        tabbarController.modalPresentationStyle = .fullScreen
+        present(tabbarController, animated: true)
     }
     
     override func viewDidLoad() {
@@ -231,7 +232,6 @@ extension MainViewController: Alertable {
 extension MainViewController {
     private func configureUIComponents() {
         [addressImageView, addressLabel].forEach(addressStackView.addArrangedSubview(_:))
-        [addressStackView, userLocationButton].forEach { $0.translatesAutoresizingMaskIntoConstraints = false }
     }
     
     private func configureHierachy() {
@@ -241,12 +241,13 @@ extension MainViewController {
     private func configureLayout() {
         naverMapView.frame = view.frame
         
-        NSLayoutConstraint.activate([
-            addressStackView.topAnchor.constraint(equalTo: view.safeAreaLayoutGuide.topAnchor, constant: 15),
-            addressStackView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor, constant: 20),
-            
-            userLocationButton.bottomAnchor.constraint(equalTo: view.safeAreaLayoutGuide.bottomAnchor, constant: -100),
-            userLocationButton.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor, constant: -20)
-        ])
+        addressStackView.snp.makeConstraints { component in
+            component.top.leading.equalTo(view.safeAreaLayoutGuide).inset(20)
+        }
+        
+        userLocationButton.snp.makeConstraints { component in
+            component.bottom.equalToSuperview().offset(-150)
+            component.trailing.equalToSuperview().offset(-20)
+        }
     }
 }

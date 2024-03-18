@@ -13,6 +13,7 @@
 		310C7B8E2B96DE52002A3BB6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C7B8D2B96DE52002A3BB6 /* MainViewController.swift */; };
 		310C7B932B96DE53002A3BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 310C7B922B96DE53002A3BB6 /* Assets.xcassets */; };
 		310C7B962B96DE53002A3BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310C7B942B96DE53002A3BB6 /* LaunchScreen.storyboard */; };
+		311AB6812BA55755004057FA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311AB6802BA55755004057FA /* TabBarController.swift */; };
 		3125B39E2BA03C410064E8DD /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3125B39D2BA03C410064E8DD /* Alertable.swift */; };
 		313CFB3E2B9827490032ECE3 /* NaverMaps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 313CFB3D2B9827490032ECE3 /* NaverMaps.plist */; };
 		3155BC2F2B9848AB003D4140 /* SubwayInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3155BC2E2B9848AB003D4140 /* SubwayInformationDTO.swift */; };
@@ -25,6 +26,10 @@
 		315A685C2B9AF71E00268DF4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 315A685B2B9AF71E00268DF4 /* RxSwift */; };
 		3172261F2B9C11700035704A /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172261E2B9C116F0035704A /* State.swift */; };
 		3173BFE52B9E048A005CFC5F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3173BFE42B9E048A005CFC5F /* LocationManager.swift */; };
+		318657F22BA43873001F5277 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318657F12BA43873001F5277 /* TabBarItem.swift */; };
+		318657F42BA43C67001F5277 /* TabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318657F32BA43C67001F5277 /* TabBarItemView.swift */; };
+		318657F72BA459E5001F5277 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 318657F62BA459E5001F5277 /* SnapKit */; };
+		318657F92BA46DC9001F5277 /* TabBarStackView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318657F82BA46DC9001F5277 /* TabBarStackView.swift */; };
 		318C840B2B96F15100D88219 /* .swiftlint.yml in Resources */ = {isa = PBXBuildFile; fileRef = 318C840A2B96F15100D88219 /* .swiftlint.yml */; };
 		31A075A02B9B03DF0060211B /* DefaultMarkerDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A0759F2B9B03DF0060211B /* DefaultMarkerDataRepository.swift */; };
 		31A075A32B9B0E710060211B /* JSONDataError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A075A22B9B0E710060211B /* JSONDataError.swift */; };
@@ -50,6 +55,7 @@
 		310C7B922B96DE53002A3BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		310C7B952B96DE53002A3BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		310C7B972B96DE53002A3BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		311AB6802BA55755004057FA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3125B39D2BA03C410064E8DD /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		313CFB3D2B9827490032ECE3 /* NaverMaps.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NaverMaps.plist; sourceTree = "<group>"; };
 		3155BC2E2B9848AB003D4140 /* SubwayInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayInformationDTO.swift; sourceTree = "<group>"; };
@@ -59,6 +65,9 @@
 		31569A362B9B1D00000DF03B /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		3172261E2B9C116F0035704A /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		3173BFE42B9E048A005CFC5F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		318657F12BA43873001F5277 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
+		318657F32BA43C67001F5277 /* TabBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemView.swift; sourceTree = "<group>"; };
+		318657F82BA46DC9001F5277 /* TabBarStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarStackView.swift; sourceTree = "<group>"; };
 		318C840A2B96F15100D88219 /* .swiftlint.yml */ = {isa = PBXFileReference; lastKnownFileType = text.yaml; path = .swiftlint.yml; sourceTree = "<group>"; };
 		31A0759F2B9B03DF0060211B /* DefaultMarkerDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultMarkerDataRepository.swift; sourceTree = "<group>"; };
 		31A075A22B9B0E710060211B /* JSONDataError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = JSONDataError.swift; sourceTree = "<group>"; };
@@ -82,6 +91,7 @@
 				315A68542B9AF71E00268DF4 /* RxCocoa in Frameworks */,
 				315A685C2B9AF71E00268DF4 /* RxSwift in Frameworks */,
 				8539C3733FD3F320422145DF /* libPods-SubwayTalking.a in Frameworks */,
+				318657F72BA459E5001F5277 /* SnapKit in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -127,6 +137,7 @@
 		3108E4BD2B98291E003115B0 /* Util */ = {
 			isa = PBXGroup;
 			children = (
+				318657F02BA43863001F5277 /* CustomTabBar */,
 				31A102542B9DDF450051121A /* Constant */,
 				3108E4BE2B982938003115B0 /* Extensions */,
 			);
@@ -246,6 +257,17 @@
 			path = Intent;
 			sourceTree = "<group>";
 		};
+		318657F02BA43863001F5277 /* CustomTabBar */ = {
+			isa = PBXGroup;
+			children = (
+				318657F12BA43873001F5277 /* TabBarItem.swift */,
+				318657F32BA43C67001F5277 /* TabBarItemView.swift */,
+				318657F82BA46DC9001F5277 /* TabBarStackView.swift */,
+				311AB6802BA55755004057FA /* TabBarController.swift */,
+			);
+			path = CustomTabBar;
+			sourceTree = "<group>";
+		};
 		318F86772BA2DE8D00A6BD3A /* Font */ = {
 			isa = PBXGroup;
 			children = (
@@ -356,6 +378,7 @@
 				315A68532B9AF71E00268DF4 /* RxCocoa */,
 				315A68572B9AF71E00268DF4 /* RxRelay */,
 				315A685B2B9AF71E00268DF4 /* RxSwift */,
+				318657F62BA459E5001F5277 /* SnapKit */,
 			);
 			productName = SubwayTalking;
 			productReference = 310C7B862B96DE52002A3BB6 /* SubwayTalking.app */;
@@ -387,6 +410,7 @@
 			mainGroup = 310C7B7D2B96DE52002A3BB6;
 			packageReferences = (
 				315A684E2B9AF71E00268DF4 /* XCRemoteSwiftPackageReference "RxSwift" */,
+				318657F52BA459E5001F5277 /* XCRemoteSwiftPackageReference "SnapKit" */,
 			);
 			productRefGroup = 310C7B872B96DE52002A3BB6 /* Products */;
 			projectDirPath = "";
@@ -479,9 +503,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				318657F42BA43C67001F5277 /* TabBarItemView.swift in Sources */,
 				31569A372B9B1D00000DF03B /* View.swift in Sources */,
 				31569A322B9B1C3D000DF03B /* MainState.swift in Sources */,
+				318657F22BA43873001F5277 /* TabBarItem.swift in Sources */,
 				31A4B0742B9D7CE900CDEA26 /* Observable+Previous.swift in Sources */,
+				311AB6812BA55755004057FA /* TabBarController.swift in Sources */,
 				31A075A32B9B0E710060211B /* JSONDataError.swift in Sources */,
 				310C7B8E2B96DE52002A3BB6 /* MainViewController.swift in Sources */,
 				3155BC2F2B9848AB003D4140 /* SubwayInformationDTO.swift in Sources */,
@@ -490,6 +517,7 @@
 				3173BFE52B9E048A005CFC5F /* LocationManager.swift in Sources */,
 				31569A302B9B1B3C000DF03B /* MarkerDataRepository.swift in Sources */,
 				31A4B0782B9D7D8200CDEA26 /* StateRelay.swift in Sources */,
+				318657F92BA46DC9001F5277 /* TabBarStackView.swift in Sources */,
 				3125B39E2BA03C410064E8DD /* Alertable.swift in Sources */,
 				310C7B8A2B96DE52002A3BB6 /* AppDelegate.swift in Sources */,
 				31A102562B9DDF580051121A /* Constant.swift in Sources */,
@@ -748,6 +776,14 @@
 				version = 6.5.0;
 			};
 		};
+		318657F52BA459E5001F5277 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/SnapKit/SnapKit";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 5.7.1;
+			};
+		};
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
@@ -765,6 +801,11 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 315A684E2B9AF71E00268DF4 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		318657F62BA459E5001F5277 /* SnapKit */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 318657F52BA459E5001F5277 /* XCRemoteSwiftPackageReference "SnapKit" */;
+			productName = SnapKit;
 		};
 /* End XCSwiftPackageProductDependency section */
 	};
