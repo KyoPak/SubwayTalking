@@ -19,6 +19,10 @@ protocol MainIntent {
 
 final class DefaultMainIntent: MainIntent {
     
+    deinit {
+        print("DefaultMainIntent DEINIT")
+    }
+    
     // MARK: Property
     
     private let state: StateRelay<MainState>
@@ -48,26 +52,31 @@ final class DefaultMainIntent: MainIntent {
         
         let backGroundQueue = ConcurrentDispatchQueueScheduler(queue: .global())
         
-        addMarkerUseCase.fetchMarkerData()
-            .subscribe(on: backGroundQueue)
-            .withUnretained(self)
-            .flatMap { (owner, datas) in
-                return owner.locationManager.getAddress(location: owner.state.value.location)
-                    .map { [weak owner] address in
-                        let newState = MainState(
-                            prevState: owner?.state.value,
-                            subwayInfos: datas,
-                            userLocationMoveFlag: true,
-                            cameraLocationAddress: address
-                        )
-                        return newState
-                    }
-            }
-            .observe(on: MainScheduler.instance)
-            .subscribe(with: self, onNext: { owner, newState in
+        Observable.zip(
+            addMarkerUseCase.fetchMarkerData().asObservable(),
+            locationManager.getAddress(location: state.value.location)
+        )
+        .subscribe(on: backGroundQueue)
+        .withUnretained(self)
+        .map { (owner, datas) in
+            let newState = MainState(
+                prevState: owner.state.value,
+                subwayInfos: datas.0,
+                userLocationMoveFlag: true,
+                cameraLocationAddress: datas.1
+            )
+            return newState
+        }
+        .observe(on: MainScheduler.instance)
+        .subscribe(with: self, onNext: { owner, mainState in
+            owner.state.accept(mainState)
+        }, onError: { owner, error in
+            [error, nil].forEach {
+                let newState = MainState(prevState: owner.state.value, error: $0)
                 owner.state.accept(newState)
-            })
-            .disposed(by: disposeBag)
+            }
+        })
+        .disposed(by: disposeBag)
     }
     
     func userLocationButtonTapped() {
