@@ -19,10 +19,6 @@ protocol MainIntent {
 
 final class DefaultMainIntent: MainIntent {
     
-    deinit {
-        print("DefaultMainIntent DEINIT")
-    }
-    
     // MARK: Property
     
     private let state: StateRelay<MainState>
