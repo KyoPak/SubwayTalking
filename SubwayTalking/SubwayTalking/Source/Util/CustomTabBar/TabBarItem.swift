@@ -28,22 +28,38 @@ extension TabBarItem {
     var defaultIcon: UIImage {
         switch self {
         case .chat:
-            return Constant.Image.chat.withTintColor(.label.withAlphaComponent(0.4), renderingMode: .alwaysOriginal)
+            return Constant.Image.chat.withTintColor(.black.withAlphaComponent(0.4), renderingMode: .alwaysOriginal)
         case .map:
-            return Constant.Image.map.withTintColor(.label.withAlphaComponent(0.4), renderingMode: .alwaysOriginal)
+            return Constant.Image.map.withTintColor(.black.withAlphaComponent(0.4), renderingMode: .alwaysOriginal)
         case .setting:
-            return Constant.Image.setting.withTintColor(.label.withAlphaComponent(0.4), renderingMode: .alwaysOriginal)
+            return Constant.Image.setting.withTintColor(.black.withAlphaComponent(0.4), renderingMode: .alwaysOriginal)
         }
     }
     
     var selectedIcon: UIImage? {
         switch self {
         case .chat:
-            return Constant.Image.chatSelected.withTintColor(.label, renderingMode: .alwaysOriginal)
+            return Constant.Image.chatSelected.withTintColor(.black, renderingMode: .alwaysOriginal)
         case .map:
-            return Constant.Image.mapSelected.withTintColor(.label, renderingMode: .alwaysOriginal)
+            return Constant.Image.mapSelected.withTintColor(.black, renderingMode: .alwaysOriginal)
         case .setting:
-            return Constant.Image.settingSelected.withTintColor(.label, renderingMode: .alwaysOriginal)
+            return Constant.Image.settingSelected.withTintColor(.black, renderingMode: .alwaysOriginal)
         }
     }
+    
+    var viewController: UIViewController {
+        let mainIntent = DefaultMainIntent(
+            addMarkerUseCase: DefaultAddMarkerUseCase(markerDataRepository: DefaultMarkerDataRepository()),
+            locationManager: LocationManager()
+        )
+        let mainVC = MainViewController(intent: mainIntent)
+           switch self {
+           case .chat:
+               return mainVC
+           case .map:
+               return mainVC
+           case .setting:
+               return mainVC
+           }
+       }
 }
