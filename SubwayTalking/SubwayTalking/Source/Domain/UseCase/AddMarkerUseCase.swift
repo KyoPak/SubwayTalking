@@ -9,7 +9,7 @@ import RxSwift
 import Foundation
 
 protocol AddMarkerUseCase {
-    func fetchMarkerData() -> Observable<[SubwayInformation]>
+    func fetchMarkerData() -> Single<[SubwayInformation]>
 }
 
 final class DefaultAddMarkerUseCase: AddMarkerUseCase {
@@ -19,11 +19,10 @@ final class DefaultAddMarkerUseCase: AddMarkerUseCase {
         self.markerDataRepository = markerDataRepository
     }
     
-    func fetchMarkerData() -> Observable<[SubwayInformation]> {
+    func fetchMarkerData() -> Single<[SubwayInformation]> {
         return markerDataRepository.fetchData()
             .map({ infos in
                 return infos.filter { $0.latitude != .zero && $0.longitude != .zero }
             })
-            .asObservable()
     }
 }
