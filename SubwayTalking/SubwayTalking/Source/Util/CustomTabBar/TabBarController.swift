@@ -63,9 +63,9 @@ extension TabBarController {
     
     private func configureLayout() {
         tabBarView.snp.makeConstraints { component in
-            component.leading.trailing.equalToSuperview().inset(50)
+            component.leading.trailing.equalToSuperview().inset(60)
             component.bottom.equalToSuperview().offset(-50)
-            component.height.equalTo(80)
+            component.height.equalTo(70)
         }
     }
 }
