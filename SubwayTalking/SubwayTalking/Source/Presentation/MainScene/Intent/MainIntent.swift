@@ -47,32 +47,31 @@ final class DefaultMainIntent: MainIntent {
         locationManager.startUpdatingLocation()
         
         let backGroundQueue = ConcurrentDispatchQueueScheduler(queue: .global())
-        
-        Observable.zip(
-            addMarkerUseCase.fetchMarkerData().asObservable(),
-            locationManager.getAddress(location: state.value.location)
-        )
-        .subscribe(on: backGroundQueue)
-        .withUnretained(self)
-        .map { (owner, datas) in
-            let newState = MainState(
-                prevState: owner.state.value,
-                subwayInfos: datas.0,
-                userLocationMoveFlag: true,
-                cameraLocationAddress: datas.1
-            )
-            return newState
-        }
-        .observe(on: MainScheduler.instance)
-        .subscribe(with: self, onNext: { owner, mainState in
-            owner.state.accept(mainState)
-        }, onError: { owner, error in
-            [error, nil].forEach {
-                let newState = MainState(prevState: owner.state.value, error: $0)
-                owner.state.accept(newState)
+        locationManager.getAddress(location: state.value.location)
+            .subscribe(on: backGroundQueue)
+            .withUnretained(self)
+            .map { (owner, address) in
+                return MainState(prevState: owner.state.value, userLocationMoveFlag: true)
             }
-        })
-        .disposed(by: disposeBag)
+            .observe(on: MainScheduler.instance)
+            .subscribe(with: self, onNext: { owner, newState in
+                owner.state.accept(newState)
+            })
+            .disposed(by: disposeBag)
+        
+        addMarkerUseCase.fetchMarkerData()
+            .subscribe(on: backGroundQueue)
+            .observe(on: MainScheduler.instance)
+            .subscribe(with: self, onSuccess: { owner, datas in
+                let newState = MainState(prevState: owner.state.value, subwayInfos: datas)
+                owner.state.accept(newState)
+            }, onFailure: { owner, error in
+                [error, nil].forEach {
+                    let newState = MainState(prevState: owner.state.value, error: $0)
+                    owner.state.accept(newState)
+                }
+            })
+            .disposed(by: disposeBag)
     }
     
     func userLocationButtonTapped() {
