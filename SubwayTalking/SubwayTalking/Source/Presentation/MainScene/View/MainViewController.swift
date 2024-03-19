@@ -246,7 +246,8 @@ extension MainViewController {
         naverMapView.frame = view.frame
         
         addressStackView.snp.makeConstraints { component in
-            component.top.leading.equalTo(view.safeAreaLayoutGuide).inset(20)
+            component.centerX.equalToSuperview()
+            component.top.equalTo(view.safeAreaLayoutGuide).offset(20)
         }
         
         userLocationButton.snp.makeConstraints { component in
