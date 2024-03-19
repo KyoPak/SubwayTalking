@@ -1,5 +1,5 @@
 //
-//  MainState.swift
+//  MapState.swift
 //  SubwayTalking
 //
 //  Created by 박효성 on 3/8/24.
@@ -7,8 +7,8 @@
 
 import CoreLocation
 
-struct MainState: State {
-    static let initialState = MainState(subwayInfos: [], location: CLLocation(), cameraLocationAddress: "")
+struct MapState: State {
+    static let initialState = MapState(subwayInfos: [], location: CLLocation(), cameraLocationAddress: "")
     
     let subwayInfos: [SubwayInformation]
     let authRequestFlag: Bool
@@ -18,7 +18,7 @@ struct MainState: State {
     let error: Error?
     
     init(
-        prevState: MainState? = nil,
+        prevState: MapState? = nil,
         subwayInfos: [SubwayInformation] = [],
         authRequestFlag: Bool? = false,
         location: CLLocation? = nil,
