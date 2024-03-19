@@ -38,9 +38,11 @@
 		31A102562B9DDF580051121A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A102552B9DDF580051121A /* Constant.swift */; };
 		31A4B0742B9D7CE900CDEA26 /* Observable+Previous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4B0732B9D7CE900CDEA26 /* Observable+Previous.swift */; };
 		31A4B0782B9D7D8200CDEA26 /* StateRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4B0772B9D7D8200CDEA26 /* StateRelay.swift */; };
-		31F583652BA32B41003A1F59 /* LINESeedKR-Rg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31F583622BA32B41003A1F59 /* LINESeedKR-Rg.otf */; };
-		31F583662BA32B41003A1F59 /* LINESeedKR-Bd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31F583632BA32B41003A1F59 /* LINESeedKR-Bd.otf */; };
-		31F583672BA32B41003A1F59 /* LINESeedKR-Th.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31F583642BA32B41003A1F59 /* LINESeedKR-Th.otf */; };
+		31DB177A2BA958D400573897 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31DB17792BA958D400573897 /* Pretendard-Bold.otf */; };
+		31DB177E2BA9592D00573897 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31DB177B2BA9592D00573897 /* Pretendard-Medium.otf */; };
+		31DB177F2BA9592D00573897 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31DB177C2BA9592D00573897 /* Pretendard-Regular.otf */; };
+		31DB17802BA9592D00573897 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31DB177D2BA9592D00573897 /* Pretendard-SemiBold.otf */; };
+		31DB17822BA9593500573897 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31DB17812BA9593500573897 /* Pretendard-Light.otf */; };
 		8539C3733FD3F320422145DF /* libPods-SubwayTalking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */; };
 /* End PBXBuildFile section */
 
@@ -76,9 +78,11 @@
 		31A102552B9DDF580051121A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		31A4B0732B9D7CE900CDEA26 /* Observable+Previous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Previous.swift"; sourceTree = "<group>"; };
 		31A4B0772B9D7D8200CDEA26 /* StateRelay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRelay.swift; sourceTree = "<group>"; };
-		31F583622BA32B41003A1F59 /* LINESeedKR-Rg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LINESeedKR-Rg.otf"; sourceTree = "<group>"; };
-		31F583632BA32B41003A1F59 /* LINESeedKR-Bd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LINESeedKR-Bd.otf"; sourceTree = "<group>"; };
-		31F583642BA32B41003A1F59 /* LINESeedKR-Th.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LINESeedKR-Th.otf"; sourceTree = "<group>"; };
+		31DB17792BA958D400573897 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		31DB177B2BA9592D00573897 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		31DB177C2BA9592D00573897 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		31DB177D2BA9592D00573897 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		31DB17812BA9593500573897 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
 		B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SubwayTalking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -271,9 +275,11 @@
 		318F86772BA2DE8D00A6BD3A /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				31F583632BA32B41003A1F59 /* LINESeedKR-Bd.otf */,
-				31F583622BA32B41003A1F59 /* LINESeedKR-Rg.otf */,
-				31F583642BA32B41003A1F59 /* LINESeedKR-Th.otf */,
+				31DB17792BA958D400573897 /* Pretendard-Bold.otf */,
+				31DB177B2BA9592D00573897 /* Pretendard-Medium.otf */,
+				31DB177C2BA9592D00573897 /* Pretendard-Regular.otf */,
+				31DB177D2BA9592D00573897 /* Pretendard-SemiBold.otf */,
+				31DB17812BA9593500573897 /* Pretendard-Light.otf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -427,12 +433,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				318C840B2B96F15100D88219 /* .swiftlint.yml in Resources */,
-				31F583672BA32B41003A1F59 /* LINESeedKR-Th.otf in Resources */,
+				31DB177A2BA958D400573897 /* Pretendard-Bold.otf in Resources */,
 				310C7B962B96DE53002A3BB6 /* LaunchScreen.storyboard in Resources */,
+				31DB17802BA9592D00573897 /* Pretendard-SemiBold.otf in Resources */,
 				313CFB3E2B9827490032ECE3 /* NaverMaps.plist in Resources */,
-				31F583662BA32B41003A1F59 /* LINESeedKR-Bd.otf in Resources */,
+				31DB177F2BA9592D00573897 /* Pretendard-Regular.otf in Resources */,
 				310C7B932B96DE53002A3BB6 /* Assets.xcassets in Resources */,
-				31F583652BA32B41003A1F59 /* LINESeedKR-Rg.otf in Resources */,
+				31DB177E2BA9592D00573897 /* Pretendard-Medium.otf in Resources */,
+				31DB17822BA9593500573897 /* Pretendard-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
