@@ -153,6 +153,10 @@ final class MainViewController: UIViewController, MainViewUpdatable {
         if state.cameraLocationAddress != prev.cameraLocationAddress {
             addressLabel.text = state.cameraLocationAddress
         }
+         
+        if state.error != nil {
+            showAlert(title: Constant.Text.alertErrorTitle, message: state.error?.localizedDescription ?? "")
+        }
     }
 }
 

@@ -47,25 +47,29 @@ final class DefaultMainIntent: MainIntent {
         locationManager.startUpdatingLocation()
         
         let backGroundQueue = ConcurrentDispatchQueueScheduler(queue: .global())
-        
-        addMarkerUseCase.fetchMarkerData()
+        locationManager.getAddress(location: state.value.location)
             .subscribe(on: backGroundQueue)
             .withUnretained(self)
-            .flatMap { (owner, datas) in
-                return owner.locationManager.getAddress(location: owner.state.value.location)
-                    .map { [weak owner] address in
-                        let newState = MainState(
-                            prevState: owner?.state.value,
-                            subwayInfos: datas,
-                            userLocationMoveFlag: true,
-                            cameraLocationAddress: address
-                        )
-                        return newState
-                    }
+            .map { (owner, address) in
+                return MainState(prevState: owner.state.value, userLocationMoveFlag: true)
             }
             .observe(on: MainScheduler.instance)
             .subscribe(with: self, onNext: { owner, newState in
                 owner.state.accept(newState)
+            })
+            .disposed(by: disposeBag)
+        
+        addMarkerUseCase.fetchMarkerData()
+            .subscribe(on: backGroundQueue)
+            .observe(on: MainScheduler.instance)
+            .subscribe(with: self, onSuccess: { owner, datas in
+                let newState = MainState(prevState: owner.state.value, subwayInfos: datas)
+                owner.state.accept(newState)
+            }, onFailure: { owner, error in
+                [error, nil].forEach {
+                    let newState = MainState(prevState: owner.state.value, error: $0)
+                    owner.state.accept(newState)
+                }
             })
             .disposed(by: disposeBag)
     }

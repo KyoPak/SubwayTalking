@@ -11,12 +11,12 @@ import RxSwift
 
 final class DefaultMarkerDataRepository: MarkerDataRepository {
     func fetchData() -> Single<[SubwayInformation]> {
-        return Single<[SubwayInformation]>.create { single in
+        return Single<[SubwayInformation]>.create { observer in
             do {
                 let subwayInformations = try self.decodeSubwayData()
-                single(.success(subwayInformations))
+                observer(.success(subwayInformations))
             } catch {
-                single(.failure(error))
+                observer(.failure(error))
             }
             
             return Disposables.create()

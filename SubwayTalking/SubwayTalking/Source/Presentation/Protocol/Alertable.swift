@@ -31,4 +31,20 @@ extension Alertable where Self: UIViewController {
         [confirmAction, cancelAction].forEach { alert.addAction($0) }
         present(alert, animated: true)
     }
+    
+    func showAlert(title: String, message: String) {
+        let alert = UIAlertController(
+            title: title,
+            message: message,
+            preferredStyle: .alert
+        )
+        
+        let confirmAction = UIAlertAction(
+            title: Constant.Text.alertCancelActionTitle,
+            style: .default
+        )
+        
+        alert.addAction(confirmAction)
+        present(alert, animated: true)
+    }
 }

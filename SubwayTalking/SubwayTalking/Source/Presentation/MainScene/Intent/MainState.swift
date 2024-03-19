@@ -15,6 +15,7 @@ struct MainState: State {
     let location: CLLocation
     let userLocationMoveFlag: Bool
     let cameraLocationAddress: String
+    let error: Error?
     
     init(
         prevState: MainState? = nil,
@@ -22,12 +23,14 @@ struct MainState: State {
         authRequestFlag: Bool? = false,
         location: CLLocation? = nil,
         userLocationMoveFlag: Bool? = false,
-        cameraLocationAddress: String? = nil
+        cameraLocationAddress: String? = nil,
+        error: Error? = nil
     ) {
         self.subwayInfos = subwayInfos.isEmpty ? (prevState?.subwayInfos ?? []) : subwayInfos
         self.authRequestFlag = authRequestFlag ?? prevState?.authRequestFlag ?? false
         self.location = location ?? prevState?.location ?? CLLocation()
         self.userLocationMoveFlag = userLocationMoveFlag ?? prevState?.userLocationMoveFlag ?? false
         self.cameraLocationAddress = cameraLocationAddress ?? prevState?.cameraLocationAddress ?? ""
+        self.error = error
     }
 }
