@@ -1,5 +1,5 @@
 //
-//  MainViewController.swift
+//  MapViewController.swift
 //  SubwayTalking
 //
 //  Created by 박효성 on 3/5/24.
@@ -43,13 +43,13 @@ class StartViewController: UIViewController {
     }
 }
 
-protocol MainViewUpdatable: View where AssociatedState == MainState { }
+protocol MapViewUpdatable: View where AssociatedState == MapState { }
 
-final class MainViewController: UIViewController, MainViewUpdatable {
+final class MapViewController: UIViewController, MapViewUpdatable {
     
     // MARK: Property
     
-    private var intent: MainIntent?
+    private var intent: MapIntent?
     private let disposeBag = DisposeBag()
     private let cameraMovingEvent = PublishRelay<(latitude: Double, longitude: Double)>()
     
@@ -86,7 +86,7 @@ final class MainViewController: UIViewController, MainViewUpdatable {
     private let addressLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .clear
-        label.font = UIFont(name: Constant.Font.lineFontBold, size: 20)
+        label.font = UIFont(name: Constant.Font.pretendardBold, size: 20)
         label.textColor = .black
         return label
     }()
@@ -108,7 +108,7 @@ final class MainViewController: UIViewController, MainViewUpdatable {
     
     // MARK: Initialize & LifeCycle
     
-    init(intent: MainIntent) {
+    init(intent: MapIntent) {
         super.init(nibName: nil, bundle: nil)
         
         self.intent = intent
@@ -129,7 +129,7 @@ final class MainViewController: UIViewController, MainViewUpdatable {
     
     // MARK: MainViewUpdatable
     
-    func update(with state: MainState?, prev: MainState?) {
+    func update(with state: MapState?, prev: MapState?) {
         guard let state = state, let prev = prev else { return }
         
         if state.subwayInfos != prev.subwayInfos {
@@ -161,7 +161,7 @@ final class MainViewController: UIViewController, MainViewUpdatable {
 }
 
 // MARK: Bind Intent
-extension MainViewController {
+extension MapViewController {
     private func bind() {
         bindView()
         bindIntent()
@@ -194,7 +194,7 @@ extension MainViewController {
 }
 
 // MARK: Configure Map Components
-extension MainViewController {
+extension MapViewController {
     private func configureMarker(_ latitude: Double, _ longitude: Double) {
         let marker = NMFMarker()
         let subwayMarkerImage = Constant.Image.subwayMarker
@@ -216,7 +216,7 @@ extension MainViewController {
 }
 
 // MARK: - NaverMap Camera Delegate
-extension MainViewController: NMFMapViewCameraDelegate {
+extension MapViewController: NMFMapViewCameraDelegate {
     func mapViewCameraIdle(_ mapView: NMFMapView) {
         cameraMovingEvent.accept((mapView.latitude, mapView.longitude))
     }
@@ -226,14 +226,14 @@ extension MainViewController: NMFMapViewCameraDelegate {
     }
 }
 
-extension MainViewController: Alertable {
+extension MapViewController: Alertable {
     func requestLocationAuthorization() {
         showLocationAuthorizationAlert()
     }
 }
 
 // MARK: UI Configure
-extension MainViewController {
+extension MapViewController {
     private func configureUIComponents() {
         [addressImageView, addressLabel].forEach(addressStackView.addArrangedSubview(_:))
     }
@@ -246,7 +246,8 @@ extension MainViewController {
         naverMapView.frame = view.frame
         
         addressStackView.snp.makeConstraints { component in
-            component.top.leading.equalTo(view.safeAreaLayoutGuide).inset(20)
+            component.centerX.equalToSuperview()
+            component.top.equalTo(view.safeAreaLayoutGuide).offset(20)
         }
         
         userLocationButton.snp.makeConstraints { component in

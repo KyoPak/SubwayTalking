@@ -50,7 +50,6 @@ extension TabBarItemView {
     private func animateItems() {
         titleLabel.isHidden = !isSelected
         iconImageView.image = isSelected ? item.selectedIcon : item.defaultIcon
-        containerView.backgroundColor = isSelected ? Constant.Color.overlay : .white
         
         if isSelected { configureSelectLayout() }
         if !isSelected { configureBasicLayout() }
@@ -63,13 +62,12 @@ extension TabBarItemView {
         titleLabel.text = item.name
         titleLabel.textColor = .black
         titleLabel.textAlignment = .left
-        titleLabel.font = UIFont(name: Constant.Font.lineFontBold, size: 17)
+        titleLabel.font = UIFont(name: Constant.Font.pretendardSemibold, size: 17)
         
         iconImageView.tintColor = .black
         iconImageView.contentMode = .right
         iconImageView.image = isSelected ? item.selectedIcon : item.defaultIcon
         
-        containerView.layer.cornerRadius = 10
         containerView.axis = .horizontal
         containerView.alignment = .center
         containerView.distribution = .fillProportionally

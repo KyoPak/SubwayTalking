@@ -48,11 +48,11 @@ extension TabBarItem {
     }
     
     var viewController: UIViewController {
-        let mainIntent = DefaultMainIntent(
+        let mainIntent = DefaultMapIntent(
             addMarkerUseCase: DefaultAddMarkerUseCase(markerDataRepository: DefaultMarkerDataRepository()),
             locationManager: LocationManager()
         )
-        let mainVC = MainViewController(intent: mainIntent)
+        let mainVC = MapViewController(intent: mainIntent)
            switch self {
            case .chat:
                return mainVC

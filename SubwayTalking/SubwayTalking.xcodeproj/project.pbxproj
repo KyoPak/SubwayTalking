@@ -10,7 +10,7 @@
 		3108E4C02B982990003115B0 /* Bundle+APIKey.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3108E4BF2B982990003115B0 /* Bundle+APIKey.swift */; };
 		310C7B8A2B96DE52002A3BB6 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C7B892B96DE52002A3BB6 /* AppDelegate.swift */; };
 		310C7B8C2B96DE52002A3BB6 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C7B8B2B96DE52002A3BB6 /* SceneDelegate.swift */; };
-		310C7B8E2B96DE52002A3BB6 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C7B8D2B96DE52002A3BB6 /* MainViewController.swift */; };
+		310C7B8E2B96DE52002A3BB6 /* MapViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 310C7B8D2B96DE52002A3BB6 /* MapViewController.swift */; };
 		310C7B932B96DE53002A3BB6 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 310C7B922B96DE53002A3BB6 /* Assets.xcassets */; };
 		310C7B962B96DE53002A3BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310C7B942B96DE53002A3BB6 /* LaunchScreen.storyboard */; };
 		311AB6812BA55755004057FA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311AB6802BA55755004057FA /* TabBarController.swift */; };
@@ -18,8 +18,8 @@
 		313CFB3E2B9827490032ECE3 /* NaverMaps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 313CFB3D2B9827490032ECE3 /* NaverMaps.plist */; };
 		3155BC2F2B9848AB003D4140 /* SubwayInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3155BC2E2B9848AB003D4140 /* SubwayInformationDTO.swift */; };
 		31569A302B9B1B3C000DF03B /* MarkerDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31569A2F2B9B1B3C000DF03B /* MarkerDataRepository.swift */; };
-		31569A322B9B1C3D000DF03B /* MainState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31569A312B9B1C3D000DF03B /* MainState.swift */; };
-		31569A352B9B1CEF000DF03B /* MainIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31569A342B9B1CEF000DF03B /* MainIntent.swift */; };
+		31569A322B9B1C3D000DF03B /* MapState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31569A312B9B1C3D000DF03B /* MapState.swift */; };
+		31569A352B9B1CEF000DF03B /* MapIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31569A342B9B1CEF000DF03B /* MapIntent.swift */; };
 		31569A372B9B1D00000DF03B /* View.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31569A362B9B1D00000DF03B /* View.swift */; };
 		315A68542B9AF71E00268DF4 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 315A68532B9AF71E00268DF4 /* RxCocoa */; };
 		315A68582B9AF71E00268DF4 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 315A68572B9AF71E00268DF4 /* RxRelay */; };
@@ -38,9 +38,11 @@
 		31A102562B9DDF580051121A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A102552B9DDF580051121A /* Constant.swift */; };
 		31A4B0742B9D7CE900CDEA26 /* Observable+Previous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4B0732B9D7CE900CDEA26 /* Observable+Previous.swift */; };
 		31A4B0782B9D7D8200CDEA26 /* StateRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4B0772B9D7D8200CDEA26 /* StateRelay.swift */; };
-		31F583652BA32B41003A1F59 /* LINESeedKR-Rg.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31F583622BA32B41003A1F59 /* LINESeedKR-Rg.otf */; };
-		31F583662BA32B41003A1F59 /* LINESeedKR-Bd.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31F583632BA32B41003A1F59 /* LINESeedKR-Bd.otf */; };
-		31F583672BA32B41003A1F59 /* LINESeedKR-Th.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31F583642BA32B41003A1F59 /* LINESeedKR-Th.otf */; };
+		31DB177A2BA958D400573897 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31DB17792BA958D400573897 /* Pretendard-Bold.otf */; };
+		31DB177E2BA9592D00573897 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31DB177B2BA9592D00573897 /* Pretendard-Medium.otf */; };
+		31DB177F2BA9592D00573897 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31DB177C2BA9592D00573897 /* Pretendard-Regular.otf */; };
+		31DB17802BA9592D00573897 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31DB177D2BA9592D00573897 /* Pretendard-SemiBold.otf */; };
+		31DB17822BA9593500573897 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31DB17812BA9593500573897 /* Pretendard-Light.otf */; };
 		8539C3733FD3F320422145DF /* libPods-SubwayTalking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */; };
 /* End PBXBuildFile section */
 
@@ -51,7 +53,7 @@
 		310C7B862B96DE52002A3BB6 /* SubwayTalking.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SubwayTalking.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		310C7B892B96DE52002A3BB6 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		310C7B8B2B96DE52002A3BB6 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
-		310C7B8D2B96DE52002A3BB6 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
+		310C7B8D2B96DE52002A3BB6 /* MapViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapViewController.swift; sourceTree = "<group>"; };
 		310C7B922B96DE53002A3BB6 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		310C7B952B96DE53002A3BB6 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		310C7B972B96DE53002A3BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
@@ -60,8 +62,8 @@
 		313CFB3D2B9827490032ECE3 /* NaverMaps.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NaverMaps.plist; sourceTree = "<group>"; };
 		3155BC2E2B9848AB003D4140 /* SubwayInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayInformationDTO.swift; sourceTree = "<group>"; };
 		31569A2F2B9B1B3C000DF03B /* MarkerDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerDataRepository.swift; sourceTree = "<group>"; };
-		31569A312B9B1C3D000DF03B /* MainState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainState.swift; sourceTree = "<group>"; };
-		31569A342B9B1CEF000DF03B /* MainIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainIntent.swift; sourceTree = "<group>"; };
+		31569A312B9B1C3D000DF03B /* MapState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapState.swift; sourceTree = "<group>"; };
+		31569A342B9B1CEF000DF03B /* MapIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapIntent.swift; sourceTree = "<group>"; };
 		31569A362B9B1D00000DF03B /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
 		3172261E2B9C116F0035704A /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		3173BFE42B9E048A005CFC5F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
@@ -76,9 +78,11 @@
 		31A102552B9DDF580051121A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		31A4B0732B9D7CE900CDEA26 /* Observable+Previous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Previous.swift"; sourceTree = "<group>"; };
 		31A4B0772B9D7D8200CDEA26 /* StateRelay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRelay.swift; sourceTree = "<group>"; };
-		31F583622BA32B41003A1F59 /* LINESeedKR-Rg.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LINESeedKR-Rg.otf"; sourceTree = "<group>"; };
-		31F583632BA32B41003A1F59 /* LINESeedKR-Bd.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LINESeedKR-Bd.otf"; sourceTree = "<group>"; };
-		31F583642BA32B41003A1F59 /* LINESeedKR-Th.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "LINESeedKR-Th.otf"; sourceTree = "<group>"; };
+		31DB17792BA958D400573897 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
+		31DB177B2BA9592D00573897 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
+		31DB177C2BA9592D00573897 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
+		31DB177D2BA9592D00573897 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
+		31DB17812BA9593500573897 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
 		B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SubwayTalking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -129,7 +133,7 @@
 		3108E4BC2B982887003115B0 /* View */ = {
 			isa = PBXGroup;
 			children = (
-				310C7B8D2B96DE52002A3BB6 /* MainViewController.swift */,
+				310C7B8D2B96DE52002A3BB6 /* MapViewController.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -251,8 +255,8 @@
 		31569A332B9B1CE3000DF03B /* Intent */ = {
 			isa = PBXGroup;
 			children = (
-				31569A312B9B1C3D000DF03B /* MainState.swift */,
-				31569A342B9B1CEF000DF03B /* MainIntent.swift */,
+				31569A312B9B1C3D000DF03B /* MapState.swift */,
+				31569A342B9B1CEF000DF03B /* MapIntent.swift */,
 			);
 			path = Intent;
 			sourceTree = "<group>";
@@ -271,9 +275,11 @@
 		318F86772BA2DE8D00A6BD3A /* Font */ = {
 			isa = PBXGroup;
 			children = (
-				31F583632BA32B41003A1F59 /* LINESeedKR-Bd.otf */,
-				31F583622BA32B41003A1F59 /* LINESeedKR-Rg.otf */,
-				31F583642BA32B41003A1F59 /* LINESeedKR-Th.otf */,
+				31DB17792BA958D400573897 /* Pretendard-Bold.otf */,
+				31DB177B2BA9592D00573897 /* Pretendard-Medium.otf */,
+				31DB177C2BA9592D00573897 /* Pretendard-Regular.otf */,
+				31DB177D2BA9592D00573897 /* Pretendard-SemiBold.otf */,
+				31DB17812BA9593500573897 /* Pretendard-Light.otf */,
 			);
 			path = Font;
 			sourceTree = "<group>";
@@ -427,12 +433,14 @@
 			buildActionMask = 2147483647;
 			files = (
 				318C840B2B96F15100D88219 /* .swiftlint.yml in Resources */,
-				31F583672BA32B41003A1F59 /* LINESeedKR-Th.otf in Resources */,
+				31DB177A2BA958D400573897 /* Pretendard-Bold.otf in Resources */,
 				310C7B962B96DE53002A3BB6 /* LaunchScreen.storyboard in Resources */,
+				31DB17802BA9592D00573897 /* Pretendard-SemiBold.otf in Resources */,
 				313CFB3E2B9827490032ECE3 /* NaverMaps.plist in Resources */,
-				31F583662BA32B41003A1F59 /* LINESeedKR-Bd.otf in Resources */,
+				31DB177F2BA9592D00573897 /* Pretendard-Regular.otf in Resources */,
 				310C7B932B96DE53002A3BB6 /* Assets.xcassets in Resources */,
-				31F583652BA32B41003A1F59 /* LINESeedKR-Rg.otf in Resources */,
+				31DB177E2BA9592D00573897 /* Pretendard-Medium.otf in Resources */,
+				31DB17822BA9593500573897 /* Pretendard-Light.otf in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -505,12 +513,12 @@
 			files = (
 				318657F42BA43C67001F5277 /* TabBarItemView.swift in Sources */,
 				31569A372B9B1D00000DF03B /* View.swift in Sources */,
-				31569A322B9B1C3D000DF03B /* MainState.swift in Sources */,
+				31569A322B9B1C3D000DF03B /* MapState.swift in Sources */,
 				318657F22BA43873001F5277 /* TabBarItem.swift in Sources */,
 				31A4B0742B9D7CE900CDEA26 /* Observable+Previous.swift in Sources */,
 				311AB6812BA55755004057FA /* TabBarController.swift in Sources */,
 				31A075A32B9B0E710060211B /* JSONDataError.swift in Sources */,
-				310C7B8E2B96DE52002A3BB6 /* MainViewController.swift in Sources */,
+				310C7B8E2B96DE52002A3BB6 /* MapViewController.swift in Sources */,
 				3155BC2F2B9848AB003D4140 /* SubwayInformationDTO.swift in Sources */,
 				3172261F2B9C11700035704A /* State.swift in Sources */,
 				31A075AA2B9B131A0060211B /* AddMarkerUseCase.swift in Sources */,
@@ -524,7 +532,7 @@
 				31A075A02B9B03DF0060211B /* DefaultMarkerDataRepository.swift in Sources */,
 				31A075A52B9B10CC0060211B /* SubwayInformation.swift in Sources */,
 				3108E4C02B982990003115B0 /* Bundle+APIKey.swift in Sources */,
-				31569A352B9B1CEF000DF03B /* MainIntent.swift in Sources */,
+				31569A352B9B1CEF000DF03B /* MapIntent.swift in Sources */,
 				310C7B8C2B96DE52002A3BB6 /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

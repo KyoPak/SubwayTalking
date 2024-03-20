@@ -22,18 +22,24 @@ final class TabBarStackView: UIStackView {
     private let chatItemView = TabBarItemView(item: .chat)
     private let settingItemView = TabBarItemView(item: .setting)
     private lazy var customItemViews: [TabBarItemView] = [chatItemView, mapItemView, settingItemView]
+    private let movingBackgroundView = UIView()
         
     init() {
         super.init(frame: .zero)
         
-        configureHierachy()
-        configureUIComponents()
         addGestureToView()
-        selectItem(index: mapItemView.index)
+        configureUIComponents()
+        configureHierachy()
+        configureSelectLayout()
     }
-    
+
     required init(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
+    }
+    
+    override func layoutSubviews() {
+        super.layoutSubviews()
+        selectItem(index: mapItemView.index)
     }
 }
 
@@ -54,6 +60,12 @@ extension TabBarStackView {
     
     private func selectItem(index: Int) {
         customItemViews.forEach { $0.isSelected = $0.index == index }
+        let selectView = customItemViews[index]
+        
+        UIView.animate(withDuration: 0.3) { [weak self] in
+            self?.movingBackgroundView.center = selectView.center
+        }
+        
         tabBarEvent.onNext(index)
     }
 }
@@ -61,20 +73,32 @@ extension TabBarStackView {
 // MARK: UI Configure
 extension TabBarStackView {
     private func configureUIComponents() {
+        spacing = 5
+        alignment = .fill
         backgroundColor = .white
         distribution = .fillEqually
-        alignment = .fill
-        layer.cornerRadius = 20
-        spacing = 5
         
+        layer.cornerRadius = 20
         layer.shadowRadius = 5
         layer.shadowOpacity = 0.3
         layer.masksToBounds = false
         layer.shadowOffset = CGSize(width: 0, height: 5)
         layer.shadowColor =  UIColor.black.cgColor
+        
+        movingBackgroundView.layer.cornerRadius = 15
+        movingBackgroundView.backgroundColor = Constant.Color.overlay
     }
 
     private func configureHierachy() {
+        addSubview(movingBackgroundView)
         [chatItemView, mapItemView, settingItemView].forEach(addArrangedSubview(_:))
+    }
+    
+    private func configureSelectLayout() {
+        movingBackgroundView.snp.makeConstraints { make in
+            make.centerY.equalToSuperview()
+            make.width.equalTo(settingItemView.snp.width).multipliedBy(0.8)
+            make.height.equalTo(settingItemView.snp.height).multipliedBy(0.8)
+        }
     }
 }

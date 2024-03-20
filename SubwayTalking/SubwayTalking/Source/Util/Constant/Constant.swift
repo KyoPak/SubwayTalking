@@ -7,7 +7,7 @@
 
 import UIKit
 
-enum Constant { 
+enum Constant {
     enum Text {
         
         // MARK: Alert
@@ -47,9 +47,11 @@ enum Constant {
     }
     
     enum Font {
-        static let lineFontBold = "LINESeedSansKR-Bold"
-        static let lineFontRegular = "LINESeedSansKR-Regular"
-        static let lineFontThin = "LINESeedSansKR-Thin"
+        static let pretendardBold = "Pretendard-Bold"
+        static let pretendardSemibold = "Pretendard-Semibold"
+        static let pretendardRegular = "Pretendard-Regular"
+        static let pretendardMedium = "Pretendard-Medium"
+        static let pretendardLight = "Pretendard-Light"
     }
     
     enum Color {
