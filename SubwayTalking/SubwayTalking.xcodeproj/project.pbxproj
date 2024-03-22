@@ -16,7 +16,7 @@
 		311AB6812BA55755004057FA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311AB6802BA55755004057FA /* TabBarController.swift */; };
 		3125B39E2BA03C410064E8DD /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3125B39D2BA03C410064E8DD /* Alertable.swift */; };
 		3139CF6D2BAC049900359273 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3139CF6C2BAC049900359273 /* GoogleService-Info.plist */; };
-		3139CF702BAC053B00359273 /* LogInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3139CF6F2BAC053B00359273 /* LogInViewController.swift */; };
+		3139CF702BAC053B00359273 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3139CF6F2BAC053B00359273 /* SignViewController.swift */; };
 		3139CF732BAC095500359273 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3139CF722BAC095500359273 /* FirebaseAnalytics */; };
 		3139CF752BAC095500359273 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3139CF742BAC095500359273 /* FirebaseAuth */; };
 		3139CF772BAC095500359273 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3139CF762BAC095500359273 /* FirebaseCrashlytics */; };
@@ -68,7 +68,7 @@
 		311AB6802BA55755004057FA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3125B39D2BA03C410064E8DD /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
 		3139CF6C2BAC049900359273 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
-		3139CF6F2BAC053B00359273 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
+		3139CF6F2BAC053B00359273 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
 		3139CF7A2BAC15FE00359273 /* SubwayTalking.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SubwayTalking.entitlements; sourceTree = "<group>"; };
 		313CFB3D2B9827490032ECE3 /* NaverMaps.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NaverMaps.plist; sourceTree = "<group>"; };
 		314B8D872BAD40AA00E0A56C /* UILabel+Mutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Mutable.swift"; sourceTree = "<group>"; };
@@ -132,7 +132,7 @@
 			children = (
 				31A4B0762B9D7D6A00CDEA26 /* CustomState */,
 				31A4B0752B9D7D5A00CDEA26 /* Protocol */,
-				3139CF6E2BAC04B900359273 /* LogInScene */,
+				3139CF6E2BAC04B900359273 /* SignScene */,
 				3108E4BB2B982872003115B0 /* MainScene */,
 			);
 			path = Presentation;
@@ -240,12 +240,12 @@
 			path = Resource;
 			sourceTree = "<group>";
 		};
-		3139CF6E2BAC04B900359273 /* LogInScene */ = {
+		3139CF6E2BAC04B900359273 /* SignScene */ = {
 			isa = PBXGroup;
 			children = (
-				3139CF6F2BAC053B00359273 /* LogInViewController.swift */,
+				3139CF6F2BAC053B00359273 /* SignViewController.swift */,
 			);
-			path = LogInScene;
+			path = SignScene;
 			sourceTree = "<group>";
 		};
 		3155BC2C2B98480E003D4140 /* Data */ = {
@@ -569,7 +569,7 @@
 				31A102562B9DDF580051121A /* Constant.swift in Sources */,
 				31A075A02B9B03DF0060211B /* DefaultMarkerDataRepository.swift in Sources */,
 				31A075A52B9B10CC0060211B /* SubwayInformation.swift in Sources */,
-				3139CF702BAC053B00359273 /* LogInViewController.swift in Sources */,
+				3139CF702BAC053B00359273 /* SignViewController.swift in Sources */,
 				3108E4C02B982990003115B0 /* Bundle+APIKey.swift in Sources */,
 				31569A352B9B1CEF000DF03B /* MapIntent.swift in Sources */,
 				310C7B8C2B96DE52002A3BB6 /* SceneDelegate.swift in Sources */,
