@@ -25,7 +25,7 @@ final class SignViewController: UIViewController {
         )
         configuration.applyFont(
             title: Constant.Text.kakaoSign,
-            font: UIFont(name: Constant.Font.pretendardSemibold, size: 15)
+            font: .pretendard(size: 15, wight: .semiBold)
         )
         configuration.imagePadding = 10
         configuration.cornerStyle = .capsule
@@ -41,7 +41,7 @@ final class SignViewController: UIViewController {
         )
         configuration.applyFont(
             title: Constant.Text.naverSign,
-            font: UIFont(name: Constant.Font.pretendardSemibold, size: 15)
+            font: .pretendard(size: 15, wight: .semiBold)
         )
         configuration.imagePadding = 10
         configuration.cornerStyle = .capsule
@@ -57,7 +57,7 @@ final class SignViewController: UIViewController {
         )
         configuration.applyFont(
             title: Constant.Text.appleSign,
-            font: UIFont(name: Constant.Font.pretendardSemibold, size: 15)
+            font: .pretendard(size: 15, wight: .semiBold)
         )
         configuration.imagePadding = 10
         configuration.cornerStyle = .capsule
@@ -98,7 +98,7 @@ extension SignViewController {
         
         logoLabel.text = Constant.Text.appName
         logoLabel.textColor = Constant.Color.subTalkBlue
-        logoLabel.font = UIFont(name: Constant.Font.pretendardBold, size: 25)
+        logoLabel.font = .pretendard(size: 25, wight: .bold)
         
         logoStackView.spacing = 10
         logoStackView.alignment = .fill
@@ -109,10 +109,10 @@ extension SignViewController {
         commentLabel.textColor = .black
         commentLabel.textAlignment = .center
         commentLabel.text = Constant.Text.loginComment
-        commentLabel.font = UIFont(name: Constant.Font.pretendardMedium, size: 20)
+        commentLabel.font = .pretendard(size: 20, wight: .medium)
         commentLabel.setMutableFontColor(
             part: Constant.Text.emphasizeComment,
-            font: UIFont(name: Constant.Font.pretendardBold, size: 20),
+            font: .pretendard(size: 20, wight: .bold),
             color: Constant.Color.subTalkBlue
         )
         

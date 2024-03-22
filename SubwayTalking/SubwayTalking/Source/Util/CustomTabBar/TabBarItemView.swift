@@ -62,7 +62,7 @@ extension TabBarItemView {
         titleLabel.text = item.name
         titleLabel.textColor = .black
         titleLabel.textAlignment = .left
-        titleLabel.font = UIFont(name: Constant.Font.pretendardSemibold, size: 17)
+        titleLabel.font = .pretendard(size: 17, wight: .semiBold)
         
         iconImageView.tintColor = .black
         iconImageView.contentMode = .right

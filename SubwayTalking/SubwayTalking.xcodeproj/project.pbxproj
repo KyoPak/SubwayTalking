@@ -51,6 +51,7 @@
 		31DB177F2BA9592D00573897 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31DB177C2BA9592D00573897 /* Pretendard-Regular.otf */; };
 		31DB17802BA9592D00573897 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31DB177D2BA9592D00573897 /* Pretendard-SemiBold.otf */; };
 		31DB17822BA9593500573897 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31DB17812BA9593500573897 /* Pretendard-Light.otf */; };
+		31F92C312BAD6DC100C905B8 /* UIFont+Pretendard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F92C302BAD6DC100C905B8 /* UIFont+Pretendard.swift */; };
 		8539C3733FD3F320422145DF /* libPods-SubwayTalking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */; };
 /* End PBXBuildFile section */
 
@@ -96,6 +97,7 @@
 		31DB177C2BA9592D00573897 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		31DB177D2BA9592D00573897 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		31DB17812BA9593500573897 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
+		31F92C302BAD6DC100C905B8 /* UIFont+Pretendard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Pretendard.swift"; sourceTree = "<group>"; };
 		B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SubwayTalking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -173,6 +175,7 @@
 				31A4B0732B9D7CE900CDEA26 /* Observable+Previous.swift */,
 				314B8D872BAD40AA00E0A56C /* UILabel+Mutable.swift */,
 				315A79372BAD67260061A1B9 /* UIButton+Configuration.swift */,
+				31F92C302BAD6DC100C905B8 /* UIFont+Pretendard.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -562,6 +565,7 @@
 				31A075AA2B9B131A0060211B /* AddMarkerUseCase.swift in Sources */,
 				3173BFE52B9E048A005CFC5F /* LocationManager.swift in Sources */,
 				31569A302B9B1B3C000DF03B /* MarkerDataRepository.swift in Sources */,
+				31F92C312BAD6DC100C905B8 /* UIFont+Pretendard.swift in Sources */,
 				31A4B0782B9D7D8200CDEA26 /* StateRelay.swift in Sources */,
 				318657F92BA46DC9001F5277 /* TabBarStackView.swift in Sources */,
 				3125B39E2BA03C410064E8DD /* Alertable.swift in Sources */,

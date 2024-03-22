@@ -60,14 +60,6 @@ enum Constant {
         static let settingSelected = UIImage(systemName: "gearshape.fill") ?? UIImage()
     }
     
-    enum Font {
-        static let pretendardBold = "Pretendard-Bold"
-        static let pretendardSemibold = "Pretendard-Semibold"
-        static let pretendardRegular = "Pretendard-Regular"
-        static let pretendardMedium = "Pretendard-Medium"
-        static let pretendardLight = "Pretendard-Light"
-    }
-    
     enum Color {
         static let overlay = UIColor(red: 0.4, green: 0.5, blue: 0.98, alpha: 0.3)
         static let subTalkBlue = UIColor(red: 4/255, green: 120/255, blue: 180/255, alpha: 1)
