@@ -10,6 +10,12 @@ import UIKit
 enum Constant {
     enum Text {
         
+        // MARK: Log In
+        
+        static let appName = "SubTalk"
+        static let loginComment = "간편하게 로그인하고 \n썹톡에서 다양한 이야기를 나눠보세요."
+        static let emphasizeComment = "썹톡에서 다양한 이야기를 나눠보세요."
+        
         // MARK: Alert
         
         static let locationAlertTitle = "현재 위치를 불러올 수 없습니다."
@@ -31,6 +37,7 @@ enum Constant {
         
         // MARK: Asset Image
         
+        static let logo = UIImage(named: "Logo") ?? UIImage()
         static let subwayMarker = UIImage(named: "SubwayMarker") ?? UIImage()
         static let userLocationButton = UIImage(named: "UserLocationButton") ?? UIImage()
         static let addressMarker = UIImage(named: "AddressMarker") ?? UIImage()
@@ -56,6 +63,7 @@ enum Constant {
     
     enum Color {
         static let overlay = UIColor(red: 0.4, green: 0.5, blue: 0.98, alpha: 0.3)
+        static let subTalkBlue = UIColor(red: 4/255, green: 120/255, blue: 180/255, alpha: 1)
     }
     
     enum Error {
