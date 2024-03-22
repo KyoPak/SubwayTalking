@@ -40,7 +40,7 @@ enum Constant {
         
         // MARK: Asset Image
         
-        static let logo = UIImage(named: "Logo") ?? UIImage()
+        static let signLogo = UIImage(named: "SignLogo") ?? UIImage()
         static let subwayMarker = UIImage(named: "SubwayMarker") ?? UIImage()
         static let userLocationButton = UIImage(named: "UserLocationButton") ?? UIImage()
         static let addressMarker = UIImage(named: "AddressMarker") ?? UIImage()

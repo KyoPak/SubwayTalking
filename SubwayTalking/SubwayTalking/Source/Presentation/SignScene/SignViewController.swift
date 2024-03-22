@@ -14,8 +14,6 @@ final class SignViewController: UIViewController {
     // MARK: UI Property
     
     private let logoImageView = UIImageView()
-    private let logoLabel = UILabel()
-    private let logoStackView = UIStackView()
     private let commentLabel = UILabel()
     
     private let kakaoSignButton: UIButton = {
@@ -37,13 +35,12 @@ final class SignViewController: UIViewController {
     private let naverSignButton: UIButton = {
         var configuration = UIButton.Configuration.basicStyle(
             backgroundColor: Constant.Color.naverGreen,
-            foregroundColor: .black
+            foregroundColor: .white
         )
         configuration.applyFont(
             title: Constant.Text.naverSign,
             font: .pretendard(size: 15, wight: .semiBold)
         )
-        configuration.imagePadding = 10
         configuration.cornerStyle = .capsule
         configuration.image = Constant.Image.naverLogo
         
@@ -93,21 +90,12 @@ extension SignViewController {
     private func configureUIComponents() {
         view.backgroundColor = .white
         
-        logoImageView.image = Constant.Image.logo
+        logoImageView.image = Constant.Image.signLogo
         logoImageView.contentMode = .scaleAspectFit
         
-        logoLabel.text = Constant.Text.appName
-        logoLabel.textColor = Constant.Color.subTalkBlue
-        logoLabel.font = .pretendard(size: 25, wight: .bold)
-        
-        logoStackView.spacing = 10
-        logoStackView.alignment = .fill
-        logoStackView.axis = .horizontal
-        logoStackView.distribution = .fill
-        
-        commentLabel.numberOfLines = 2
+        commentLabel.numberOfLines = 0
         commentLabel.textColor = .black
-        commentLabel.textAlignment = .center
+        commentLabel.textAlignment = .left
         commentLabel.text = Constant.Text.loginComment
         commentLabel.font = .pretendard(size: 20, wight: .medium)
         commentLabel.setMutableFontColor(
@@ -119,34 +107,30 @@ extension SignViewController {
         buttonStackView.axis = .vertical
         buttonStackView.distribution = .fillEqually
         buttonStackView.alignment = .fill
-        buttonStackView.spacing = 15
+        buttonStackView.spacing = 10
     }
     
     private func configureHierachy() {
-        [logoImageView, logoLabel].forEach(logoStackView.addArrangedSubview(_:))
         [kakaoSignButton, naverSignButton, appleSignButton].forEach(buttonStackView.addArrangedSubview(_:))
-        [logoStackView, commentLabel, commentLabel, buttonStackView].forEach(view.addSubview(_:))
+        [logoImageView, commentLabel, commentLabel, buttonStackView].forEach(view.addSubview(_:))
     }
     
     private func configureLayout() {
         logoImageView.snp.makeConstraints { component in
-            component.height.width.equalTo(50)
-        }
-        
-        logoStackView.snp.makeConstraints { component in
+            component.height.width.equalTo(170)
             component.centerX.equalToSuperview()
-            component.top.equalToSuperview().offset(170)
+            component.top.equalToSuperview().offset(150)
         }
         
         commentLabel.snp.makeConstraints { component in
-            component.centerX.equalToSuperview()
-            component.top.equalTo(logoStackView.snp.bottom).offset(30)
+            component.leading.equalToSuperview().offset(50)
+            component.top.equalTo(logoImageView.snp.bottom).offset(100)
         }
         
         buttonStackView.snp.makeConstraints { component in
             component.centerX.equalToSuperview()
-            component.leading.trailing.equalToSuperview().inset(20)
             component.top.equalTo(commentLabel.snp.bottom).offset(30)
+            component.leading.trailing.equalToSuperview().inset(40)
         }
     }
 }
