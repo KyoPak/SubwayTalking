@@ -245,6 +245,10 @@ extension MapViewController {
     private func configureLayout() {
         naverMapView.frame = view.frame
         
+        userLocationButton.snp.makeConstraints { component in
+            component.width.height.equalTo(35)
+        }
+        
         addressStackView.snp.makeConstraints { component in
             component.centerX.equalToSuperview()
             component.top.equalTo(view.safeAreaLayoutGuide).offset(20)

@@ -61,7 +61,8 @@ enum Constant {
     }
     
     enum Color {
-        static let overlay = UIColor(red: 0.4, green: 0.5, blue: 0.98, alpha: 0.3)
+        static let overlay = UIColor(red: 75/255, green: 137/255, blue: 220/255, alpha: 0.3)
+        static let tabBarBack = UIColor(red: 75/255, green: 137/255, blue: 220/255, alpha: 0.5)
         static let subTalkBlue = UIColor(red: 4/255, green: 120/255, blue: 180/255, alpha: 1)
         static let naverGreen = UIColor(red: 3/255, green: 199/255, blue: 90/255, alpha: 1)
         static let kakaoYellow = UIColor(red: 254/255, green: 229/255, blue: 0/255, alpha: 1)

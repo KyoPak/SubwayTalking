@@ -1,17 +1,17 @@
 {
   "images" : [
     {
-      "filename" : "Group 6.png",
+      "filename" : "SubwayMarkers.png",
       "idiom" : "universal",
       "scale" : "1x"
     },
     {
-      "filename" : "Group 5.png",
+      "filename" : "SubwayMarker 1.png",
       "idiom" : "universal",
       "scale" : "2x"
     },
     {
-      "filename" : "Group 4.png",
+      "filename" : "SubwayMarker.png",
       "idiom" : "universal",
       "scale" : "3x"
     }
