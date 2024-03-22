@@ -15,6 +15,9 @@ enum Constant {
         static let appName = "SubTalk"
         static let loginComment = "간편하게 로그인하고 \n썹톡에서 다양한 이야기를 나눠보세요."
         static let emphasizeComment = "썹톡에서 다양한 이야기를 나눠보세요."
+        static let kakaoSign = "카카오로 시작하기"
+        static let naverSign = "네이버로 시작하기"
+        static let appleSign = "애플로 시작하기"
         
         // MARK: Alert
         
@@ -42,6 +45,10 @@ enum Constant {
         static let userLocationButton = UIImage(named: "UserLocationButton") ?? UIImage()
         static let addressMarker = UIImage(named: "AddressMarker") ?? UIImage()
         
+        static let kakaoLogo = UIImage(named: "kakao") ?? UIImage()
+        static let naverLogo = UIImage(named: "naver") ?? UIImage()
+        static let appleLogo = UIImage(named: "apple") ?? UIImage()
+        
         // MARK: TabBar Image
         
         static let map = UIImage(systemName: "map") ?? UIImage()
@@ -64,6 +71,8 @@ enum Constant {
     enum Color {
         static let overlay = UIColor(red: 0.4, green: 0.5, blue: 0.98, alpha: 0.3)
         static let subTalkBlue = UIColor(red: 4/255, green: 120/255, blue: 180/255, alpha: 1)
+        static let naverGreen = UIColor(red: 3/255, green: 199/255, blue: 90/255, alpha: 1)
+        static let kakaoYellow = UIColor(red: 254/255, green: 229/255, blue: 0/255, alpha: 1)
     }
     
     enum Error {
