@@ -22,6 +22,7 @@
 		3139CF772BAC095500359273 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3139CF762BAC095500359273 /* FirebaseCrashlytics */; };
 		3139CF792BAC095500359273 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3139CF782BAC095500359273 /* FirebaseFirestore */; };
 		313CFB3E2B9827490032ECE3 /* NaverMaps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 313CFB3D2B9827490032ECE3 /* NaverMaps.plist */; };
+		314B8D882BAD40AA00E0A56C /* UILabel+Mutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314B8D872BAD40AA00E0A56C /* UILabel+Mutable.swift */; };
 		3155BC2F2B9848AB003D4140 /* SubwayInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3155BC2E2B9848AB003D4140 /* SubwayInformationDTO.swift */; };
 		31569A302B9B1B3C000DF03B /* MarkerDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31569A2F2B9B1B3C000DF03B /* MarkerDataRepository.swift */; };
 		31569A322B9B1C3D000DF03B /* MapState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31569A312B9B1C3D000DF03B /* MapState.swift */; };
@@ -69,6 +70,7 @@
 		3139CF6F2BAC053B00359273 /* LogInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LogInViewController.swift; sourceTree = "<group>"; };
 		3139CF7A2BAC15FE00359273 /* SubwayTalking.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SubwayTalking.entitlements; sourceTree = "<group>"; };
 		313CFB3D2B9827490032ECE3 /* NaverMaps.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NaverMaps.plist; sourceTree = "<group>"; };
+		314B8D872BAD40AA00E0A56C /* UILabel+Mutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Mutable.swift"; sourceTree = "<group>"; };
 		3155BC2E2B9848AB003D4140 /* SubwayInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayInformationDTO.swift; sourceTree = "<group>"; };
 		31569A2F2B9B1B3C000DF03B /* MarkerDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerDataRepository.swift; sourceTree = "<group>"; };
 		31569A312B9B1C3D000DF03B /* MapState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapState.swift; sourceTree = "<group>"; };
@@ -167,6 +169,7 @@
 			children = (
 				3108E4BF2B982990003115B0 /* Bundle+APIKey.swift */,
 				31A4B0732B9D7CE900CDEA26 /* Observable+Previous.swift */,
+				314B8D872BAD40AA00E0A56C /* UILabel+Mutable.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -543,6 +546,7 @@
 			files = (
 				318657F42BA43C67001F5277 /* TabBarItemView.swift in Sources */,
 				31569A372B9B1D00000DF03B /* View.swift in Sources */,
+				314B8D882BAD40AA00E0A56C /* UILabel+Mutable.swift in Sources */,
 				31569A322B9B1C3D000DF03B /* MapState.swift in Sources */,
 				318657F22BA43873001F5277 /* TabBarItem.swift in Sources */,
 				31A4B0742B9D7CE900CDEA26 /* Observable+Previous.swift in Sources */,
