@@ -6,8 +6,11 @@
 //
 
 import UIKit
+import AuthenticationServices
 
 import SnapKit
+import RxCocoa
+import RxSwift
 
 final class SignViewController: UIViewController {
     
@@ -82,6 +85,14 @@ final class SignViewController: UIViewController {
         configureUIComponents()
         configureHierachy()
         configureLayout()
+    }
+}
+
+// MARK: Apple Log-In Present
+extension SignViewController: ASWebAuthenticationPresentationContextProviding {
+    func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
+        guard let window = self.view.window else { return UIWindow() }
+        return window
     }
 }
 
