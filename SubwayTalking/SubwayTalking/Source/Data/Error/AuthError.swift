@@ -12,3 +12,9 @@ enum AuthError: Error {
     case tokenMissing
     case unknown
 }
+
+enum FirebaseAuthError: Error {
+    case nonceMissing
+    case userIDMissing
+    case authResultMissing
+}

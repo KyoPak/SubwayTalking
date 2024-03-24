@@ -8,6 +8,7 @@
 import UIKit
 
 import NMapsMap
+import FirebaseCore
 
 @main
 final class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,7 +19,7 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
         
         NMFAuthManager.shared().clientId = Bundle.main.naverMapsClientID
-        
+        FirebaseApp.configure()
         return true
     }
 
