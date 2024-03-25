@@ -74,6 +74,7 @@ enum Constant {
         
         static let naverMapsPlistOmit = "NaverMaps.plist 파일이 존재하지 않습니다."
         static let naverMapsIdOmit = "NaverMaps에서 발급받은 NMFClientId을 설정하세요."
+        static let kakaoAppKeyOmit = "Kakao에서 발급받은 KakaoNativeAppKey를 설정하세요."
         static let fileError = "파일 에러가 발생하였습니다."
         
         // MARK: JSON Data Error
