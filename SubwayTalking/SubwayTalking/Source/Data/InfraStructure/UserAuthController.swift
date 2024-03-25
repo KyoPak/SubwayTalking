@@ -1,5 +1,5 @@
 //
-//  AuthController.swift
+//  UserAuthController.swift
 //  SubwayTalking
 //
 //  Created by 박효성 on 3/23/24.
@@ -12,12 +12,12 @@ import CryptoKit
 import FirebaseAuth
 import RxSwift
 
-protocol AuthController {
+protocol UserAuthController {
     var authResult: PublishSubject<Result<String, Error>> { get }
     func requestAppleAuth(presentDelegate: ASAuthorizationControllerPresentationContextProviding)
 }
 
-final class DefaultAuthController: NSObject, AuthController {
+final class DefaultUserAuthController: NSObject, UserAuthController {
     
     typealias AuthPresentDelegate = ASAuthorizationControllerPresentationContextProviding
     
@@ -41,7 +41,7 @@ final class DefaultAuthController: NSObject, AuthController {
 }
 
 // MARK: Apple LogIn with FirebaseAuth
-extension DefaultAuthController: ASAuthorizationControllerDelegate {
+extension DefaultUserAuthController: ASAuthorizationControllerDelegate {
     func authorizationController(
         controller: ASAuthorizationController,
         didCompleteWithAuthorization authorization: ASAuthorization
@@ -89,7 +89,7 @@ extension DefaultAuthController: ASAuthorizationControllerDelegate {
 }
 
 // MARK: FirebaseAuth Generate Crypto Nonce
-extension DefaultAuthController {
+extension DefaultUserAuthController {
     private func randomNonceString(length: Int = 32) -> String {
         precondition(length > 0)
         var randomBytes = [UInt8](repeating: 0, count: length)
