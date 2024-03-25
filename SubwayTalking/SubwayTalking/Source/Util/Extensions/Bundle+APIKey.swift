@@ -21,7 +21,7 @@ extension Bundle {
     }
     
     var kakaoNativeKey: String {
-        guard let apiKey = Bundle.main.object(forInfoDictionaryKey: "KAKAO_NATIVE_APP_KEY") as? String else {
+        guard let apiKey = Bundle.main.object(forInfoDictionaryKey: "KAKAO_APP_KEY") as? String else {
             fatalError(Constant.Error.kakaoAppKeyOmit)
         }
         
