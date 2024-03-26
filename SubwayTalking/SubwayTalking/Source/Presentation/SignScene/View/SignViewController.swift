@@ -12,7 +12,14 @@ import SnapKit
 import RxCocoa
 import RxSwift
 
+protocol SignViewUpdatable: View where AssociatedState == SignState { }
+
 final class SignViewController: UIViewController {
+    
+    // MARK: Property
+    
+    private var intent: SignIntent?
+    private let disposeBag = DisposeBag()
     
     // MARK: UI Property
     
@@ -55,8 +62,10 @@ final class SignViewController: UIViewController {
     
     // MARK: Initialize & LifeCycle
     
-    init() {
+    init(intent: SignIntent) {
         super.init(nibName: nil, bundle: nil)
+        
+        self.intent = intent
     }
     
     required init?(coder: NSCoder) {
