@@ -10,6 +10,8 @@ import AuthenticationServices
 
 import CryptoKit
 import FirebaseAuth
+import KakaoSDKAuth
+import KakaoSDKUser
 import RxSwift
 
 protocol UserAuthController {
@@ -38,6 +40,94 @@ final class DefaultUserAuthController: NSObject, UserAuthController {
         authorizationController.presentationContextProvider = presentDelegate
         authorizationController.performRequests()
     }
+    
+    func requestKakaoAuth() {
+        if AuthApi.hasToken() {
+            UserApi.shared.accessTokenInfo { [weak self] accessTokenInfo, error in
+                if error != nil {
+                    self?.kakaoOpen()
+                } else {
+                    self?.directHandleKakaoToken()
+                }
+            }
+        } else {
+            kakaoOpen()
+        }
+    }
+}
+
+// MARK: Kakao LogIn with FirebaseAuth
+extension DefaultUserAuthController {
+    private func directHandleKakaoToken() {
+        UserApi.shared.me { [weak self] user, error in
+            if error != nil {
+                self?.authResult.onNext(.failure(KakaoAuthError.userInfoMissing))
+            } else {
+                guard let email = user?.kakaoAccount?.email else { return }
+                let password = "\(String(describing: user?.id))"
+                
+                self?.signInFirebase(email: email, password: password)
+            }
+        }
+    }
+    
+    private func kakaoOpen() {
+        if UserApi.isKakaoTalkLoginAvailable() {
+            kakaoLoginInApp()
+        } else {
+            kakaoLoginInWeb()
+        }
+    }
+    
+    private func kakaoLoginInApp() {
+        UserApi.shared.loginWithKakaoTalk { [weak self] oauthToken, error in
+            if error != nil {
+                self?.authResult.onNext(.failure(KakaoAuthError.logInError))
+            } else {
+                if let token = oauthToken {
+                    self?.createInFirebase()
+                }
+            }
+        }
+    }
+    
+    private func kakaoLoginInWeb() {
+        UserApi.shared.loginWithKakaoAccount { [weak self] oauthToken, error in
+            if error != nil {
+                self?.authResult.onNext(.failure(KakaoAuthError.logInError))
+            } else {
+                if let token = oauthToken {
+                    self?.createInFirebase()
+                }
+            }
+        }
+    }
+    
+    private func createInFirebase() {
+        UserApi.shared.me { [weak self] user, error in
+            if error != nil {
+                self?.authResult.onNext(.failure(KakaoAuthError.userInfoMissing))
+            } else {
+                guard let email = user?.kakaoAccount?.email else { return }
+                let password = "\(String(describing: user?.id))"
+                
+                Auth.auth().createUser(withEmail: email, password: password) { result, _ in
+                    self?.signInFirebase(email: email, password: password)
+                }
+            }
+        }
+    }
+    
+    private func signInFirebase(email: String, password: String) {
+        Auth.auth().signIn(withEmail: email, password: password) { [weak self] authResult, error in
+            if error != nil {
+                self?.authResult.onNext(.failure(FirebaseAuthError.logInError))
+            } else if let authData = authResult?.user {
+                let uid = authData.uid
+                self?.authResult.onNext(.success(uid))
+            }
+        }
+    }
 }
 
 // MARK: Apple LogIn with FirebaseAuth
@@ -47,7 +137,7 @@ extension DefaultUserAuthController: ASAuthorizationControllerDelegate {
         didCompleteWithAuthorization authorization: ASAuthorization
     ) {
         guard let appleIDCredential = authorization.credential as? ASAuthorizationAppleIDCredential else {
-            authResult.onNext(.failure(AuthError.credentialMissing))
+            authResult.onNext(.failure(AppleAuthError.credentialMissing))
             return
         }
         
@@ -58,7 +148,7 @@ extension DefaultUserAuthController: ASAuthorizationControllerDelegate {
         
         guard let identityTokenData = appleIDCredential.identityToken,
               let token = String(data: identityTokenData, encoding: .utf8) else {
-            authResult.onNext(.failure(AuthError.tokenMissing))
+            authResult.onNext(.failure(AppleAuthError.tokenMissing))
             return
         }
         
@@ -69,7 +159,7 @@ extension DefaultUserAuthController: ASAuthorizationControllerDelegate {
         )
         
         Auth.auth().signIn(with: firebaseCredential) { [weak self] (authData, error) in
-            if let error = error {
+            if error != nil {
                 self?.authResult.onNext(.failure(FirebaseAuthError.authResultMissing))
                 return
             }
@@ -84,7 +174,7 @@ extension DefaultUserAuthController: ASAuthorizationControllerDelegate {
     }
     
     func authorizationController(controller: ASAuthorizationController, didCompleteWithError error: Error) {
-        authResult.onNext(.failure(AuthError.unknown))
+        authResult.onNext(.failure(AppleAuthError.unknown))
     }
 }
 
