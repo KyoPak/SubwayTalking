@@ -29,23 +29,8 @@ final class SignViewController: UIViewController {
             font: .pretendard(size: 15, wight: .semiBold)
         )
         configuration.imagePadding = 10
-        configuration.cornerStyle = .capsule
+        configuration.cornerStyle = .medium
         configuration.image = Constant.Image.kakaoLogo
-        
-        return UIButton(configuration: configuration)
-    }()
-    
-    private let naverSignButton: UIButton = {
-        var configuration = UIButton.Configuration.basicStyle(
-            backgroundColor: Constant.Color.naverGreen,
-            foregroundColor: .white
-        )
-        configuration.applyFont(
-            title: Constant.Text.naverSign,
-            font: .pretendard(size: 15, wight: .semiBold)
-        )
-        configuration.cornerStyle = .capsule
-        configuration.image = Constant.Image.naverLogo
         
         return UIButton(configuration: configuration)
     }()
@@ -60,8 +45,7 @@ final class SignViewController: UIViewController {
             font: .pretendard(size: 15, wight: .semiBold)
         )
         configuration.imagePadding = 10
-        configuration.cornerStyle = .capsule
-        
+        configuration.cornerStyle = .medium
         configuration.image = Constant.Image.appleLogo
         
         return UIButton(configuration: configuration)
@@ -105,11 +89,13 @@ extension SignViewController {
         logoImageView.contentMode = .scaleAspectFit
         
         commentLabel.numberOfLines = 0
-        commentLabel.textColor = .black
+        commentLabel.textColor = Constant.Color.subTalkBlue
         commentLabel.textAlignment = .left
+        
         commentLabel.text = Constant.Text.loginComment
-        commentLabel.font = .pretendard(size: 20, wight: .medium)
-        commentLabel.setMutableFontColor(
+        commentLabel.font = .pretendard(size: 25, wight: .bold)
+        
+        commentLabel.setMutableText(
             part: Constant.Text.emphasizeComment,
             font: .pretendard(size: 20, wight: .bold),
             color: Constant.Color.subTalkBlue
@@ -122,26 +108,30 @@ extension SignViewController {
     }
     
     private func configureHierachy() {
-        [kakaoSignButton, naverSignButton, appleSignButton].forEach(buttonStackView.addArrangedSubview(_:))
+        [kakaoSignButton, appleSignButton].forEach(buttonStackView.addArrangedSubview(_:))
         [logoImageView, commentLabel, commentLabel, buttonStackView].forEach(view.addSubview(_:))
     }
     
     private func configureLayout() {
         logoImageView.snp.makeConstraints { component in
-            component.height.width.equalTo(170)
+            component.height.width.equalTo(view.bounds.width/2.5)
             component.centerX.equalToSuperview()
-            component.top.equalToSuperview().offset(150)
+            component.centerY.equalToSuperview().offset(-150)
         }
         
         commentLabel.snp.makeConstraints { component in
-            component.leading.equalToSuperview().offset(50)
-            component.top.equalTo(logoImageView.snp.bottom).offset(100)
+            component.leading.trailing.equalToSuperview().inset(40)
+            component.bottom.equalTo(buttonStackView.snp.top).offset(-20)
         }
         
         buttonStackView.snp.makeConstraints { component in
             component.centerX.equalToSuperview()
-            component.top.equalTo(commentLabel.snp.bottom).offset(30)
-            component.leading.trailing.equalToSuperview().inset(40)
+            component.leading.trailing.equalToSuperview().inset(30)
+            component.bottom.equalToSuperview().offset(-120)
+        }
+        
+        [appleSignButton, kakaoSignButton].forEach { button in
+            button.snp.makeConstraints { $0.height.equalTo(50) }
         }
     }
 }
