@@ -97,8 +97,8 @@ extension SignViewController {
         
         commentLabel.setMutableText(
             part: Constant.Text.emphasizeComment,
-            font: .pretendard(size: 20, wight: .bold),
-            color: Constant.Color.subTalkBlue
+            font: .pretendard(size: 20, wight: .regular), color: .black,
+            line: 8
         )
         
         buttonStackView.axis = .vertical
