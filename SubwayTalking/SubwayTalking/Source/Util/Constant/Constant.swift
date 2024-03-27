@@ -73,11 +73,6 @@ enum Constant {
         static let naverMapsIdOmit = "NaverMaps에서 발급받은 NMFClientId을 설정하세요."
         static let kakaoAppKeyOmit = "Kakao에서 발급받은 KakaoNativeAppKey를 설정하세요."
         static let fileError = "파일 에러가 발생하였습니다."
-        
-        // MARK: JSON Data Error
-        
-        static let dataSetError = "데이터 파일이 올바르지 않습니다."
-        static let decodingError = "데이터를 불러오는 과정에서 오류가 발생하였습니다."
     }
     
     enum Value {

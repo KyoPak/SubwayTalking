@@ -8,7 +8,6 @@
 import CoreLocation
 
 import RxSwift
-import RxRelay
 
 protocol MapIntent {
     func bind<V: MapViewUpdatable>(to view: V)

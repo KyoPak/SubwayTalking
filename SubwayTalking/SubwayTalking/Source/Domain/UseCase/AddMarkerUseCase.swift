@@ -6,7 +6,6 @@
 //
 
 import RxSwift
-import Foundation
 
 protocol AddMarkerUseCase {
     func fetchMarkerData() -> Single<[SubwayInformation]>

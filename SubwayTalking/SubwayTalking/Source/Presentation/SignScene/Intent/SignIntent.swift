@@ -35,6 +35,8 @@ final class DefaultSignIntent: SignIntent {
             .disposed(by: disposeBag)
     }
     
+    // MARK: Inputs
+    
     func viewDidLoad() {
         signUseCase.authResult
             .withUnretained(self)
