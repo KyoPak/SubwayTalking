@@ -12,6 +12,7 @@ import SnapKit
 import RxCocoa
 import RxSwift
 
+protocol AppleSignViewPresentable: ASAuthorizationControllerPresentationContextProviding { }
 protocol SignViewUpdatable: View where AssociatedState == SignState { }
 
 final class SignViewController: UIViewController {
@@ -82,8 +83,8 @@ final class SignViewController: UIViewController {
 }
 
 // MARK: Apple Log-In Present
-extension SignViewController: ASWebAuthenticationPresentationContextProviding {
-    func presentationAnchor(for session: ASWebAuthenticationSession) -> ASPresentationAnchor {
+extension SignViewController: AppleSignViewPresentable {
+    func presentationAnchor(for controller: ASAuthorizationController) -> ASPresentationAnchor {
         guard let window = self.view.window else { return UIWindow() }
         return window
     }
