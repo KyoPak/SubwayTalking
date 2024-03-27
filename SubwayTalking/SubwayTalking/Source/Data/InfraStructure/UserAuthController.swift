@@ -17,6 +17,7 @@ import RxSwift
 protocol UserAuthController {
     var authResult: PublishSubject<Result<String, Error>> { get }
     func requestAppleAuth(presentDelegate: ASAuthorizationControllerPresentationContextProviding)
+    func requestKakaoAuth()
 }
 
 final class DefaultUserAuthController: NSObject, UserAuthController {
