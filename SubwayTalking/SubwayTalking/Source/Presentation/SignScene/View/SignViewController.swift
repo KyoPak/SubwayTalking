@@ -88,7 +88,10 @@ final class SignViewController: UIViewController, SignViewUpdatable {
         guard let state = state, let prev = prev else { return }
         
         debugPrint(state.userId)
-        debugPrint(state.error)
+        
+        if state.error != nil {
+            showAlert(title: Constant.Text.alertErrorTitle, message: state.error?.localizedDescription ?? "")
+        }
     }
 }
 
@@ -189,3 +192,5 @@ extension SignViewController {
         }
     }
 }
+
+extension SignViewController: Alertable { }
