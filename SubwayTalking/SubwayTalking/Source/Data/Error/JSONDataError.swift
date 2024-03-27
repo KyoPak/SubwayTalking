@@ -22,3 +22,9 @@ extension JSONDataError: LocalizedError {
         }
     }
 }
+
+// MARK: Extension Constant Error Description Text
+private extension Constant.Error {
+    static let dataSetError = "데이터 파일이 올바르지 않습니다."
+    static let decodingError = "데이터를 불러오는 과정에서 오류가 발생하였습니다."
+}

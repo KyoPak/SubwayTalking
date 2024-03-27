@@ -86,7 +86,7 @@ extension TabBarStackView {
         layer.shadowColor =  UIColor.black.cgColor
         
         movingBackgroundView.layer.cornerRadius = 15
-        movingBackgroundView.backgroundColor = Constant.Color.overlay
+        movingBackgroundView.backgroundColor = Constant.Color.tabBarBack
     }
 
     private func configureHierachy() {

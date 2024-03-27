@@ -86,7 +86,7 @@ final class MapViewController: UIViewController, MapViewUpdatable {
     private let addressLabel: UILabel = {
         let label = UILabel()
         label.backgroundColor = .clear
-        label.font = UIFont(name: Constant.Font.pretendardBold, size: 20)
+        label.font = .pretendard(size: 20, wight: .bold)
         label.textColor = .black
         return label
     }()
@@ -244,6 +244,10 @@ extension MapViewController {
     
     private func configureLayout() {
         naverMapView.frame = view.frame
+        
+        userLocationButton.snp.makeConstraints { component in
+            component.width.height.equalTo(35)
+        }
         
         addressStackView.snp.makeConstraints { component in
             component.centerX.equalToSuperview()

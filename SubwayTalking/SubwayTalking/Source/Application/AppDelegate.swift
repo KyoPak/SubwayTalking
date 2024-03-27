@@ -8,6 +8,8 @@
 import UIKit
 
 import NMapsMap
+import FirebaseCore
+import KakaoSDKCommon
 
 @main
 final class AppDelegate: UIResponder, UIApplicationDelegate {
@@ -18,6 +20,8 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
     ) -> Bool {
         
         NMFAuthManager.shared().clientId = Bundle.main.naverMapsClientID
+        FirebaseApp.configure()
+        KakaoSDK.initSDK(appKey: Bundle.main.kakaoNativeKey)
         
         return true
     }
@@ -32,6 +36,6 @@ final class AppDelegate: UIResponder, UIApplicationDelegate {
         
         return UISceneConfiguration(name: "Default Configuration", sessionRole: connectingSceneSession.role)
     }
-
+    
     func application(_ application: UIApplication, didDiscardSceneSessions sceneSessions: Set<UISceneSession>) { }
 }

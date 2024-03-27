@@ -10,6 +10,14 @@ import UIKit
 enum Constant {
     enum Text {
         
+        // MARK: Log In
+        
+        static let appName = "SubTalk"
+        static let loginComment = "심심한 출퇴근 길\n간편하게 로그인하고,\n다양한 이야기를 나눠보세요."
+        static let emphasizeComment = "간편하게 로그인하고,"
+        static let kakaoSign = "카카오로 시작하기"
+        static let appleSign = "애플로 시작하기"
+        
         // MARK: Alert
         
         static let locationAlertTitle = "현재 위치를 불러올 수 없습니다."
@@ -31,9 +39,13 @@ enum Constant {
         
         // MARK: Asset Image
         
+        static let signLogo = UIImage(named: "SignLogo") ?? UIImage()
         static let subwayMarker = UIImage(named: "SubwayMarker") ?? UIImage()
         static let userLocationButton = UIImage(named: "UserLocationButton") ?? UIImage()
         static let addressMarker = UIImage(named: "AddressMarker") ?? UIImage()
+        
+        static let kakaoLogo = UIImage(named: "kakao") ?? UIImage()
+        static let appleLogo = UIImage(named: "apple") ?? UIImage()
         
         // MARK: TabBar Image
         
@@ -46,16 +58,11 @@ enum Constant {
         static let settingSelected = UIImage(systemName: "gearshape.fill") ?? UIImage()
     }
     
-    enum Font {
-        static let pretendardBold = "Pretendard-Bold"
-        static let pretendardSemibold = "Pretendard-Semibold"
-        static let pretendardRegular = "Pretendard-Regular"
-        static let pretendardMedium = "Pretendard-Medium"
-        static let pretendardLight = "Pretendard-Light"
-    }
-    
     enum Color {
-        static let overlay = UIColor(red: 0.4, green: 0.5, blue: 0.98, alpha: 0.3)
+        static let overlay = UIColor(red: 75/255, green: 137/255, blue: 220/255, alpha: 0.3)
+        static let tabBarBack = UIColor(red: 75/255, green: 137/255, blue: 220/255, alpha: 0.5)
+        static let subTalkBlue = UIColor(red: 4/255, green: 120/255, blue: 180/255, alpha: 1)
+        static let kakaoYellow = UIColor(red: 254/255, green: 229/255, blue: 0/255, alpha: 1)
     }
     
     enum Error {
@@ -64,12 +71,8 @@ enum Constant {
         
         static let naverMapsPlistOmit = "NaverMaps.plist 파일이 존재하지 않습니다."
         static let naverMapsIdOmit = "NaverMaps에서 발급받은 NMFClientId을 설정하세요."
+        static let kakaoAppKeyOmit = "Kakao에서 발급받은 KakaoNativeAppKey를 설정하세요."
         static let fileError = "파일 에러가 발생하였습니다."
-        
-        // MARK: JSON Data Error
-        
-        static let dataSetError = "데이터 파일이 올바르지 않습니다."
-        static let decodingError = "데이터를 불러오는 과정에서 오류가 발생하였습니다."
     }
     
     enum Value {

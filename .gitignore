@@ -93,4 +93,5 @@ iOSInjectionProject/
 
 # APIKeys
 NaverMaps.plist
-
+GoogleService-Info.plist
+Kakao-Info.xcconfig

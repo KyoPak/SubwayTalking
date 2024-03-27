@@ -19,4 +19,12 @@ extension Bundle {
         
         return clientID
     }
+    
+    var kakaoNativeKey: String {
+        guard let apiKey = Bundle.main.object(forInfoDictionaryKey: "KAKAO_APP_KEY") as? String else {
+            fatalError(Constant.Error.kakaoAppKeyOmit)
+        }
+        
+        return apiKey
+    }
 }

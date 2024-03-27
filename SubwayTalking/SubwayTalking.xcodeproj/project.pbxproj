@@ -15,7 +15,16 @@
 		310C7B962B96DE53002A3BB6 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 310C7B942B96DE53002A3BB6 /* LaunchScreen.storyboard */; };
 		311AB6812BA55755004057FA /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 311AB6802BA55755004057FA /* TabBarController.swift */; };
 		3125B39E2BA03C410064E8DD /* Alertable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3125B39D2BA03C410064E8DD /* Alertable.swift */; };
+		3139994D2BAEE92100EBDA37 /* UserAuthController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3139994C2BAEE92100EBDA37 /* UserAuthController.swift */; };
+		3139994F2BAEEAB100EBDA37 /* AuthError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3139994E2BAEEAB100EBDA37 /* AuthError.swift */; };
+		3139CF6D2BAC049900359273 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 3139CF6C2BAC049900359273 /* GoogleService-Info.plist */; };
+		3139CF702BAC053B00359273 /* SignViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3139CF6F2BAC053B00359273 /* SignViewController.swift */; };
+		3139CF732BAC095500359273 /* FirebaseAnalytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3139CF722BAC095500359273 /* FirebaseAnalytics */; };
+		3139CF752BAC095500359273 /* FirebaseAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3139CF742BAC095500359273 /* FirebaseAuth */; };
+		3139CF772BAC095500359273 /* FirebaseCrashlytics in Frameworks */ = {isa = PBXBuildFile; productRef = 3139CF762BAC095500359273 /* FirebaseCrashlytics */; };
+		3139CF792BAC095500359273 /* FirebaseFirestore in Frameworks */ = {isa = PBXBuildFile; productRef = 3139CF782BAC095500359273 /* FirebaseFirestore */; };
 		313CFB3E2B9827490032ECE3 /* NaverMaps.plist in Resources */ = {isa = PBXBuildFile; fileRef = 313CFB3D2B9827490032ECE3 /* NaverMaps.plist */; };
+		314B8D882BAD40AA00E0A56C /* UILabel+Mutable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 314B8D872BAD40AA00E0A56C /* UILabel+Mutable.swift */; };
 		3155BC2F2B9848AB003D4140 /* SubwayInformationDTO.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3155BC2E2B9848AB003D4140 /* SubwayInformationDTO.swift */; };
 		31569A302B9B1B3C000DF03B /* MarkerDataRepository.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31569A2F2B9B1B3C000DF03B /* MarkerDataRepository.swift */; };
 		31569A322B9B1C3D000DF03B /* MapState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31569A312B9B1C3D000DF03B /* MapState.swift */; };
@@ -24,8 +33,11 @@
 		315A68542B9AF71E00268DF4 /* RxCocoa in Frameworks */ = {isa = PBXBuildFile; productRef = 315A68532B9AF71E00268DF4 /* RxCocoa */; };
 		315A68582B9AF71E00268DF4 /* RxRelay in Frameworks */ = {isa = PBXBuildFile; productRef = 315A68572B9AF71E00268DF4 /* RxRelay */; };
 		315A685C2B9AF71E00268DF4 /* RxSwift in Frameworks */ = {isa = PBXBuildFile; productRef = 315A685B2B9AF71E00268DF4 /* RxSwift */; };
+		315A79382BAD67260061A1B9 /* UIButton+Configuration.swift in Sources */ = {isa = PBXBuildFile; fileRef = 315A79372BAD67260061A1B9 /* UIButton+Configuration.swift */; };
 		3172261F2B9C11700035704A /* State.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3172261E2B9C116F0035704A /* State.swift */; };
 		3173BFE52B9E048A005CFC5F /* LocationManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3173BFE42B9E048A005CFC5F /* LocationManager.swift */; };
+		3183A2752BB06DC700DD8546 /* KakaoSDKAuth in Frameworks */ = {isa = PBXBuildFile; productRef = 3183A2742BB06DC700DD8546 /* KakaoSDKAuth */; };
+		3183A2772BB06DC700DD8546 /* KakaoSDKUser in Frameworks */ = {isa = PBXBuildFile; productRef = 3183A2762BB06DC700DD8546 /* KakaoSDKUser */; };
 		318657F22BA43873001F5277 /* TabBarItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318657F12BA43873001F5277 /* TabBarItem.swift */; };
 		318657F42BA43C67001F5277 /* TabBarItemView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 318657F32BA43C67001F5277 /* TabBarItemView.swift */; };
 		318657F72BA459E5001F5277 /* SnapKit in Frameworks */ = {isa = PBXBuildFile; productRef = 318657F62BA459E5001F5277 /* SnapKit */; };
@@ -38,11 +50,16 @@
 		31A102562B9DDF580051121A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A102552B9DDF580051121A /* Constant.swift */; };
 		31A4B0742B9D7CE900CDEA26 /* Observable+Previous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4B0732B9D7CE900CDEA26 /* Observable+Previous.swift */; };
 		31A4B0782B9D7D8200CDEA26 /* StateRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4B0772B9D7D8200CDEA26 /* StateRelay.swift */; };
+		31D42E472BB31E9D00084F7D /* SignIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D42E462BB31E9D00084F7D /* SignIntent.swift */; };
+		31D42E492BB31F4F00084F7D /* SignState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D42E482BB31F4F00084F7D /* SignState.swift */; };
 		31DB177A2BA958D400573897 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31DB17792BA958D400573897 /* Pretendard-Bold.otf */; };
 		31DB177E2BA9592D00573897 /* Pretendard-Medium.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31DB177B2BA9592D00573897 /* Pretendard-Medium.otf */; };
 		31DB177F2BA9592D00573897 /* Pretendard-Regular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31DB177C2BA9592D00573897 /* Pretendard-Regular.otf */; };
 		31DB17802BA9592D00573897 /* Pretendard-SemiBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31DB177D2BA9592D00573897 /* Pretendard-SemiBold.otf */; };
 		31DB17822BA9593500573897 /* Pretendard-Light.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31DB17812BA9593500573897 /* Pretendard-Light.otf */; };
+		31E949942BB3CD760031F9AF /* SignUseCase.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E949932BB3CD760031F9AF /* SignUseCase.swift */; };
+		31E949962BB3DB9B0031F9AF /* AuthProvider.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31E949952BB3DB9B0031F9AF /* AuthProvider.swift */; };
+		31F92C312BAD6DC100C905B8 /* UIFont+Pretendard.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31F92C302BAD6DC100C905B8 /* UIFont+Pretendard.swift */; };
 		8539C3733FD3F320422145DF /* libPods-SubwayTalking.a in Frameworks */ = {isa = PBXBuildFile; fileRef = B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */; };
 /* End PBXBuildFile section */
 
@@ -59,14 +76,22 @@
 		310C7B972B96DE53002A3BB6 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		311AB6802BA55755004057FA /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		3125B39D2BA03C410064E8DD /* Alertable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alertable.swift; sourceTree = "<group>"; };
+		3139994C2BAEE92100EBDA37 /* UserAuthController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserAuthController.swift; sourceTree = "<group>"; };
+		3139994E2BAEEAB100EBDA37 /* AuthError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthError.swift; sourceTree = "<group>"; };
+		3139CF6C2BAC049900359273 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		3139CF6F2BAC053B00359273 /* SignViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignViewController.swift; sourceTree = "<group>"; };
+		3139CF7A2BAC15FE00359273 /* SubwayTalking.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SubwayTalking.entitlements; sourceTree = "<group>"; };
 		313CFB3D2B9827490032ECE3 /* NaverMaps.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = NaverMaps.plist; sourceTree = "<group>"; };
+		314B8D872BAD40AA00E0A56C /* UILabel+Mutable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UILabel+Mutable.swift"; sourceTree = "<group>"; };
 		3155BC2E2B9848AB003D4140 /* SubwayInformationDTO.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubwayInformationDTO.swift; sourceTree = "<group>"; };
 		31569A2F2B9B1B3C000DF03B /* MarkerDataRepository.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MarkerDataRepository.swift; sourceTree = "<group>"; };
 		31569A312B9B1C3D000DF03B /* MapState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapState.swift; sourceTree = "<group>"; };
 		31569A342B9B1CEF000DF03B /* MapIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapIntent.swift; sourceTree = "<group>"; };
 		31569A362B9B1D00000DF03B /* View.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = View.swift; sourceTree = "<group>"; };
+		315A79372BAD67260061A1B9 /* UIButton+Configuration.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIButton+Configuration.swift"; sourceTree = "<group>"; };
 		3172261E2B9C116F0035704A /* State.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = State.swift; sourceTree = "<group>"; };
 		3173BFE42B9E048A005CFC5F /* LocationManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocationManager.swift; sourceTree = "<group>"; };
+		3183A2782BB0721800DD8546 /* Kakao-Info.xcconfig */ = {isa = PBXFileReference; lastKnownFileType = text.xcconfig; path = "Kakao-Info.xcconfig"; sourceTree = "<group>"; };
 		318657F12BA43873001F5277 /* TabBarItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItem.swift; sourceTree = "<group>"; };
 		318657F32BA43C67001F5277 /* TabBarItemView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarItemView.swift; sourceTree = "<group>"; };
 		318657F82BA46DC9001F5277 /* TabBarStackView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarStackView.swift; sourceTree = "<group>"; };
@@ -78,11 +103,16 @@
 		31A102552B9DDF580051121A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		31A4B0732B9D7CE900CDEA26 /* Observable+Previous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Previous.swift"; sourceTree = "<group>"; };
 		31A4B0772B9D7D8200CDEA26 /* StateRelay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRelay.swift; sourceTree = "<group>"; };
+		31D42E462BB31E9D00084F7D /* SignIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIntent.swift; sourceTree = "<group>"; };
+		31D42E482BB31F4F00084F7D /* SignState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignState.swift; sourceTree = "<group>"; };
 		31DB17792BA958D400573897 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
 		31DB177B2BA9592D00573897 /* Pretendard-Medium.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Medium.otf"; sourceTree = "<group>"; };
 		31DB177C2BA9592D00573897 /* Pretendard-Regular.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Regular.otf"; sourceTree = "<group>"; };
 		31DB177D2BA9592D00573897 /* Pretendard-SemiBold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-SemiBold.otf"; sourceTree = "<group>"; };
 		31DB17812BA9593500573897 /* Pretendard-Light.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Light.otf"; sourceTree = "<group>"; };
+		31E949932BB3CD760031F9AF /* SignUseCase.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUseCase.swift; sourceTree = "<group>"; };
+		31E949952BB3DB9B0031F9AF /* AuthProvider.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AuthProvider.swift; sourceTree = "<group>"; };
+		31F92C302BAD6DC100C905B8 /* UIFont+Pretendard.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "UIFont+Pretendard.swift"; sourceTree = "<group>"; };
 		B045C9370B77B11E4F0847BD /* libPods-SubwayTalking.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-SubwayTalking.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -92,10 +122,16 @@
 			buildActionMask = 2147483647;
 			files = (
 				315A68582B9AF71E00268DF4 /* RxRelay in Frameworks */,
+				3183A2772BB06DC700DD8546 /* KakaoSDKUser in Frameworks */,
 				315A68542B9AF71E00268DF4 /* RxCocoa in Frameworks */,
+				3139CF732BAC095500359273 /* FirebaseAnalytics in Frameworks */,
 				315A685C2B9AF71E00268DF4 /* RxSwift in Frameworks */,
 				8539C3733FD3F320422145DF /* libPods-SubwayTalking.a in Frameworks */,
+				3139CF792BAC095500359273 /* FirebaseFirestore in Frameworks */,
+				3139CF772BAC095500359273 /* FirebaseCrashlytics in Frameworks */,
+				3139CF752BAC095500359273 /* FirebaseAuth in Frameworks */,
 				318657F72BA459E5001F5277 /* SnapKit in Frameworks */,
+				3183A2752BB06DC700DD8546 /* KakaoSDKAuth in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -115,6 +151,7 @@
 			children = (
 				31A4B0762B9D7D6A00CDEA26 /* CustomState */,
 				31A4B0752B9D7D5A00CDEA26 /* Protocol */,
+				3139CF6E2BAC04B900359273 /* SignScene */,
 				3108E4BB2B982872003115B0 /* MainScene */,
 			);
 			path = Presentation;
@@ -153,6 +190,9 @@
 			children = (
 				3108E4BF2B982990003115B0 /* Bundle+APIKey.swift */,
 				31A4B0732B9D7CE900CDEA26 /* Observable+Previous.swift */,
+				314B8D872BAD40AA00E0A56C /* UILabel+Mutable.swift */,
+				315A79372BAD67260061A1B9 /* UIButton+Configuration.swift */,
+				31F92C302BAD6DC100C905B8 /* UIFont+Pretendard.swift */,
 			);
 			path = Extensions;
 			sourceTree = "<group>";
@@ -179,6 +219,7 @@
 		310C7B882B96DE52002A3BB6 /* SubwayTalking */ = {
 			isa = PBXGroup;
 			children = (
+				3139CF7A2BAC15FE00359273 /* SubwayTalking.entitlements */,
 				310C7B9F2B96E3ED002A3BB6 /* Resource */,
 				310C7B9D2B96E3C2002A3BB6 /* Source */,
 			);
@@ -214,13 +255,33 @@
 				310C7B942B96DE53002A3BB6 /* LaunchScreen.storyboard */,
 				310C7B972B96DE53002A3BB6 /* Info.plist */,
 				313CFB3D2B9827490032ECE3 /* NaverMaps.plist */,
+				3139CF6C2BAC049900359273 /* GoogleService-Info.plist */,
+				3183A2782BB0721800DD8546 /* Kakao-Info.xcconfig */,
 			);
 			path = Resource;
+			sourceTree = "<group>";
+		};
+		3139994B2BAEE91200EBDA37 /* InfraStructure */ = {
+			isa = PBXGroup;
+			children = (
+				3139994C2BAEE92100EBDA37 /* UserAuthController.swift */,
+			);
+			path = InfraStructure;
+			sourceTree = "<group>";
+		};
+		3139CF6E2BAC04B900359273 /* SignScene */ = {
+			isa = PBXGroup;
+			children = (
+				31D42E442BB31E6900084F7D /* View */,
+				31D42E452BB31E7A00084F7D /* Intent */,
+			);
+			path = SignScene;
 			sourceTree = "<group>";
 		};
 		3155BC2C2B98480E003D4140 /* Data */ = {
 			isa = PBXGroup;
 			children = (
+				3139994B2BAEE91200EBDA37 /* InfraStructure */,
 				31A075A12B9B0E630060211B /* Error */,
 				31A0759E2B9B036F0060211B /* Repository */,
 				3155BC2D2B984892003D4140 /* DataMapping */,
@@ -296,6 +357,7 @@
 			isa = PBXGroup;
 			children = (
 				31A075A22B9B0E710060211B /* JSONDataError.swift */,
+				3139994E2BAEEAB100EBDA37 /* AuthError.swift */,
 			);
 			path = Error;
 			sourceTree = "<group>";
@@ -314,6 +376,7 @@
 			isa = PBXGroup;
 			children = (
 				31A075A42B9B10CC0060211B /* SubwayInformation.swift */,
+				31E949952BB3DB9B0031F9AF /* AuthProvider.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -322,6 +385,7 @@
 			isa = PBXGroup;
 			children = (
 				31A075A92B9B131A0060211B /* AddMarkerUseCase.swift */,
+				31E949932BB3CD760031F9AF /* SignUseCase.swift */,
 			);
 			path = UseCase;
 			sourceTree = "<group>";
@@ -350,6 +414,23 @@
 				31A4B0772B9D7D8200CDEA26 /* StateRelay.swift */,
 			);
 			path = CustomState;
+			sourceTree = "<group>";
+		};
+		31D42E442BB31E6900084F7D /* View */ = {
+			isa = PBXGroup;
+			children = (
+				3139CF6F2BAC053B00359273 /* SignViewController.swift */,
+			);
+			path = View;
+			sourceTree = "<group>";
+		};
+		31D42E452BB31E7A00084F7D /* Intent */ = {
+			isa = PBXGroup;
+			children = (
+				31D42E462BB31E9D00084F7D /* SignIntent.swift */,
+				31D42E482BB31F4F00084F7D /* SignState.swift */,
+			);
+			path = Intent;
 			sourceTree = "<group>";
 		};
 		FD29053EA72FC72E53DBAD4F /* Pods */ = {
@@ -385,6 +466,12 @@
 				315A68572B9AF71E00268DF4 /* RxRelay */,
 				315A685B2B9AF71E00268DF4 /* RxSwift */,
 				318657F62BA459E5001F5277 /* SnapKit */,
+				3139CF722BAC095500359273 /* FirebaseAnalytics */,
+				3139CF742BAC095500359273 /* FirebaseAuth */,
+				3139CF762BAC095500359273 /* FirebaseCrashlytics */,
+				3139CF782BAC095500359273 /* FirebaseFirestore */,
+				3183A2742BB06DC700DD8546 /* KakaoSDKAuth */,
+				3183A2762BB06DC700DD8546 /* KakaoSDKUser */,
 			);
 			productName = SubwayTalking;
 			productReference = 310C7B862B96DE52002A3BB6 /* SubwayTalking.app */;
@@ -417,6 +504,8 @@
 			packageReferences = (
 				315A684E2B9AF71E00268DF4 /* XCRemoteSwiftPackageReference "RxSwift" */,
 				318657F52BA459E5001F5277 /* XCRemoteSwiftPackageReference "SnapKit" */,
+				3139CF712BAC095500359273 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */,
+				3183A2732BB06DC700DD8546 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */,
 			);
 			productRefGroup = 310C7B872B96DE52002A3BB6 /* Products */;
 			projectDirPath = "";
@@ -439,6 +528,7 @@
 				313CFB3E2B9827490032ECE3 /* NaverMaps.plist in Resources */,
 				31DB177F2BA9592D00573897 /* Pretendard-Regular.otf in Resources */,
 				310C7B932B96DE53002A3BB6 /* Assets.xcassets in Resources */,
+				3139CF6D2BAC049900359273 /* GoogleService-Info.plist in Resources */,
 				31DB177E2BA9592D00573897 /* Pretendard-Medium.otf in Resources */,
 				31DB17822BA9593500573897 /* Pretendard-Light.otf in Resources */,
 			);
@@ -513,24 +603,34 @@
 			files = (
 				318657F42BA43C67001F5277 /* TabBarItemView.swift in Sources */,
 				31569A372B9B1D00000DF03B /* View.swift in Sources */,
+				314B8D882BAD40AA00E0A56C /* UILabel+Mutable.swift in Sources */,
+				31D42E492BB31F4F00084F7D /* SignState.swift in Sources */,
 				31569A322B9B1C3D000DF03B /* MapState.swift in Sources */,
 				318657F22BA43873001F5277 /* TabBarItem.swift in Sources */,
+				31E949942BB3CD760031F9AF /* SignUseCase.swift in Sources */,
+				3139994D2BAEE92100EBDA37 /* UserAuthController.swift in Sources */,
 				31A4B0742B9D7CE900CDEA26 /* Observable+Previous.swift in Sources */,
 				311AB6812BA55755004057FA /* TabBarController.swift in Sources */,
 				31A075A32B9B0E710060211B /* JSONDataError.swift in Sources */,
 				310C7B8E2B96DE52002A3BB6 /* MapViewController.swift in Sources */,
+				315A79382BAD67260061A1B9 /* UIButton+Configuration.swift in Sources */,
 				3155BC2F2B9848AB003D4140 /* SubwayInformationDTO.swift in Sources */,
 				3172261F2B9C11700035704A /* State.swift in Sources */,
 				31A075AA2B9B131A0060211B /* AddMarkerUseCase.swift in Sources */,
 				3173BFE52B9E048A005CFC5F /* LocationManager.swift in Sources */,
 				31569A302B9B1B3C000DF03B /* MarkerDataRepository.swift in Sources */,
+				31F92C312BAD6DC100C905B8 /* UIFont+Pretendard.swift in Sources */,
 				31A4B0782B9D7D8200CDEA26 /* StateRelay.swift in Sources */,
 				318657F92BA46DC9001F5277 /* TabBarStackView.swift in Sources */,
+				31E949962BB3DB9B0031F9AF /* AuthProvider.swift in Sources */,
 				3125B39E2BA03C410064E8DD /* Alertable.swift in Sources */,
+				3139994F2BAEEAB100EBDA37 /* AuthError.swift in Sources */,
 				310C7B8A2B96DE52002A3BB6 /* AppDelegate.swift in Sources */,
+				31D42E472BB31E9D00084F7D /* SignIntent.swift in Sources */,
 				31A102562B9DDF580051121A /* Constant.swift in Sources */,
 				31A075A02B9B03DF0060211B /* DefaultMarkerDataRepository.swift in Sources */,
 				31A075A52B9B10CC0060211B /* SubwayInformation.swift in Sources */,
+				3139CF702BAC053B00359273 /* SignViewController.swift in Sources */,
 				3108E4C02B982990003115B0 /* Bundle+APIKey.swift in Sources */,
 				31569A352B9B1CEF000DF03B /* MapIntent.swift in Sources */,
 				310C7B8C2B96DE52002A3BB6 /* SceneDelegate.swift in Sources */,
@@ -553,6 +653,7 @@
 /* Begin XCBuildConfiguration section */
 		310C7B982B96DE53002A3BB6 /* Debug */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3183A2782BB0721800DD8546 /* Kakao-Info.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -618,6 +719,7 @@
 		};
 		310C7B992B96DE53002A3BB6 /* Release */ = {
 			isa = XCBuildConfiguration;
+			baseConfigurationReference = 3183A2782BB0721800DD8546 /* Kakao-Info.xcconfig */;
 			buildSettings = {
 				ALWAYS_SEARCH_USER_PATHS = NO;
 				ASSETCATALOG_COMPILER_GENERATE_SWIFT_ASSET_SYMBOL_EXTENSIONS = YES;
@@ -680,6 +782,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SubwayTalking/SubwayTalking.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZRLFU9PV5L;
@@ -719,6 +822,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = SubwayTalking/SubwayTalking.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = ZRLFU9PV5L;
@@ -776,12 +880,28 @@
 /* End XCConfigurationList section */
 
 /* Begin XCRemoteSwiftPackageReference section */
+		3139CF712BAC095500359273 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/firebase/firebase-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 10.23.0;
+			};
+		};
 		315A684E2B9AF71E00268DF4 /* XCRemoteSwiftPackageReference "RxSwift" */ = {
 			isa = XCRemoteSwiftPackageReference;
 			repositoryURL = "https://github.com/ReactiveX/RxSwift";
 			requirement = {
 				kind = exactVersion;
 				version = 6.5.0;
+			};
+		};
+		3183A2732BB06DC700DD8546 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */ = {
+			isa = XCRemoteSwiftPackageReference;
+			repositoryURL = "https://github.com/kakao/kakao-ios-sdk";
+			requirement = {
+				kind = upToNextMajorVersion;
+				minimumVersion = 2.22.0;
 			};
 		};
 		318657F52BA459E5001F5277 /* XCRemoteSwiftPackageReference "SnapKit" */ = {
@@ -795,6 +915,26 @@
 /* End XCRemoteSwiftPackageReference section */
 
 /* Begin XCSwiftPackageProductDependency section */
+		3139CF722BAC095500359273 /* FirebaseAnalytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3139CF712BAC095500359273 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAnalytics;
+		};
+		3139CF742BAC095500359273 /* FirebaseAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3139CF712BAC095500359273 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseAuth;
+		};
+		3139CF762BAC095500359273 /* FirebaseCrashlytics */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3139CF712BAC095500359273 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseCrashlytics;
+		};
+		3139CF782BAC095500359273 /* FirebaseFirestore */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3139CF712BAC095500359273 /* XCRemoteSwiftPackageReference "firebase-ios-sdk" */;
+			productName = FirebaseFirestore;
+		};
 		315A68532B9AF71E00268DF4 /* RxCocoa */ = {
 			isa = XCSwiftPackageProductDependency;
 			package = 315A684E2B9AF71E00268DF4 /* XCRemoteSwiftPackageReference "RxSwift" */;
@@ -809,6 +949,16 @@
 			isa = XCSwiftPackageProductDependency;
 			package = 315A684E2B9AF71E00268DF4 /* XCRemoteSwiftPackageReference "RxSwift" */;
 			productName = RxSwift;
+		};
+		3183A2742BB06DC700DD8546 /* KakaoSDKAuth */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3183A2732BB06DC700DD8546 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKAuth;
+		};
+		3183A2762BB06DC700DD8546 /* KakaoSDKUser */ = {
+			isa = XCSwiftPackageProductDependency;
+			package = 3183A2732BB06DC700DD8546 /* XCRemoteSwiftPackageReference "kakao-ios-sdk" */;
+			productName = KakaoSDKUser;
 		};
 		318657F62BA459E5001F5277 /* SnapKit */ = {
 			isa = XCSwiftPackageProductDependency;
