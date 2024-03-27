@@ -372,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				31A075A42B9B10CC0060211B /* SubwayInformation.swift */,
+				31E949952BB3DB9B0031F9AF /* AuthProvider.swift */,
 			);
 			path = Entity;
 			sourceTree = "<group>";
@@ -615,6 +616,7 @@
 				31F92C312BAD6DC100C905B8 /* UIFont+Pretendard.swift in Sources */,
 				31A4B0782B9D7D8200CDEA26 /* StateRelay.swift in Sources */,
 				318657F92BA46DC9001F5277 /* TabBarStackView.swift in Sources */,
+				31E949962BB3DB9B0031F9AF /* AuthProvider.swift in Sources */,
 				3125B39E2BA03C410064E8DD /* Alertable.swift in Sources */,
 				3139994F2BAEEAB100EBDA37 /* AuthError.swift in Sources */,
 				310C7B8A2B96DE52002A3BB6 /* AppDelegate.swift in Sources */,
