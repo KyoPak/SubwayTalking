@@ -10,7 +10,11 @@ import Foundation
 struct SignState: State {
     static let initialState = SignState()
     
-    init() {
-        
+    let userId: String
+    let error: Error?
+    
+    init(prevState: SignState? = nil, userId: String? = nil, error: Error? = nil) {
+        self.userId = userId ?? prevState?.userId ?? ""
+        self.error = error
     }
 }
