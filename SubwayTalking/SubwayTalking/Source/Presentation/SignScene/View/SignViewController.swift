@@ -15,7 +15,7 @@ import RxSwift
 protocol AppleSignViewPresentable: ASAuthorizationControllerPresentationContextProviding { }
 protocol SignViewUpdatable: View where AssociatedState == SignState { }
 
-final class SignViewController: UIViewController {
+final class SignViewController: UIViewController, SignViewUpdatable {
     
     // MARK: Property
     
@@ -67,6 +67,7 @@ final class SignViewController: UIViewController {
         super.init(nibName: nil, bundle: nil)
         
         self.intent = intent
+        bind()
     }
     
     required init?(coder: NSCoder) {
@@ -79,6 +80,49 @@ final class SignViewController: UIViewController {
         configureUIComponents()
         configureHierachy()
         configureLayout()
+    }
+    
+    // MARK: SignViewUpdatable
+    
+    func update(with state: SignState?, prev: SignState?) {
+        guard let state = state, let prev = prev else { return }
+        
+        debugPrint(state.userId)
+        debugPrint(state.error)
+    }
+}
+
+// MARK: Bind Intent
+extension SignViewController {
+    private func bind() {
+        bindView()
+        bindIntent()
+    }
+    
+    private func bindView() {
+        intent?.bind(to: self)
+    }
+    
+    private func bindIntent() {
+        rx.methodInvoked(#selector(viewDidLoad))
+            .bind(with: self, onNext: { owner, _ in
+                owner.intent?.viewDidLoad()
+            })
+            .disposed(by: disposeBag)
+        
+        appleSignButton.rx.tap
+            .throttle(.milliseconds(1500), scheduler: MainScheduler.instance)
+            .bind(with: self) { owner, _ in
+                owner.intent?.appleSignInButtonTapped(delegate: owner)
+            }
+            .disposed(by: disposeBag)
+        
+        kakaoSignButton.rx.tap
+            .throttle(.milliseconds(1500), scheduler: MainScheduler.instance)
+            .bind(with: self) { owner, _ in
+                owner.intent?.kakaoSignInButtonTapped()
+            }
+            .disposed(by: disposeBag)
     }
 }
 
