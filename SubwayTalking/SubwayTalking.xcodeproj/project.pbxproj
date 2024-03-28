@@ -50,6 +50,8 @@
 		31A102562B9DDF580051121A /* Constant.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A102552B9DDF580051121A /* Constant.swift */; };
 		31A4B0742B9D7CE900CDEA26 /* Observable+Previous.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4B0732B9D7CE900CDEA26 /* Observable+Previous.swift */; };
 		31A4B0782B9D7D8200CDEA26 /* StateRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4B0772B9D7D8200CDEA26 /* StateRelay.swift */; };
+		31D2A0782BB5299F00CDA125 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D2A0772BB5299F00CDA125 /* SignUpViewController.swift */; };
+		31D2A07A2BB529C400CDA125 /* SignUpIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D2A0792BB529C400CDA125 /* SignUpIntent.swift */; };
 		31D42E472BB31E9D00084F7D /* SignIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D42E462BB31E9D00084F7D /* SignIntent.swift */; };
 		31D42E492BB31F4F00084F7D /* SignState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D42E482BB31F4F00084F7D /* SignState.swift */; };
 		31DB177A2BA958D400573897 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31DB17792BA958D400573897 /* Pretendard-Bold.otf */; };
@@ -103,6 +105,8 @@
 		31A102552B9DDF580051121A /* Constant.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constant.swift; sourceTree = "<group>"; };
 		31A4B0732B9D7CE900CDEA26 /* Observable+Previous.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Observable+Previous.swift"; sourceTree = "<group>"; };
 		31A4B0772B9D7D8200CDEA26 /* StateRelay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRelay.swift; sourceTree = "<group>"; };
+		31D2A0772BB5299F00CDA125 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		31D2A0792BB529C400CDA125 /* SignUpIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpIntent.swift; sourceTree = "<group>"; };
 		31D42E462BB31E9D00084F7D /* SignIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIntent.swift; sourceTree = "<group>"; };
 		31D42E482BB31F4F00084F7D /* SignState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignState.swift; sourceTree = "<group>"; };
 		31DB17792BA958D400573897 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
@@ -272,8 +276,8 @@
 		3139CF6E2BAC04B900359273 /* SignScene */ = {
 			isa = PBXGroup;
 			children = (
-				31D42E442BB31E6900084F7D /* View */,
-				31D42E452BB31E7A00084F7D /* Intent */,
+				31D2A0742BB5297400CDA125 /* SignUpScene */,
+				31D2A0732BB5296800CDA125 /* SignInScene */,
 			);
 			path = SignScene;
 			sourceTree = "<group>";
@@ -414,6 +418,40 @@
 				31A4B0772B9D7D8200CDEA26 /* StateRelay.swift */,
 			);
 			path = CustomState;
+			sourceTree = "<group>";
+		};
+		31D2A0732BB5296800CDA125 /* SignInScene */ = {
+			isa = PBXGroup;
+			children = (
+				31D42E442BB31E6900084F7D /* View */,
+				31D42E452BB31E7A00084F7D /* Intent */,
+			);
+			path = SignInScene;
+			sourceTree = "<group>";
+		};
+		31D2A0742BB5297400CDA125 /* SignUpScene */ = {
+			isa = PBXGroup;
+			children = (
+				31D2A0762BB5298600CDA125 /* View */,
+				31D2A0752BB5297C00CDA125 /* Intent */,
+			);
+			path = SignUpScene;
+			sourceTree = "<group>";
+		};
+		31D2A0752BB5297C00CDA125 /* Intent */ = {
+			isa = PBXGroup;
+			children = (
+				31D2A0792BB529C400CDA125 /* SignUpIntent.swift */,
+			);
+			path = Intent;
+			sourceTree = "<group>";
+		};
+		31D2A0762BB5298600CDA125 /* View */ = {
+			isa = PBXGroup;
+			children = (
+				31D2A0772BB5299F00CDA125 /* SignUpViewController.swift */,
+			);
+			path = View;
 			sourceTree = "<group>";
 		};
 		31D42E442BB31E6900084F7D /* View */ = {
@@ -623,12 +661,14 @@
 				31A4B0782B9D7D8200CDEA26 /* StateRelay.swift in Sources */,
 				318657F92BA46DC9001F5277 /* TabBarStackView.swift in Sources */,
 				31E949962BB3DB9B0031F9AF /* AuthProvider.swift in Sources */,
+				31D2A0782BB5299F00CDA125 /* SignUpViewController.swift in Sources */,
 				3125B39E2BA03C410064E8DD /* Alertable.swift in Sources */,
 				3139994F2BAEEAB100EBDA37 /* AuthError.swift in Sources */,
 				310C7B8A2B96DE52002A3BB6 /* AppDelegate.swift in Sources */,
 				31D42E472BB31E9D00084F7D /* SignIntent.swift in Sources */,
 				31A102562B9DDF580051121A /* Constant.swift in Sources */,
 				31A075A02B9B03DF0060211B /* DefaultMarkerDataRepository.swift in Sources */,
+				31D2A07A2BB529C400CDA125 /* SignUpIntent.swift in Sources */,
 				31A075A52B9B10CC0060211B /* SubwayInformation.swift in Sources */,
 				3139CF702BAC053B00359273 /* SignViewController.swift in Sources */,
 				3108E4C02B982990003115B0 /* Bundle+APIKey.swift in Sources */,
