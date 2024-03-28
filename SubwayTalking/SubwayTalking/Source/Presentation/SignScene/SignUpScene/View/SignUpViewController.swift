@@ -16,8 +16,25 @@ final class SignUpViewController: UIViewController {
     // MARK: UI Property
     
     private let pageViewController = UIPageViewController(transitionStyle: .scroll, navigationOrientation: .horizontal)
-    private let stepView = UIView()
-    private let confirmButton = UIButton()
+    private let stepView = StepView()
+    
+    private let backButton: UIButton = {
+        var configuration = UIButton.Configuration.plain()
+        configuration.baseForegroundColor = .black
+        configuration.applyFont(title: "뒤로", font: .pretendard(size: 16, wight: .medium))
+        
+        return UIButton(configuration: configuration)
+    }()
+    
+    private let confirmButton: UIButton = {
+        var configuration = UIButton.Configuration.filled()
+        configuration.baseBackgroundColor = .lightGray
+        configuration.baseForegroundColor = .white
+        configuration.background.cornerRadius = .zero
+        configuration.applyFont(title: "다음", font: .pretendard(size: 20, wight: .semiBold))
+
+        return UIButton(configuration: configuration)
+    }()
     
     // MARK: Initialize & LifeCycle
     
@@ -31,6 +48,10 @@ final class SignUpViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        configureUIComponents()
+        configureHierachy()
+        configureLayout()
     }
 }
 
@@ -41,12 +62,18 @@ extension SignUpViewController {
     }
     
     private func configureHierachy() {
-        [stepView, pageViewController.view, confirmButton].forEach(view.addSubview(_:))
+        [stepView, pageViewController.view, backButton, confirmButton].forEach(view.addSubview(_:))
     }
     
     private func configureLayout() {
+        backButton.snp.makeConstraints {
+            $0.top.equalTo(view.safeAreaLayoutGuide).offset(10)
+            $0.leading.equalToSuperview().inset(10)
+        }
+        
         stepView.snp.makeConstraints { component in
-            component.top.leading.trailing.equalTo(view.safeAreaLayoutGuide)
+            component.top.equalTo(backButton.snp.bottom).offset(10)
+            component.leading.trailing.equalToSuperview()
         }
         
         pageViewController.view.snp.makeConstraints { component in
