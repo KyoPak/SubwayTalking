@@ -52,6 +52,10 @@
 		31A4B0782B9D7D8200CDEA26 /* StateRelay.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31A4B0772B9D7D8200CDEA26 /* StateRelay.swift */; };
 		31D2A0782BB5299F00CDA125 /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D2A0772BB5299F00CDA125 /* SignUpViewController.swift */; };
 		31D2A07A2BB529C400CDA125 /* SignUpIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D2A0792BB529C400CDA125 /* SignUpIntent.swift */; };
+		31D2A07D2BB535DE00CDA125 /* AgreementViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D2A07C2BB535DE00CDA125 /* AgreementViewController.swift */; };
+		31D2A07F2BB5367600CDA125 /* SetNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D2A07E2BB5367600CDA125 /* SetNicknameViewController.swift */; };
+		31D2A0812BB5372800CDA125 /* SignUpStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D2A0802BB5372800CDA125 /* SignUpStep.swift */; };
+		31D2A0832BB53B3200CDA125 /* UseExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D2A0822BB53B3200CDA125 /* UseExplainViewController.swift */; };
 		31D42E472BB31E9D00084F7D /* SignIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D42E462BB31E9D00084F7D /* SignIntent.swift */; };
 		31D42E492BB31F4F00084F7D /* SignState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D42E482BB31F4F00084F7D /* SignState.swift */; };
 		31DB177A2BA958D400573897 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31DB17792BA958D400573897 /* Pretendard-Bold.otf */; };
@@ -107,6 +111,10 @@
 		31A4B0772B9D7D8200CDEA26 /* StateRelay.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StateRelay.swift; sourceTree = "<group>"; };
 		31D2A0772BB5299F00CDA125 /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
 		31D2A0792BB529C400CDA125 /* SignUpIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpIntent.swift; sourceTree = "<group>"; };
+		31D2A07C2BB535DE00CDA125 /* AgreementViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AgreementViewController.swift; sourceTree = "<group>"; };
+		31D2A07E2BB5367600CDA125 /* SetNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNicknameViewController.swift; sourceTree = "<group>"; };
+		31D2A0802BB5372800CDA125 /* SignUpStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep.swift; sourceTree = "<group>"; };
+		31D2A0822BB53B3200CDA125 /* UseExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseExplainViewController.swift; sourceTree = "<group>"; };
 		31D42E462BB31E9D00084F7D /* SignIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIntent.swift; sourceTree = "<group>"; };
 		31D42E482BB31F4F00084F7D /* SignState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignState.swift; sourceTree = "<group>"; };
 		31DB17792BA958D400573897 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
@@ -434,6 +442,7 @@
 			children = (
 				31D2A0762BB5298600CDA125 /* View */,
 				31D2A0752BB5297C00CDA125 /* Intent */,
+				31D2A0802BB5372800CDA125 /* SignUpStep.swift */,
 			);
 			path = SignUpScene;
 			sourceTree = "<group>";
@@ -449,9 +458,20 @@
 		31D2A0762BB5298600CDA125 /* View */ = {
 			isa = PBXGroup;
 			children = (
+				31D2A07B2BB535CB00CDA125 /* ChildView */,
 				31D2A0772BB5299F00CDA125 /* SignUpViewController.swift */,
 			);
 			path = View;
+			sourceTree = "<group>";
+		};
+		31D2A07B2BB535CB00CDA125 /* ChildView */ = {
+			isa = PBXGroup;
+			children = (
+				31D2A07C2BB535DE00CDA125 /* AgreementViewController.swift */,
+				31D2A07E2BB5367600CDA125 /* SetNicknameViewController.swift */,
+				31D2A0822BB53B3200CDA125 /* UseExplainViewController.swift */,
+			);
+			path = ChildView;
 			sourceTree = "<group>";
 		};
 		31D42E442BB31E6900084F7D /* View */ = {
@@ -649,15 +669,19 @@
 				3139994D2BAEE92100EBDA37 /* UserAuthController.swift in Sources */,
 				31A4B0742B9D7CE900CDEA26 /* Observable+Previous.swift in Sources */,
 				311AB6812BA55755004057FA /* TabBarController.swift in Sources */,
+				31D2A0832BB53B3200CDA125 /* UseExplainViewController.swift in Sources */,
 				31A075A32B9B0E710060211B /* JSONDataError.swift in Sources */,
 				310C7B8E2B96DE52002A3BB6 /* MapViewController.swift in Sources */,
 				315A79382BAD67260061A1B9 /* UIButton+Configuration.swift in Sources */,
 				3155BC2F2B9848AB003D4140 /* SubwayInformationDTO.swift in Sources */,
+				31D2A07F2BB5367600CDA125 /* SetNicknameViewController.swift in Sources */,
 				3172261F2B9C11700035704A /* State.swift in Sources */,
+				31D2A07D2BB535DE00CDA125 /* AgreementViewController.swift in Sources */,
 				31A075AA2B9B131A0060211B /* AddMarkerUseCase.swift in Sources */,
 				3173BFE52B9E048A005CFC5F /* LocationManager.swift in Sources */,
 				31569A302B9B1B3C000DF03B /* MarkerDataRepository.swift in Sources */,
 				31F92C312BAD6DC100C905B8 /* UIFont+Pretendard.swift in Sources */,
+				31D2A0812BB5372800CDA125 /* SignUpStep.swift in Sources */,
 				31A4B0782B9D7D8200CDEA26 /* StateRelay.swift in Sources */,
 				318657F92BA46DC9001F5277 /* TabBarStackView.swift in Sources */,
 				31E949962BB3DB9B0031F9AF /* AuthProvider.swift in Sources */,
