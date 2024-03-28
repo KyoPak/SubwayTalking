@@ -56,6 +56,7 @@
 		31D2A07F2BB5367600CDA125 /* SetNicknameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D2A07E2BB5367600CDA125 /* SetNicknameViewController.swift */; };
 		31D2A0812BB5372800CDA125 /* SignUpStep.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D2A0802BB5372800CDA125 /* SignUpStep.swift */; };
 		31D2A0832BB53B3200CDA125 /* UseExplainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D2A0822BB53B3200CDA125 /* UseExplainViewController.swift */; };
+		31D2A0852BB53D8800CDA125 /* StepView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D2A0842BB53D8800CDA125 /* StepView.swift */; };
 		31D42E472BB31E9D00084F7D /* SignIntent.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D42E462BB31E9D00084F7D /* SignIntent.swift */; };
 		31D42E492BB31F4F00084F7D /* SignState.swift in Sources */ = {isa = PBXBuildFile; fileRef = 31D42E482BB31F4F00084F7D /* SignState.swift */; };
 		31DB177A2BA958D400573897 /* Pretendard-Bold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 31DB17792BA958D400573897 /* Pretendard-Bold.otf */; };
@@ -115,6 +116,7 @@
 		31D2A07E2BB5367600CDA125 /* SetNicknameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SetNicknameViewController.swift; sourceTree = "<group>"; };
 		31D2A0802BB5372800CDA125 /* SignUpStep.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpStep.swift; sourceTree = "<group>"; };
 		31D2A0822BB53B3200CDA125 /* UseExplainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UseExplainViewController.swift; sourceTree = "<group>"; };
+		31D2A0842BB53D8800CDA125 /* StepView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StepView.swift; sourceTree = "<group>"; };
 		31D42E462BB31E9D00084F7D /* SignIntent.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignIntent.swift; sourceTree = "<group>"; };
 		31D42E482BB31F4F00084F7D /* SignState.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignState.swift; sourceTree = "<group>"; };
 		31DB17792BA958D400573897 /* Pretendard-Bold.otf */ = {isa = PBXFileReference; lastKnownFileType = file; path = "Pretendard-Bold.otf"; sourceTree = "<group>"; };
@@ -470,6 +472,7 @@
 				31D2A07C2BB535DE00CDA125 /* AgreementViewController.swift */,
 				31D2A07E2BB5367600CDA125 /* SetNicknameViewController.swift */,
 				31D2A0822BB53B3200CDA125 /* UseExplainViewController.swift */,
+				31D2A0842BB53D8800CDA125 /* StepView.swift */,
 			);
 			path = ChildView;
 			sourceTree = "<group>";
@@ -667,6 +670,7 @@
 				318657F22BA43873001F5277 /* TabBarItem.swift in Sources */,
 				31E949942BB3CD760031F9AF /* SignUseCase.swift in Sources */,
 				3139994D2BAEE92100EBDA37 /* UserAuthController.swift in Sources */,
+				31D2A0852BB53D8800CDA125 /* StepView.swift in Sources */,
 				31A4B0742B9D7CE900CDEA26 /* Observable+Previous.swift in Sources */,
 				311AB6812BA55755004057FA /* TabBarController.swift in Sources */,
 				31D2A0832BB53B3200CDA125 /* UseExplainViewController.swift in Sources */,
