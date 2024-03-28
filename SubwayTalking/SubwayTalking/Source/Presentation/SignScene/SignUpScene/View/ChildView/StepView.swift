@@ -7,6 +7,8 @@
 
 import UIKit
 
+import SnapKit
+
 final class StepView: UIView {
     
     // MARK: UI Property
@@ -24,6 +26,7 @@ final class StepView: UIView {
         let childViews = (0...2).map { _ in
             let view: UIView = {
                 let view = UIView()
+                view.layer.cornerRadius = 10
                 view.backgroundColor = .lightGray
                 return view
             }()
@@ -38,7 +41,6 @@ final class StepView: UIView {
         childViews.forEach(stackView.addArrangedSubview)
         return stackView
     }()
-    
     
     // MARK: Initialize
 
